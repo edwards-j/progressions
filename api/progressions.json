@@ -1,0 +1,337 @@
+{
+    "users": [
+        {
+            "username": "",
+            "password": "",
+            "id": ""
+        }
+    ],
+    "keys": [
+        {
+            "name": "Cmaj",
+            "id": "1",
+            "i": {
+                "name": "C",
+                "audio": "",
+                "img": ""
+            },
+            "ii": {
+                "name": "Dmi",
+                "audio": "",
+                "img": ""
+            },
+            "iii": {
+                "name": "Emi",
+                "audio": "",
+                "img": ""
+            },
+            "iv": {
+                "name": "F",
+                "audio": "",
+                "img": ""
+            },
+            "v": {
+                "name": "G",
+                "audio": "",
+                "img": ""
+            },
+            "vi": {
+                "name": "Ami",
+                "audio": "",
+                "img": ""
+            },
+            "vii": {
+                "name": "B°",
+                "audio": "",
+                "img": ""
+            }
+        },
+        {
+            "name": "Cmi",
+            "id": "2",
+            "i": {
+                "name": "Cmi",
+                "audio": "",
+                "img": ""
+            },
+            "ii": {
+                "name": "D°",
+                "audio": "",
+                "img": ""
+            },
+            "iii": {
+                "name": "E♭",
+                "audio": "",
+                "img": ""
+            },
+            "iv": {
+                "name": "Fmi",
+                "audio": "",
+                "img": ""
+            },
+            "v": {
+                "name": "Gmi",
+                "audio": "",
+                "img": ""
+            },
+            "vi": {
+                "name": "A♭",
+                "audio": "",
+                "img": ""
+            },
+            "vii": {
+                "name": "B♭",
+                "audio": "",
+                "img": ""
+            }
+        },
+        {
+            "name": "Dmaj",
+            "id": "3",
+            "i": {
+                "name": "D",
+                "audio": "",
+                "img": ""
+            },
+            "ii": {
+                "name": "Emi",
+                "audio": "",
+                "img": ""
+            },
+            "iii": {
+                "name": "F♯mi",
+                "audio": "",
+                "img": ""
+            },
+            "iv": {
+                "name": "G",
+                "audio": "",
+                "img": ""
+            },
+            "v": {
+                "name": "A",
+                "audio": "",
+                "img": ""
+            },
+            "vi": {
+                "name": "Bmi",
+                "audio": "",
+                "img": ""
+            },
+            "vii": {
+                "name": "C♯°",
+                "audio": "",
+                "img": ""
+            }
+        },
+        {
+            "name": "Dmi",
+            "id": "4",
+            "i": {
+                "name": "Dmi",
+                "audio": "",
+                "img": ""
+            },
+            "ii": {
+                "name": "E°",
+                "audio": "",
+                "img": ""
+            },
+            "iii": {
+                "name": "F",
+                "audio": "",
+                "img": ""
+            },
+            "iv": {
+                "name": "Gmi",
+                "audio": "",
+                "img": ""
+            },
+            "v": {
+                "name": "Ami",
+                "audio": "",
+                "img": ""
+            },
+            "vi": {
+                "name": "B♭",
+                "audio": "",
+                "img": ""
+            },
+            "vii": {
+                "name": "C",
+                "audio": "",
+                "img": ""
+            }
+        },
+        {
+            "name": "Emaj",
+            "id": "5",
+            "i": {
+                "name": "E",
+                "audio": "",
+                "img": ""
+            },
+            "ii": {
+                "name": "F♯mi",
+                "audio": "",
+                "img": ""
+            },
+            "iii": {
+                "name": "G♯mi",
+                "audio": "",
+                "img": ""
+            },
+            "iv": {
+                "name": "A",
+                "audio": "",
+                "img": ""
+            },
+            "v": {
+                "name": "B",
+                "audio": "",
+                "img": ""
+            },
+            "vi": {
+                "name": "C♯mi",
+                "audio": "",
+                "img": ""
+            },
+            "vii": {
+                "name": "D♯°",
+                "audio": "",
+                "img": ""
+            }
+        },
+        {
+            "name": "Emi",
+            "id": "6",
+            "i": {
+                "name": "Emi",
+                "audio": "",
+                "img": ""
+            },
+            "ii": {
+                "name": "F♯°",
+                "audio": "",
+                "img": ""
+            },
+            "iii": {
+                "name": "G",
+                "audio": "",
+                "img": ""
+            },
+            "iv": {
+                "name": "Ami",
+                "audio": "",
+                "img": ""
+            },
+            "v": {
+                "name": "Bmi",
+                "audio": "",
+                "img": ""
+            },
+            "vi": {
+                "name": "C",
+                "audio": "",
+                "img": ""
+            },
+            "vii": {
+                "name": "D",
+                "audio": "",
+                "img": ""
+            }
+        },
+        {
+            "name": "Fmaj",
+            "id": "7",
+            "i": {
+                "name": "F",
+                "audio": "",
+                "img": ""
+            },
+            "ii": {
+                "name": "Gmi",
+                "audio": "",
+                "img": ""
+            },
+            "iii": {
+                "name": "Ami",
+                "audio": "",
+                "img": ""
+            },
+            "iv": {
+                "name": "B♭",
+                "audio": "",
+                "img": ""
+            },
+            "v": {
+                "name": "C",
+                "audio": "",
+                "img": ""
+            },
+            "vi": {
+                "name": "Dmi",
+                "audio": "",
+                "img": ""
+            },
+            "vii": {
+                "name": "E°",
+                "audio": "",
+                "img": ""
+            }
+        },
+        {
+            "name": "Fmi",
+            "id": "8",
+            "i": {
+                "name": "Fmi",
+                "audio": "",
+                "img": ""
+            },
+            "ii": {
+                "name": "G°",
+                "audio": "",
+                "img": ""
+            },
+            "iii": {
+                "name": "A♭",
+                "audio": "",
+                "img": ""
+            },
+            "iv": {
+                "name": "B♭mi",
+                "audio": "",
+                "img": ""
+            },
+            "v": {
+                "name": "Cmi",
+                "audio": "",
+                "img": ""
+            },
+            "vi": {
+                "name": "D♭",
+                "audio": "",
+                "img": ""
+            },
+            "vii": {
+                "name": "E♭",
+                "audio": "",
+                "img": ""
+            }
+        }
+    ],
+    "songs": [
+        {
+            "title": "",
+            "userid": "",
+            "description": "",
+            "chord1": "",
+            "chord2": "",
+            "chord3": "",
+            "chord4": "",
+            "lyrics": "",
+            "id": 1,
+            "public": true
+        }
+    ]
+}
