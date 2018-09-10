@@ -1,0 +1,21 @@
+.login-form {
+    background: url("./LoginBG.svg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.login-button {
+    width: 50%;
+    text-align: center;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    margin: auto
+}
+
+.login-flag {
+}
