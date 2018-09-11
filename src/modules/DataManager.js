@@ -27,6 +27,18 @@ const getData = Object.create(null, {
 })
 
 const saveData = Object.create(null, {
+    newUser: {
+        value: (user) => {
+            return fetch(`${remoteURL}/users`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(user)
+            })
+                .then(response => response.json())
+        }
+    },
     saveSong: {
         value: (song) => {
             return fetch(`${remoteURL}/songs`, {
@@ -39,6 +51,7 @@ const saveData = Object.create(null, {
                 .then(response => response.json())
         }
     }
-})
+}
+)
 
-export default {getData, saveData}
+export default { getData, saveData }
