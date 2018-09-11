@@ -57,26 +57,10 @@ export default class NewSong extends Component {
         },
         yourChords:
         {
-            "chord1": {
-                "name": "C",
-                "audio": "",
-                "img": ""
-            },
-            "chord2": {
-                "name": "C",
-                "audio": "",
-                "img": ""
-            },
-            "chord3": {
-                "name": "C",
-                "audio": "",
-                "img": ""
-            },
-            "chord4": {
-                "name": "C",
-                "audio": "",
-                "img": ""
-            }
+            "chord1": "",
+            "chord2": "",
+            "chord3": "",
+            "chord4": ""
         }
         ,
         lyrics: "",
@@ -87,31 +71,23 @@ export default class NewSong extends Component {
     handleKeyChange = evt => {
         DataManager.getData.getKey(evt.target.value)
             .then(res => this.setState({ currentKey: res }))
+            .then(() => this.setState({
+                yourChords: {
+                    "chord1": this.state.currentKey.chords[0].name,
+                    "chord2": this.state.currentKey.chords[0].name,
+                    "chord3": this.state.currentKey.chords[0].name,
+                    "chord4": this.state.currentKey.chords[0].name,
+                }
+            }))
     }
 
     handleChord1Change = evt => {
         this.setState({
             yourChords: {
-                "chord1": {
-                    "name": evt.target.value,
-                    "audio": "",
-                    "img": ""
-                },
-                "chord2": {
-                    "name": this.state.yourChords.chord2.name,
-                    "audio": "",
-                    "img": ""
-                },
-                "chord3": {
-                    "name": this.state.yourChords.chord3.name,
-                    "audio": "",
-                    "img": ""
-                },
-                "chord4": {
-                    "name": this.state.yourChords.chord4.name,
-                    "audio": "",
-                    "img": ""
-                }
+                "chord1": evt.target.value,
+                "chord2": this.state.yourChords.chord2,
+                "chord3": this.state.yourChords.chord3,
+                "chord4": this.state.yourChords.chord4,
             }
         })
     }
@@ -119,26 +95,10 @@ export default class NewSong extends Component {
     handleChord2Change = evt => {
         this.setState({
             yourChords: {
-                "chord1": {
-                    "name": this.state.yourChords.chord1.name,
-                    "audio": "",
-                    "img": ""
-                },
-                "chord2": {
-                    "name": evt.target.value,
-                    "audio": "",
-                    "img": ""
-                },
-                "chord3": {
-                    "name": this.state.yourChords.chord3.name,
-                    "audio": "",
-                    "img": ""
-                },
-                "chord4": {
-                    "name": this.state.yourChords.chord4.name,
-                    "audio": "",
-                    "img": ""
-                }
+                "chord1": this.state.yourChords.chord1,
+                "chord2": evt.target.value,
+                "chord3": this.state.yourChords.chord3,
+                "chord4": this.state.yourChords.chord4,
             }
         })
     }
@@ -146,26 +106,10 @@ export default class NewSong extends Component {
     handleChord3Change = evt => {
         this.setState({
             yourChords: {
-                "chord1": {
-                    "name": this.state.yourChords.chord1.name,
-                    "audio": "",
-                    "img": ""
-                },
-                "chord2": {
-                    "name": this.state.yourChords.chord2.name,
-                    "audio": "",
-                    "img": ""
-                },
-                "chord3": {
-                    "name": evt.target.value,
-                    "audio": "",
-                    "img": ""
-                },
-                "chord4": {
-                    "name": this.state.yourChords.chord4.name,
-                    "audio": "",
-                    "img": ""
-                }
+                "chord1": this.state.yourChords.chord1,
+                "chord2": this.state.yourChords.chord2,
+                "chord3": evt.target.value,
+                "chord4": this.state.yourChords.chord4,
             }
         })
     }
@@ -173,26 +117,10 @@ export default class NewSong extends Component {
     handleChord4Change = evt => {
         this.setState({
             yourChords: {
-                "chord1": {
-                    "name": this.state.yourChords.chord1.name,
-                    "audio": "",
-                    "img": ""
-                },
-                "chord2": {
-                    "name": this.state.yourChords.chord2.name,
-                    "audio": "",
-                    "img": ""
-                },
-                "chord3": {
-                    "name": this.state.yourChords.chord3.name,
-                    "audio": "",
-                    "img": ""
-                },
-                "chord4": {
-                    "name": evt.target.value,
-                    "audio": "",
-                    "img": ""
-                }
+                "chord1": this.state.yourChords.chord1,
+                "chord2": this.state.yourChords.chord2,
+                "chord3": this.state.yourChords.chord3,
+                "chord4": evt.target.value,
             }
         })
     }
@@ -202,12 +130,35 @@ export default class NewSong extends Component {
             .then(res => this.setState({ currentKey: res }))
     }
 
+    handleFieldChange = evt => {
+        const stateToChange = {}
+        stateToChange[evt.target.id] = evt.target.value
+        this.setState(stateToChange)
+    }
+
+    saveSong = () => {
+        const newSong = {
+            title: this.state.title,
+            key: this.state.currentKey.name,
+            chords: this.state.yourChords,
+            lyrics: this.state.lyrics,
+            description: this.state.description,
+            public: false
+        }
+
+        DataManager.saveData.saveSong(newSong)
+    }
+
     render() {
         const chord = this.state.currentKey.chords
 
 
         return (
             <div>
+                <div className="has-text-centered">
+                    <h4 className="is-size-4">Song Title</h4>
+                    <input type="text" id="title" onChange={this.handleFieldChange} /><br />
+                </div>
                 Select Key:
                 <select name="selectedKey" id="selectedKey" onChange={this.handleKeyChange}>
                     <option value="1">Cmaj</option>
@@ -228,75 +179,63 @@ export default class NewSong extends Component {
 
                 <div>
                     <div>
-                        <h4 className="is-size-4">Available Chords</h4>
+                        <h4 className="is-size-4 has-text-centered">Available Chords</h4>
                         {
-                            <div className="">
-                                <p>{chord[0].name}</p>
-                                <p>{chord[1].name}</p>
-                                <p>{chord[2].name}</p>
-                                <p>{chord[3].name}</p>
-                                <p>{chord[4].name}</p>
-                                <p>{chord[5].name}</p>
-                                <p>{chord[6].name}</p>
+                            <div className="columns">
+                                {
+                                    chord.map((chord) =>
+                                        <p key={chord.id} className="column has-text-centered">{chord.name}</p>
+                                    )
+                                }
                             </div>
                         }
                     </div>
                     <h4 className="is-size-4 has-text-centered">Your Chords</h4>
-                    <div className="columns">
-                        <div className="column">
+                    <div className="your-chords columns">
+                        <div className="chord has-text-centered column">
                             <select name="chord1" id="chord1" onChange={this.handleChord1Change}>
-                                <option value={chord[0].name}>{chord[0].name}</option>
-                                <option value={chord[1].name}>{chord[1].name}</option>
-                                <option value={chord[2].name}>{chord[2].name}</option>
-                                <option value={chord[3].name}>{chord[3].name}</option>
-                                <option value={chord[4].name}>{chord[4].name}</option>
-                                <option value={chord[5].name}>{chord[5].name}</option>
-                                <option value={chord[6].name}>{chord[6].name}</option>
+                                {
+                                    chord.map(chord => <option value={chord.name}>{chord.name}</option>)
+                                }
                             </select>
-                            <p>{this.state.yourChords.chord1.name.chord1}</p>
-                            <ChordDisplayer.Chord1Displayer yourChords={this.state.yourChords} {...this.props}/>
+                            <ChordDisplayer.Chord1Displayer yourChords={this.state.yourChords} {...this.props} />
                         </div>
-                        <div className="column">
+                        <div className="chord has-text-centered column">
                             <select name="chord2" id="chord2" onChange={this.handleChord2Change}>
-                                <option value={chord[0].name}>{chord[0].name}</option>
-                                <option value={chord[1].name}>{chord[1].name}</option>
-                                <option value={chord[2].name}>{chord[2].name}</option>
-                                <option value={chord[3].name}>{chord[3].name}</option>
-                                <option value={chord[4].name}>{chord[4].name}</option>
-                                <option value={chord[5].name}>{chord[5].name}</option>
-                                <option value={chord[6].name}>{chord[6].name}</option>
+                                {
+                                    chord.map(chord => <option value={chord.name}>{chord.name}</option>)
+                                }
                             </select>
-                            <p>{this.state.yourChords.chord2.name.chord2}</p>
-                            <ChordDisplayer.Chord2Displayer yourChords={this.state.yourChords} {...this.props}/>
+                            <ChordDisplayer.Chord2Displayer yourChords={this.state.yourChords} {...this.props} />
                         </div>
-                        <div className="column">
+                        <div className="chord has-text-centered column">
                             <select name="chord3" id="chord3" onChange={this.handleChord3Change}>
-                                <option value={chord[0].name}>{chord[0].name}</option>
-                                <option value={chord[1].name}>{chord[1].name}</option>
-                                <option value={chord[2].name}>{chord[2].name}</option>
-                                <option value={chord[3].name}>{chord[3].name}</option>
-                                <option value={chord[4].name}>{chord[4].name}</option>
-                                <option value={chord[5].name}>{chord[5].name}</option>
-                                <option value={chord[6].name}>{chord[6].name}</option>
+                                {
+                                    chord.map(chord => <option value={chord.name}>{chord.name}</option>)
+                                }
                             </select>
-                            <p>{this.state.yourChords.chord3.name.chord3}</p>
-                            <ChordDisplayer.Chord3Displayer yourChords={this.state.yourChords} {...this.props}/>
+                            <ChordDisplayer.Chord3Displayer yourChords={this.state.yourChords} {...this.props} />
                         </div>
-                        <div className="column">
+                        <div className="chord has-text-centered column">
                             <select name="chord4" id="chord4" onChange={this.handleChord4Change}>
-                                <option value={chord[0].name}>{chord[0].name}</option>
-                                <option value={chord[1].name}>{chord[1].name}</option>
-                                <option value={chord[2].name}>{chord[2].name}</option>
-                                <option value={chord[3].name}>{chord[3].name}</option>
-                                <option value={chord[4].name}>{chord[4].name}</option>
-                                <option value={chord[5].name}>{chord[5].name}</option>
-                                <option value={chord[6].name}>{chord[6].name}</option>
+                                {
+                                    chord.map(chord => <option value={chord.name}>{chord.name}</option>)
+                                }
                             </select>
-                            <p>{this.state.yourChords.chord4.name.chord4}</p>
-                            <ChordDisplayer.Chord4Displayer yourChords={this.state.yourChords} {...this.props}/>
+                            <ChordDisplayer.Chord4Displayer yourChords={this.state.yourChords} {...this.props} />
                         </div>
                     </div>
                 </div>
+                <div className="has-text-centered">
+                    <h4 className="is-size-4">Lyrics</h4>
+                    <textarea id="lyrics" rows="20" cols="70" onChange={this.handleFieldChange} />
+                </div>
+                <div>
+                    <h4 className="is-size-4">Song Description</h4>
+                    <input type="text" id="description" onChange={this.handleFieldChange} />
+                </div>
+                <button className="button is-info" onClick={this.saveSong}>Save Song</button>
+
             </div>
         )
     }

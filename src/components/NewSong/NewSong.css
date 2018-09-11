@@ -1,3 +1,13 @@
-.chordChart {
-    width: 20%
+.your-chords {
+    margin: 0 2em
+}
+
+.chord {
+    border: 1px solid lightgray;
+    margin: .75rem;
+    border-radius: 10px;
+}
+
+.emptyCard {
+
 }

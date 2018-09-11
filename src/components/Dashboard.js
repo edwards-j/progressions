@@ -16,7 +16,7 @@ export default class Dashboard extends Component {
                 </div>
                 <div className="dash-header has-text-centered">
                     <div>
-                        <h3 className="subtitle ">Would you like to?</h3>
+                        <h3 className="subtitle ">Would you like to...</h3>
                         <div class="field is-grouped">
                             <p class="control">
                                 <Link to="/new-song" className="button dash-button is-warning">

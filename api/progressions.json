@@ -1,599 +1,586 @@
 {
-    "users": [
+  "users": [
+    {
+      "username": "",
+      "password": "",
+      "id": ""
+    }
+  ],
+  "keys": [
+    {
+      "name": "Cmaj",
+      "id": "1",
+      "chords": [
         {
-            "username": "",
-            "password": "",
-            "id": ""
+          "name": "C",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Dmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Emi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "F",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "G",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Ami",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "B°",
+          "audio": "",
+          "img": ""
         }
-    ],
-    "keys": [
+      ]
+    },
+    {
+      "name": "Cmi",
+      "id": "2",
+      "chords": [
         {
-            "name": "Cmaj",
-            "id": "1",
-            "chords": [
-                {
-                    "name": "C",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Dmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Emi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "F",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "G",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Ami",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "B°",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
+          "name": "Cmi",
+          "audio": "",
+          "img": ""
         },
         {
-            "name": "Cmi",
-            "id": "2",
-            "chords": [
-                {
-                    "name": "Cmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "D°",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "E♭",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Fmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Gmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "A♭",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "B♭",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
+          "name": "D°",
+          "audio": "",
+          "img": ""
         },
         {
-            "name": "Dmaj",
-            "id": "3",
-            "chords": [
-                {
-                    "name": "D",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Emi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "F♯mi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "G",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "A",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Bmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "C♯°",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
+          "name": "E♭",
+          "audio": "",
+          "img": ""
         },
         {
-            "name": "Dmi",
-            "id": "4",
-            "chords": [
-                {
-                    "name": "Dmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "E°",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "F",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Gmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Ami",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "B♭",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "C",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
+          "name": "Fmi",
+          "audio": "",
+          "img": ""
         },
         {
-            "name": "Emaj",
-            "id": "5",
-            "chords": [
-                {
-                    "name": "E",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "F♯mi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "G♯mi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "A",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "B",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "C♯mi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "D♯°",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
+          "name": "Gmi",
+          "audio": "",
+          "img": ""
         },
         {
-            "name": "Emi",
-            "id": "6",
-            "chords": [
-                {
-                    "name": "Emi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "F♯°",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "G",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Ami",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Bmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "C",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "D",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
+          "name": "A♭",
+          "audio": "",
+          "img": ""
         },
         {
-            "name": "Fmaj",
-            "id": "7",
-            "chords": [
-                {
-                    "name": "F",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Gmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Ami",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "B♭",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "C",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Dmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "E°",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
-        },
-        {
-            "name": "Fmi",
-            "id": "8",
-            "chords": [
-                {
-                    "name": "Fmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "G°",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "A♭",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "B♭mi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Cmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "D♭",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "E♭",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
-        },
-        {
-            "name": "Gmaj",
-            "id": "9",
-            "chords": [
-                {
-                    "name": "G",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Ami",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Bmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "C",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "D",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Emi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "F♯°",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
-        },
-        {
-            "name": "Gmi",
-            "id": "10",
-            "chords": [
-                {
-                    "name": "Gmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "A°",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "B♭",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Cmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Dmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "E♭",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "F",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
-        },
-        {
-            "name": "Amaj",
-            "id": "11",
-            "chords": [
-                {
-                    "name": "A",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Bmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "C♯mi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "D",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "E",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "F♯mi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "G♯°",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
-        },
-        {
-            "name": "Ami",
-            "id": "12",
-            "chords": [
-                {
-                    "name": "Ami",
-                    "audio": "",
-                    "img": "Ami"
-                },
-                {
-                    "name": "B°",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "C",
-                    "audio": "",
-                    "img": "C"
-                },
-                {
-                    "name": "Dmi",
-                    "audio": "",
-                    "img": "Dmi"
-                },
-                {
-                    "name": "Emi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "F",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "G",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
-        },
-        {
-            "name": "Bmaj",
-            "id": "13",
-            "chords": {
-                "i": {
-                    "name": "B",
-                    "audio": "",
-                    "img": ""
-                },
-                "ii": {
-                    "name": "C♯mi",
-                    "audio": "",
-                    "img": ""
-                },
-                "iii": {
-                    "name": "D♯mi",
-                    "audio": "",
-                    "img": ""
-                },
-                "iv": {
-                    "name": "E",
-                    "audio": "",
-                    "img": ""
-                },
-                "v": {
-                    "name": "F♯",
-                    "audio": "",
-                    "img": ""
-                },
-                "vi": {
-                    "name": "G♯mi",
-                    "audio": "",
-                    "img": ""
-                },
-                "vii": {
-                    "name": "A♯°",
-                    "audio": "",
-                    "img": ""
-                }
-            }
-        },
-        {
-            "name": "Bmi",
-            "id": "14",
-            "chords": [
-                {
-                    "name": "Bmi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "C♯°",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "D",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "Emi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "F♯mi",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "G",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "A",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
+          "name": "B♭",
+          "audio": "",
+          "img": ""
         }
-    ],
-    "songs": [
+      ]
+    },
+    {
+      "name": "Dmaj",
+      "id": "3",
+      "chords": [
         {
-            "id": 1,
-            "title": "",
-            "userid": "",
-            "description": "",
-            "chord1": "",
-            "chord2": "",
-            "chord3": "",
-            "chord4": "",
-            "lyrics": "",
-            "public": true
+          "name": "D",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Emi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "F♯mi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "G",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "A",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Bmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "C♯°",
+          "audio": "",
+          "img": ""
         }
-    ]
+      ]
+    },
+    {
+      "name": "Dmi",
+      "id": "4",
+      "chords": [
+        {
+          "name": "Dmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "E°",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "F",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Gmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Ami",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "B♭",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "C",
+          "audio": "",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "name": "Emaj",
+      "id": "5",
+      "chords": [
+        {
+          "name": "E",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "F♯mi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "G♯mi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "A",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "B",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "C♯mi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "D♯°",
+          "audio": "",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "name": "Emi",
+      "id": "6",
+      "chords": [
+        {
+          "name": "Emi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "F♯°",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "G",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Ami",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Bmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "C",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "D",
+          "audio": "",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "name": "Fmaj",
+      "id": "7",
+      "chords": [
+        {
+          "name": "F",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Gmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Ami",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "B♭",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "C",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Dmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "E°",
+          "audio": "",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "name": "Fmi",
+      "id": "8",
+      "chords": [
+        {
+          "name": "Fmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "G°",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "A♭",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "B♭mi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Cmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "D♭",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "E♭",
+          "audio": "",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "name": "Gmaj",
+      "id": "9",
+      "chords": [
+        {
+          "name": "G",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Ami",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Bmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "C",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "D",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Emi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "F♯°",
+          "audio": "",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "name": "Gmi",
+      "id": "10",
+      "chords": [
+        {
+          "name": "Gmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "A°",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "B♭",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Cmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Dmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "E♭",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "F",
+          "audio": "",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "name": "Amaj",
+      "id": "11",
+      "chords": [
+        {
+          "name": "A",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Bmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "C♯mi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "D",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "E",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "F♯mi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "G♯°",
+          "audio": "",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "name": "Ami",
+      "id": "12",
+      "chords": [
+        {
+          "name": "Ami",
+          "audio": "",
+          "img": "Ami"
+        },
+        {
+          "name": "B°",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "C",
+          "audio": "",
+          "img": "C"
+        },
+        {
+          "name": "Dmi",
+          "audio": "",
+          "img": "Dmi"
+        },
+        {
+          "name": "Emi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "F",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "G",
+          "audio": "",
+          "img": ""
+        }
+      ]
+    },
+    {
+      "name": "Bmaj",
+      "id": "13",
+      "chords": {
+        "i": {
+          "name": "B",
+          "audio": "",
+          "img": ""
+        },
+        "ii": {
+          "name": "C♯mi",
+          "audio": "",
+          "img": ""
+        },
+        "iii": {
+          "name": "D♯mi",
+          "audio": "",
+          "img": ""
+        },
+        "iv": {
+          "name": "E",
+          "audio": "",
+          "img": ""
+        },
+        "v": {
+          "name": "F♯",
+          "audio": "",
+          "img": ""
+        },
+        "vi": {
+          "name": "G♯mi",
+          "audio": "",
+          "img": ""
+        },
+        "vii": {
+          "name": "A♯°",
+          "audio": "",
+          "img": ""
+        }
+      }
+    },
+    {
+      "name": "Bmi",
+      "id": "14",
+      "chords": [
+        {
+          "name": "Bmi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "C♯°",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "D",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "Emi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "F♯mi",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "G",
+          "audio": "",
+          "img": ""
+        },
+        {
+          "name": "A",
+          "audio": "",
+          "img": ""
+        }
+      ]
+    }
+  ],
+  "songs": []
 }

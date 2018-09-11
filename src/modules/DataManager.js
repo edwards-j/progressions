@@ -29,7 +29,7 @@ const getData = Object.create(null, {
 const saveData = Object.create(null, {
     saveSong: {
         value: (song) => {
-            return fetch(`${remoteURL}/song`, {
+            return fetch(`${remoteURL}/songs`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
