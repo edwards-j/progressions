@@ -49,4 +49,16 @@ const saveData = Object.create(null, {
 }
 )
 
-export default { getData, saveData }
+const deleteData = Object.create(null, {
+    deleteSong: {
+        value: function (songID) {
+            return fetch(`${remoteURL}/songs/${songID}`, {
+                method: "DELETE"
+            })
+                .then(e => e.json())
+        }
+    }
+}
+)
+
+export default { getData, saveData, deleteData }

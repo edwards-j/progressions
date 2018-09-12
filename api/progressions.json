@@ -23,18 +23,6 @@
       "description": "Test",
       "public": false,
       "id": 1
-    },
-    {
-      "userId": 2,
-      "title": "Test2",
-      "chord1": "GMaj,",
-      "chord2": "Am,",
-      "chord3": "Bm,",
-      "chord4": "D,",
-      "lyrics": "Test2",
-      "description": "Test2",
-      "public": false,
-      "id": 2
     }
   ]
 }
