@@ -13,9 +13,10 @@ const getData = Object.create(null, {
                 .then(res => res.json())
         }
     },
-    getSongs: {
-        value: () => {
-            return fetch(`${remoteURL}/songs`)
+    getUserSongs: {
+        value: (userID) => {
+            return fetch(`${remoteURL}/songs?userId=${userID}`)
+                .then(res => res.json())
         }
     }
 })

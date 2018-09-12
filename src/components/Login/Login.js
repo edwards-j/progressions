@@ -30,8 +30,9 @@ class Login extends Component {
                         .then((result) => {
                             let stringifiedUserObject = JSON.stringify(result);
                             sessionStorage.setItem("userInfo", stringifiedUserObject)
-                            this.props.history.push("/dashboard")
+                            
                         })
+                        .then(() => this.props.history.push("/dashboard"))
                 }
             })
     }
@@ -59,7 +60,7 @@ class Login extends Component {
                                             <input id="password" onChange={this.handleFieldChange} class="input is-large" type="password" placeholder="" />
                                         </div>
                                     </div>
-                                    <button class="button is-block is-warning is-large is-fullwidth" onClick={this.login}>Let's Rock</button>
+                                    <a class="button is-block is-warning is-large is-fullwidth"  onClick={this.login}>Let's Rock</a>
                                 </form>
                             </div>
                             <p class="has-text-grey has-text-center">

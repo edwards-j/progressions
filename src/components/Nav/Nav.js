@@ -6,6 +6,10 @@ import './Nav.css'
 
 
 export default class Nav extends Component {
+    logout = () => {
+        sessionStorage.setItem("userInfo", "")
+    }
+
     render() {
         return (
             <nav className="navbar is-info">
@@ -30,7 +34,7 @@ export default class Nav extends Component {
 
                     <div className="navbar-end">
                         <div className="navbar-item">
-                            <Link className="navbar-item" to="/login">Logout</Link>
+                            <Link className="navbar-item" to="/login" onClick={this.logout}>Logout</Link>
                         </div>
                     </div>
                 </div>

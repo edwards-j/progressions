@@ -90,7 +90,7 @@ export default class NewSong extends Component {
 
     saveSong = () => {
         const newSong = {
-            userID: UserSS.loadUserIDFromSS(),
+            userId: UserSS.loadUserIDFromSS(),
             title: this.state.title,
             chord1: this.state.yourChords.chord1,
             chord2: this.state.yourChords.chord2,
