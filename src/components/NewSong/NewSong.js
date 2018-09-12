@@ -12,14 +12,10 @@ export default class NewSong extends Component {
     state = {
         title: "",
         selectedKey: [],
-        yourChords:
-        {
-            chord1: "",
-            chord2: "",
-            chord3: "",
-            chord4: ""
-        }
-        ,
+        chord1: "",
+        chord2: "",
+        chord3: "",
+        chord4: "",
         lyrics: "",
         description: ""
 
@@ -40,45 +36,37 @@ export default class NewSong extends Component {
 
     handleChord1Change = evt => {
         this.setState({
-            yourChords: {
-                "chord1": evt.target.value,
-                "chord2": this.state.yourChords.chord2,
-                "chord3": this.state.yourChords.chord3,
-                "chord4": this.state.yourChords.chord4,
-            }
+            "chord1": evt.target.value,
+            "chord2": this.state.chord2,
+            "chord3": this.state.chord3,
+            "chord4": this.state.chord4,
         })
     }
 
     handleChord2Change = evt => {
         this.setState({
-            yourChords: {
-                "chord1": this.state.yourChords.chord1,
-                "chord2": evt.target.value,
-                "chord3": this.state.yourChords.chord3,
-                "chord4": this.state.yourChords.chord4,
-            }
+            "chord1": this.state.chord1,
+            "chord2": evt.target.value,
+            "chord3": this.state.chord3,
+            "chord4": this.state.chord4,
         })
     }
 
     handleChord3Change = evt => {
         this.setState({
-            yourChords: {
-                "chord1": this.state.yourChords.chord1,
-                "chord2": this.state.yourChords.chord2,
-                "chord3": evt.target.value,
-                "chord4": this.state.yourChords.chord4,
-            }
+            "chord1": this.state.chord1,
+            "chord2": this.state.chord2,
+            "chord3": evt.target.value,
+            "chord4": this.state.chord4,
         })
     }
 
     handleChord4Change = evt => {
         this.setState({
-            yourChords: {
-                "chord1": this.state.yourChords.chord1,
-                "chord2": this.state.yourChords.chord2,
-                "chord3": this.state.yourChords.chord3,
+                "chord1": this.state.chord1,
+                "chord2": this.state.chord2,
+                "chord3": this.state.chord3,
                 "chord4": evt.target.value,
-            }
         })
     }
 
@@ -92,10 +80,10 @@ export default class NewSong extends Component {
         const newSong = {
             userId: UserSS.loadUserIDFromSS(),
             title: this.state.title,
-            chord1: this.state.yourChords.chord1,
-            chord2: this.state.yourChords.chord2,
-            chord3: this.state.yourChords.chord3,
-            chord4: this.state.yourChords.chord4,
+            chord1: this.state.chord1,
+            chord2: this.state.chord2,
+            chord3: this.state.chord3,
+            chord4: this.state.chord4,
             lyrics: this.state.lyrics,
             description: this.state.description,
             public: false
@@ -155,7 +143,7 @@ export default class NewSong extends Component {
                                     Key.chords(this.state.selectedKey).map(chord => <option key={chord.index} className="column has-text-centered" value={chord.split("7")}>{chord.split("7")}</option>)
                                 }
                             </select>
-                            <ChordDisplayer.Chord1Displayer yourChords={this.state.yourChords} {...this.props} />
+                            <ChordDisplayer.Chord1Displayer chord1={this.state.chord1} {...this.props} />
                         </div>
                         <div className="chord has-text-centered column">
                             <select name="chord2" id="chord2" onChange={this.handleChord2Change}>
@@ -164,7 +152,7 @@ export default class NewSong extends Component {
                                     Key.chords(this.state.selectedKey).map(chord => <option key={chord.index} className="column has-text-centered" value={chord.split("7")}>{chord.split("7")}</option>)
                                 }
                             </select>
-                            <ChordDisplayer.Chord2Displayer yourChords={this.state.yourChords} {...this.props} />
+                            <ChordDisplayer.Chord2Displayer chord2={this.state.chord2} {...this.props} />
                         </div>
                         <div className="chord has-text-centered column">
                             <select name="chord3" id="chord3" onChange={this.handleChord3Change}>
@@ -173,7 +161,7 @@ export default class NewSong extends Component {
                                     Key.chords(this.state.selectedKey).map(chord => <option key={chord.index} className="column has-text-centered" value={chord.split("7")}>{chord.split("7")}</option>)
                                 }
                             </select>
-                            <ChordDisplayer.Chord3Displayer yourChords={this.state.yourChords} {...this.props} />
+                            <ChordDisplayer.Chord3Displayer chord3={this.state.chord3} {...this.props} />
                         </div>
                         <div className="chord has-text-centered column">
                             <select name="chord4" id="chord4" onChange={this.handleChord4Change}>
@@ -182,7 +170,7 @@ export default class NewSong extends Component {
                                     Key.chords(this.state.selectedKey).map(chord => <option key={chord.index} className="column has-text-centered" value={chord.split("7")}>{chord.split("7")}</option>)
                                 }
                             </select>
-                            <ChordDisplayer.Chord4Displayer yourChords={this.state.yourChords} {...this.props} />
+                            <ChordDisplayer.Chord4Displayer chord4={this.state.chord4} {...this.props} />
                         </div>
                     </div>
                 </div>

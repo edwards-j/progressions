@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class SongCard extends Component {
     render() {
@@ -11,6 +12,7 @@ export default class SongCard extends Component {
                 <div>
                     <p>{this.props.song.description}</p>
                 </div>
+                <Link className="" to={`/your-songs/${this.props.song.id}`}>Details</Link>
             </div>
         )
     }

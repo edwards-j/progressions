@@ -25,216 +25,216 @@ import Fmi from '../../img/png/Fmi.png'
 import G from '../../img/png/G.png'
 import Gmi from '../../img/png/Gmi.png'
 
-const Chord1Displayer = ({yourChords}) => {
-    if (yourChords.chord1 === "CMaj," || yourChords.chord1 === "C,") {
+const Chord1Displayer = ({chord1}) => {
+    if (chord1 === "CMaj," || chord1 === "C,") {
         return <img className="chordChart" src={C} alt="C" />
-    } else if (yourChords.chord1 === "Cm,") {
+    } else if (chord1 === "Cm,") {
         return <img className="chordChart" src={Cmi} alt="Cmi" />
-    } else if (yourChords.chord1 === "DMaj," || yourChords.chord1 === "D,") {
+    } else if (chord1 === "DMaj," || chord1 === "D,") {
         return <img className="chordChart" src={D} alt="D" />
-    } else if (yourChords.chord1 === "DbMaj," || yourChords.chord1 === "Db,") {
+    } else if (chord1 === "DbMaj," || chord1 === "Db,") {
         return <img className="chordChart" src={Dflat} alt="D♭" />
-    } else if (yourChords.chord1 === "Dbm,") {
+    } else if (chord1 === "Dbm,") {
         return <img className="chordChart" src={Dflatmi} alt="D" />
-    } else if (yourChords.chord1 === "Dm,") {
+    } else if (chord1 === "Dm,") {
         return <img className="chordChart" src={Dmi} alt="Dmi" />
-    } else if (yourChords.chord1 === "EMaj," || yourChords.chord1 === "E,") {
+    } else if (chord1 === "EMaj," || chord1 === "E,") {
         return <img className="chordChart" src={E} alt="E" />
-    } else if (yourChords.chord1 === "EbMaj,") {
+    } else if (chord1 === "EbMaj,") {
         return <img className="chordChart" src={Eflat} alt="E♭" />
-    } else if (yourChords.chord1 === "Ebm,") {
+    } else if (chord1 === "Ebm,") {
         return <img className="chordChart" src={Eflatmi} alt="E♭mi" />
-    } else if (yourChords.chord1 === "Em,") {
+    } else if (chord1 === "Em,") {
         return <img className="chordChart" src={Emi} alt="Emi" />
-    } else if (yourChords.chord1 === "FMaj," || yourChords.chord1 === "F,") {
+    } else if (chord1 === "FMaj," || chord1 === "F,") {
         return <img className="chordChart" src={F} alt="F" />
-    } else if (yourChords.chord1 === "F#," || yourChords.chord1 === "F#Maj,") {
+    } else if (chord1 === "F#," || chord1 === "F#Maj,") {
         return <img className="chordChart" src={Fsharp} alt="F#" />
-    } else if (yourChords.chord1 === "F#m,") {
+    } else if (chord1 === "F#m,") {
         return <img className="chordChart" src={Fsharpmi} alt="F#mi" />
-    } else if (yourChords.chord1 === "Fm,") {
+    } else if (chord1 === "Fm,") {
         return <img className="chordChart" src={Fmi} alt="Fmi" />
-    } else if (yourChords.chord1 === "G," || yourChords.chord1 === "GMaj,") {
+    } else if (chord1 === "G," || chord1 === "GMaj,") {
         return <img className="chordChart" src={G} alt="G" />
-    } else if (yourChords.chord1 === "Gm,") {
+    } else if (chord1 === "Gm,") {
         return <img className="chordChart" src={Gmi} alt="Gmi" />
-    } else if (yourChords.chord1 === "AbMaj," || yourChords.chord1 === "Ab,") {
+    } else if (chord1 === "AbMaj," || chord1 === "Ab,") {
         return <img className="chordChart" src={Aflat} alt="Ab" />
-    } else if (yourChords.chord1 === "Abbm,") {
+    } else if (chord1 === "Abbm,") {
         return <img className="chordChart" src={Aflatmi} alt="Ab" />
-    } else if (yourChords.chord1 === "AMaj," || yourChords.chord1 === "A,") {
+    } else if (chord1 === "AMaj," || chord1 === "A,") {
         return <img className="chordChart" src={A} alt="A" />
-    } else if (yourChords.chord1 === "Am,") {
+    } else if (chord1 === "Am,") {
         return <img className="chordChart" src={Ami} alt="Ami" />
-    } else if (yourChords.chord1 === "BbMaj," || yourChords.chord1 === "Bb,") {
+    } else if (chord1 === "BbMaj," || chord1 === "Bb,") {
         return <img className="chordChart" src={Bflat} alt="Bb" />
-    } else if (yourChords.chord1 === "Bbm,") {
+    } else if (chord1 === "Bbm,") {
         return <img className="chordChart" src={Bflatmi} alt="Bb" />
-    } else if (yourChords.chord1 === "B," || yourChords.chord1 === "BMaj,") {
+    } else if (chord1 === "B," || chord1 === "BMaj,") {
         return <img className="chordChart" src={B} alt="B" />
-    } else if (yourChords.chord1 === "Bm,") {
+    } else if (chord1 === "Bm,") {
         return <img className="chordChart" src={Bmi} alt="Bmi" />
     } else {
         return <div className="emptyCard"></div>
     }
 }
 
-const Chord2Displayer = ({yourChords}) => {
-    if (yourChords.chord1 === "CMaj," || yourChords.chord1 === "C,") {
+const Chord2Displayer = ({chord2}) => {
+    if (chord2 === "CMaj," || chord2 === "C,") {
         return <img className="chordChart" src={C} alt="C" />
-    } else if (yourChords.chord2 === "Cm,") {
+    } else if (chord2 === "Cm,") {
         return <img className="chordChart" src={Cmi} alt="Cmi" />
-    } else if (yourChords.chord2 === "DMaj," || yourChords.chord2 === "D,") {
+    } else if (chord2 === "DMaj," || chord2 === "D,") {
         return <img className="chordChart" src={D} alt="D" />
-    } else if (yourChords.chord2 === "DbMaj," || yourChords.chord2 === "Db,") {
+    } else if (chord2 === "DbMaj," || chord2 === "Db,") {
         return <img className="chordChart" src={Dflat} alt="D♭" />
-    } else if (yourChords.chord2 === "Dbm,") {
+    } else if (chord2 === "Dbm,") {
         return <img className="chordChart" src={Dflatmi} alt="D" />
-    } else if (yourChords.chord2 === "Dm,") {
+    } else if (chord2 === "Dm,") {
         return <img className="chordChart" src={Dmi} alt="Dmi" />
-    } else if (yourChords.chord2 === "EMaj," || yourChords.chord2 === "E,") {
+    } else if (chord2 === "EMaj," || chord2 === "E,") {
         return <img className="chordChart" src={E} alt="E" />
-    } else if (yourChords.chord2 === "EbMaj,") {
+    } else if (chord2 === "EbMaj,") {
         return <img className="chordChart" src={Eflat} alt="E♭" />
-    } else if (yourChords.chord2 === "Ebm,") {
+    } else if (chord2 === "Ebm,") {
         return <img className="chordChart" src={Eflatmi} alt="E♭mi" />
-    } else if (yourChords.chord2 === "Em,") {
+    } else if (chord2 === "Em,") {
         return <img className="chordChart" src={Emi} alt="Emi" />
-    } else if (yourChords.chord2 === "FMaj," || yourChords.chord2 === "F,") {
+    } else if (chord2 === "FMaj," || chord2 === "F,") {
         return <img className="chordChart" src={F} alt="F" />
-    } else if (yourChords.chord2 === "F#," || yourChords.chord2 === "F#Maj,") {
+    } else if (chord2 === "F#," || chord2 === "F#Maj,") {
         return <img className="chordChart" src={Fsharp} alt="F#" />
-    } else if (yourChords.chord2 === "F#m,") {
+    } else if (chord2 === "F#m,") {
         return <img className="chordChart" src={Fsharpmi} alt="F#mi" />
-    } else if (yourChords.chord2 === "Fm,") {
+    } else if (chord2 === "Fm,") {
         return <img className="chordChart" src={Fmi} alt="Fmi" />
-    } else if (yourChords.chord2 === "G," || yourChords.chord2 === "GMaj,") {
+    } else if (chord2 === "G," || chord2 === "GMaj,") {
         return <img className="chordChart" src={G} alt="G" />
-    } else if (yourChords.chord2 === "Gm,") {
+    } else if (chord2 === "Gm,") {
         return <img className="chordChart" src={Gmi} alt="Gmi" />
-    } else if (yourChords.chord2 === "AbMaj," || yourChords.chord2 === "Ab,") {
+    } else if (chord2 === "AbMaj," || chord2 === "Ab,") {
         return <img className="chordChart" src={Aflat} alt="Ab" />
-    } else if (yourChords.chord2 === "Abbm,") {
+    } else if (chord2 === "Abbm,") {
         return <img className="chordChart" src={Aflatmi} alt="Ab" />
-    } else if (yourChords.chord2 === "AMaj," || yourChords.chord2 === "A,") {
+    } else if (chord2 === "AMaj," || chord2 === "A,") {
         return <img className="chordChart" src={A} alt="A" />
-    } else if (yourChords.chord2 === "Am,") {
+    } else if (chord2 === "Am,") {
         return <img className="chordChart" src={Ami} alt="Ami" />
-    } else if (yourChords.chord2 === "BbMaj," || yourChords.chord2 === "Bb,") {
+    } else if (chord2 === "BbMaj," || chord2 === "Bb,") {
         return <img className="chordChart" src={Bflat} alt="Bb" />
-    } else if (yourChords.chord2 === "Bbm,") {
+    } else if (chord2 === "Bbm,") {
         return <img className="chordChart" src={Bflatmi} alt="Bb" />
-    } else if (yourChords.chord2 === "B," || yourChords.chord2 === "BMaj,") {
+    } else if (chord2 === "B," || chord2 === "BMaj,") {
         return <img className="chordChart" src={B} alt="B" />
-    } else if (yourChords.chord2 === "Bm,") {
+    } else if (chord2 === "Bm,") {
         return <img className="chordChart" src={Bmi} alt="Bmi" />
     } else {
         return <div className="emptyCard"></div>
     }
 }
 
-const Chord3Displayer = ({yourChords}) => {
-    if (yourChords.chord3 === "CMaj," || yourChords.chord3 === "C,") {
+const Chord3Displayer = ({chord3}) => {
+    if (chord3 === "CMaj," || chord3 === "C,") {
         return <img className="chordChart" src={C} alt="C" />
-    } else if (yourChords.chord3 === "Cm,") {
+    } else if (chord3 === "Cm,") {
         return <img className="chordChart" src={Cmi} alt="Cmi" />
-    } else if (yourChords.chord3 === "DMaj," || yourChords.chord3 === "D,") {
+    } else if (chord3 === "DMaj," || chord3 === "D,") {
         return <img className="chordChart" src={D} alt="D" />
-    } else if (yourChords.chord3 === "DbMaj," || yourChords.chord3 === "Db,") {
+    } else if (chord3 === "DbMaj," || chord3 === "Db,") {
         return <img className="chordChart" src={Dflat} alt="D♭" />
-    } else if (yourChords.chord3 === "Dbm,") {
+    } else if (chord3 === "Dbm,") {
         return <img className="chordChart" src={Dflatmi} alt="D" />
-    } else if (yourChords.chord3 === "Dm,") {
+    } else if (chord3 === "Dm,") {
         return <img className="chordChart" src={Dmi} alt="Dmi" />
-    } else if (yourChords.chord3 === "EMaj," || yourChords.chord3 === "E,") {
+    } else if (chord3 === "EMaj," || chord3 === "E,") {
         return <img className="chordChart" src={E} alt="E" />
-    } else if (yourChords.chord3 === "EbMaj,") {
+    } else if (chord3 === "EbMaj,") {
         return <img className="chordChart" src={Eflat} alt="E♭" />
-    } else if (yourChords.chord3 === "Ebm,") {
+    } else if (chord3 === "Ebm,") {
         return <img className="chordChart" src={Eflatmi} alt="E♭mi" />
-    } else if (yourChords.chord3 === "Em,") {
+    } else if (chord3 === "Em,") {
         return <img className="chordChart" src={Emi} alt="Emi" />
-    } else if (yourChords.chord3 === "FMaj," || yourChords.chord3 === "F,") {
+    } else if (chord3 === "FMaj," || chord3 === "F,") {
         return <img className="chordChart" src={F} alt="F" />
-    } else if (yourChords.chord3 === "F#," || yourChords.chord3 === "F#Maj,") {
+    } else if (chord3 === "F#," || chord3 === "F#Maj,") {
         return <img className="chordChart" src={Fsharp} alt="F#" />
-    } else if (yourChords.chord3 === "F#m,") {
+    } else if (chord3 === "F#m,") {
         return <img className="chordChart" src={Fsharpmi} alt="F#mi" />
-    } else if (yourChords.chord3 === "Fm,") {
+    } else if (chord3 === "Fm,") {
         return <img className="chordChart" src={Fmi} alt="Fmi" />
-    } else if (yourChords.chord3 === "G," || yourChords.chord3 === "GMaj,") {
+    } else if (chord3 === "G," || chord3 === "GMaj,") {
         return <img className="chordChart" src={G} alt="G" />
-    } else if (yourChords.chord3 === "Gm,") {
+    } else if (chord3 === "Gm,") {
         return <img className="chordChart" src={Gmi} alt="Gmi" />
-    } else if (yourChords.chord3 === "AbMaj," || yourChords.chord3 === "Ab,") {
+    } else if (chord3 === "AbMaj," || chord3 === "Ab,") {
         return <img className="chordChart" src={Aflat} alt="Ab" />
-    } else if (yourChords.chord3 === "Abbm,") {
+    } else if (chord3 === "Abbm,") {
         return <img className="chordChart" src={Aflatmi} alt="Ab" />
-    } else if (yourChords.chord3 === "AMaj," || yourChords.chord3 === "A,") {
+    } else if (chord3 === "AMaj," || chord3 === "A,") {
         return <img className="chordChart" src={A} alt="A" />
-    } else if (yourChords.chord3 === "Am,") {
+    } else if (chord3 === "Am,") {
         return <img className="chordChart" src={Ami} alt="Ami" />
-    } else if (yourChords.chord3 === "BbMaj," || yourChords.chord3 === "Bb,") {
+    } else if (chord3 === "BbMaj," || chord3 === "Bb,") {
         return <img className="chordChart" src={Bflat} alt="Bb" />
-    } else if (yourChords.chord3 === "Bbm,") {
+    } else if (chord3 === "Bbm,") {
         return <img className="chordChart" src={Bflatmi} alt="Bb" />
-    } else if (yourChords.chord3 === "B," || yourChords.chord3 === "BMaj,") {
+    } else if (chord3 === "B," || chord3 === "BMaj,") {
         return <img className="chordChart" src={B} alt="B" />
-    } else if (yourChords.chord3 === "Bm,") {
+    } else if (chord3 === "Bm,") {
         return <img className="chordChart" src={Bmi} alt="Bmi" />
     } else {
         return <div className="emptyCard"></div>
     }
 }
 
-const Chord4Displayer = ({yourChords}) => {
-    if (yourChords.chord4 === "CMaj," || yourChords.chord4 === "C,") {
+const Chord4Displayer = ({chord4}) => {
+    if (chord4 === "CMaj," || chord4 === "C,") {
         return <img className="chordChart" src={C} alt="C" />
-    } else if (yourChords.chord4 === "Cm,") {
+    } else if (chord4 === "Cm,") {
         return <img className="chordChart" src={Cmi} alt="Cmi" />
-    } else if (yourChords.chord4 === "DMaj," || yourChords.chord4 === "D,") {
+    } else if (chord4 === "DMaj," || chord4 === "D,") {
         return <img className="chordChart" src={D} alt="D" />
-    } else if (yourChords.chord4 === "DbMaj," || yourChords.chord4 === "Db,") {
+    } else if (chord4 === "DbMaj," || chord4 === "Db,") {
         return <img className="chordChart" src={Dflat} alt="D♭" />
-    } else if (yourChords.chord4 === "Dbm,") {
+    } else if (chord4 === "Dbm,") {
         return <img className="chordChart" src={Dflatmi} alt="D" />
-    } else if (yourChords.chord4 === "Dm,") {
+    } else if (chord4 === "Dm,") {
         return <img className="chordChart" src={Dmi} alt="Dmi" />
-    } else if (yourChords.chord4 === "EMaj," || yourChords.chord4 === "E,") {
+    } else if (chord4 === "EMaj," || chord4 === "E,") {
         return <img className="chordChart" src={E} alt="E" />
-    } else if (yourChords.chord4 === "EbMaj,") {
+    } else if (chord4 === "EbMaj,") {
         return <img className="chordChart" src={Eflat} alt="E♭" />
-    } else if (yourChords.chord4 === "Ebm,") {
+    } else if (chord4 === "Ebm,") {
         return <img className="chordChart" src={Eflatmi} alt="E♭mi" />
-    } else if (yourChords.chord4 === "Em,") {
+    } else if (chord4 === "Em,") {
         return <img className="chordChart" src={Emi} alt="Emi" />
-    } else if (yourChords.chord4 === "FMaj," || yourChords.chord4 === "F,") {
+    } else if (chord4 === "FMaj," || chord4 === "F,") {
         return <img className="chordChart" src={F} alt="F" />
-    } else if (yourChords.chord4 === "F#," || yourChords.chord4 === "F#Maj,") {
+    } else if (chord4 === "F#," || chord4 === "F#Maj,") {
         return <img className="chordChart" src={Fsharp} alt="F#" />
-    } else if (yourChords.chord4 === "F#m,") {
+    } else if (chord4 === "F#m,") {
         return <img className="chordChart" src={Fsharpmi} alt="F#mi" />
-    } else if (yourChords.chord4 === "Fm,") {
+    } else if (chord4 === "Fm,") {
         return <img className="chordChart" src={Fmi} alt="Fmi" />
-    } else if (yourChords.chord4 === "G," || yourChords.chord4 === "GMaj,") {
+    } else if (chord4 === "G," || chord4 === "GMaj,") {
         return <img className="chordChart" src={G} alt="G" />
-    } else if (yourChords.chord4 === "Gm,") {
+    } else if (chord4 === "Gm,") {
         return <img className="chordChart" src={Gmi} alt="Gmi" />
-    } else if (yourChords.chord4 === "AbMaj," || yourChords.chord4 === "Ab,") {
+    } else if (chord4 === "AbMaj," || chord4 === "Ab,") {
         return <img className="chordChart" src={Aflat} alt="Ab" />
-    } else if (yourChords.chord4 === "Abbm,") {
+    } else if (chord4 === "Abbm,") {
         return <img className="chordChart" src={Aflatmi} alt="Ab" />
-    } else if (yourChords.chord4 === "AMaj," || yourChords.chord4 === "A,") {
+    } else if (chord4 === "AMaj," || chord4 === "A,") {
         return <img className="chordChart" src={A} alt="A" />
-    } else if (yourChords.chord4 === "Am,") {
+    } else if (chord4 === "Am,") {
         return <img className="chordChart" src={Ami} alt="Ami" />
-    } else if (yourChords.chord4 === "BbMaj," || yourChords.chord4 === "Bb,") {
+    } else if (chord4 === "BbMaj," || chord4 === "Bb,") {
         return <img className="chordChart" src={Bflat} alt="Bb" />
-    } else if (yourChords.chord4 === "Bbm,") {
+    } else if (chord4 === "Bbm,") {
         return <img className="chordChart" src={Bflatmi} alt="Bb" />
-    } else if (yourChords.chord4 === "B," || yourChords.chord4 === "BMaj,") {
+    } else if (chord4 === "B," || chord4 === "BMaj,") {
         return <img className="chordChart" src={B} alt="B" />
-    } else if (yourChords.chord4 === "Bm,") {
+    } else if (chord4 === "Bm,") {
         return <img className="chordChart" src={Bmi} alt="Bmi" />
     } else {
         return <div className="emptyCard"></div>

@@ -13,16 +13,28 @@
   ],
   "songs": [
     {
-      "userId": 1,
+      "userId": 2,
       "title": "Test",
-      "chord1": "Cm,",
-      "chord2": "EbMaj,",
-      "chord3": "Cm,",
-      "chord4": "Bb,",
+      "chord1": "DMaj,",
+      "chord2": "Em,",
+      "chord3": "A,",
+      "chord4": "Bm,",
       "lyrics": "Test",
       "description": "Test",
       "public": false,
       "id": 1
+    },
+    {
+      "userId": 2,
+      "title": "Tribute",
+      "chord1": "Am,",
+      "chord2": "G,",
+      "chord3": "FMaj,",
+      "chord4": "G,",
+      "lyrics": "This is not the greatest song in the world",
+      "description": "This is a tribute",
+      "public": false,
+      "id": 2
     }
   ]
 }
