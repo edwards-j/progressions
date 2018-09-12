@@ -3,64 +3,21 @@ import Link from 'react-router-dom'
 import DataManager from '../../modules/DataManager'
 import './ChordDisplayer'
 import './NewSong.css'
+import UserSS from '../../modules/userSS'
 import ChordDisplayer from './ChordDisplayer';
+import * as Key from 'tonal-key'
+import * as Scale from 'tonal-scale'
 
 export default class NewSong extends Component {
-    // constructor(props) {
-    //     super(props)
-
-    //     this.handleKeyChange = this.handleKeyChange.bind(this)
-    // }
-
     state = {
         title: "",
-        currentKey: {
-            name: "",
-            id: "",
-            chords: [
-                {
-                    "name": "",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "",
-                    "audio": "",
-                    "img": ""
-                },
-                {
-                    "name": "",
-                    "audio": "",
-                    "img": ""
-                }
-            ]
-        },
+        selectedKey: [],
         yourChords:
         {
-            "chord1": "",
-            "chord2": "",
-            "chord3": "",
-            "chord4": ""
+            chord1: "",
+            chord2: "",
+            chord3: "",
+            chord4: ""
         }
         ,
         lyrics: "",
@@ -73,10 +30,10 @@ export default class NewSong extends Component {
             .then(res => this.setState({ currentKey: res }))
             .then(() => this.setState({
                 yourChords: {
-                    "chord1": this.state.currentKey.chords[0].name,
-                    "chord2": this.state.currentKey.chords[0].name,
-                    "chord3": this.state.currentKey.chords[0].name,
-                    "chord4": this.state.currentKey.chords[0].name,
+                    "chord1": "",
+                    "chord2": "",
+                    "chord3": "",
+                    "chord4": "",
                 }
             }))
     }
@@ -125,11 +82,6 @@ export default class NewSong extends Component {
         })
     }
 
-    componentDidMount = () => {
-        DataManager.getData.getKey(1)
-            .then(res => this.setState({ currentKey: res }))
-    }
-
     handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
@@ -138,9 +90,12 @@ export default class NewSong extends Component {
 
     saveSong = () => {
         const newSong = {
+            userID: UserSS.loadUserIDFromSS(),
             title: this.state.title,
-            key: this.state.currentKey.name,
-            chords: this.state.yourChords,
+            chord1: this.state.yourChords.chord1,
+            chord2: this.state.yourChords.chord2,
+            chord3: this.state.yourChords.chord3,
+            chord4: this.state.yourChords.chord4,
             lyrics: this.state.lyrics,
             description: this.state.description,
             public: false
@@ -150,9 +105,6 @@ export default class NewSong extends Component {
     }
 
     render() {
-        const chord = this.state.currentKey.chords
-
-
         return (
             <div>
                 <div className="has-text-centered">
@@ -160,66 +112,74 @@ export default class NewSong extends Component {
                     <input type="text" id="title" onChange={this.handleFieldChange} /><br />
                 </div>
                 Select Key:
-                <select name="selectedKey" id="selectedKey" onChange={this.handleKeyChange}>
-                    <option value="1">Cmaj</option>
-                    <option value="2">Cmi</option>
-                    <option value="3">Dmaj</option>
-                    <option value="4">Dmi</option>
-                    <option value="5">Emaj</option>
-                    <option value="6">Emi</option>
-                    <option value="7">Fmaj</option>
-                    <option value="8">Fmi</option>
-                    <option value="9">Gmaj</option>
-                    <option value="10">Gmi</option>
-                    <option value="11">Amaj</option>
-                    <option value="12">Ami</option>
-                    <option value="13">Bmaj</option>
-                    <option value="14">Bmi</option>
+                <select name="selectedKey" id="selectedKey" onChange={this.handleFieldChange}>
+                    <option value="C Major">C Major</option>
+                    <option value="C Minor">C Minor</option>
+                    <option value="D Major">D Major</option>
+                    <option value="D Minor">D Minor</option>
+                    <option value="E Major">E Major</option>
+                    <option value="E Minor">E Minor</option>
+                    <option value="F Major">F Major</option>
+                    <option value="F Minor">F Minor</option>
+                    <option value="G Major">G Major</option>
+                    <option value="G Minor">G Minor</option>
+                    <option value="A Major">A Major</option>
+                    <option value="A Minor">A Minor</option>
+                    <option value="B Major">B Major</option>
+                    <option value="B Minor">B Minor</option>
                 </select>
 
                 <div>
                     <div>
                         <h4 className="is-size-4 has-text-centered">Available Chords</h4>
-                        {
-                            <div className="columns">
-                                {
-                                    chord.map((chord) =>
-                                        <p key={chord.id} className="column has-text-centered">{chord.name}</p>
-                                    )
-                                }
-                            </div>
-                        }
+
+
+                        <div className="columns">
+                            {
+                                Key.degrees(this.state.selectedKey).map(deg => <p key={deg.index} className="column has-text-centered degree">{deg}</p>)
+                            }
+                        </div>
+                        <div className="columns">
+                            {
+                                Key.chords(this.state.selectedKey).map(chord => <p key={chord.index} className="column has-text-centered">{chord.split("7")}</p>)
+                            }
+                        </div>
+
                     </div>
                     <h4 className="is-size-4 has-text-centered">Your Chords</h4>
                     <div className="your-chords columns">
                         <div className="chord has-text-centered column">
                             <select name="chord1" id="chord1" onChange={this.handleChord1Change}>
+                                <option value="---">---</option>
                                 {
-                                    chord.map(chord => <option value={chord.name}>{chord.name}</option>)
+                                    Key.chords(this.state.selectedKey).map(chord => <option key={chord.index} className="column has-text-centered" value={chord.split("7")}>{chord.split("7")}</option>)
                                 }
                             </select>
                             <ChordDisplayer.Chord1Displayer yourChords={this.state.yourChords} {...this.props} />
                         </div>
                         <div className="chord has-text-centered column">
                             <select name="chord2" id="chord2" onChange={this.handleChord2Change}>
+                                <option value="---">---</option>
                                 {
-                                    chord.map(chord => <option value={chord.name}>{chord.name}</option>)
+                                    Key.chords(this.state.selectedKey).map(chord => <option key={chord.index} className="column has-text-centered" value={chord.split("7")}>{chord.split("7")}</option>)
                                 }
                             </select>
                             <ChordDisplayer.Chord2Displayer yourChords={this.state.yourChords} {...this.props} />
                         </div>
                         <div className="chord has-text-centered column">
                             <select name="chord3" id="chord3" onChange={this.handleChord3Change}>
+                                <option value="---">---</option>
                                 {
-                                    chord.map(chord => <option value={chord.name}>{chord.name}</option>)
+                                    Key.chords(this.state.selectedKey).map(chord => <option key={chord.index} className="column has-text-centered" value={chord.split("7")}>{chord.split("7")}</option>)
                                 }
                             </select>
                             <ChordDisplayer.Chord3Displayer yourChords={this.state.yourChords} {...this.props} />
                         </div>
                         <div className="chord has-text-centered column">
                             <select name="chord4" id="chord4" onChange={this.handleChord4Change}>
+                                <option value="---">---</option>
                                 {
-                                    chord.map(chord => <option value={chord.name}>{chord.name}</option>)
+                                    Key.chords(this.state.selectedKey).map(chord => <option key={chord.index} className="column has-text-centered" value={chord.split("7")}>{chord.split("7")}</option>)
                                 }
                             </select>
                             <ChordDisplayer.Chord4Displayer yourChords={this.state.yourChords} {...this.props} />

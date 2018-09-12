@@ -1,8 +1,41 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import DataManager from '../../modules/DataManager'
 import './Login.css'
 
 class Login extends Component {
+    state = {
+        username: "",
+        password: "",
+        rememberMe: false
+    }
+
+    handleFieldChange = evt => {
+        const stateToChange = {}
+        stateToChange[evt.target.id] = evt.target.value
+        this.setState(stateToChange)
+    }
+
+    login = () => {
+        DataManager.getData.getUsers()
+            .then(result => {
+                let user = result.find(result => {
+                    //Checks to see if the info entered is in the database
+                    return this.state.username === result.username && this.state.password === result.password
+                })
+                if (!user) {
+                    alert("Username does not exist")
+                } else {
+                    return DataManager.getData.getUser(this.state.username)
+                        .then((result) => {
+                            let stringifiedUserObject = JSON.stringify(result);
+                            sessionStorage.setItem("userInfo", stringifiedUserObject)
+                            this.props.history.push("/dashboard")
+                        })
+                }
+            })
+    }
+
     render() {
         return (
             <section class="hero login-form is-fullheight">
@@ -16,17 +49,17 @@ class Login extends Component {
                                     <div class="field">
                                         <div class="control">
                                             <label className="login-flag">Username</label>
-                                            <input class="input is-large" type="email" placeholder="" autofocus="" />
+                                            <input id="username" onChange={this.handleFieldChange} class="input is-large" type="text" placeholder="" />
                                         </div>
                                     </div>
 
                                     <div class="field">
                                         <div class="control">
                                             <label className="login-flag">Password</label>
-                                            <input class="input is-large" type="password" placeholder="" />
+                                            <input id="password" onChange={this.handleFieldChange} class="input is-large" type="password" placeholder="" />
                                         </div>
                                     </div>
-                                    <button class="button is-block is-warning is-large is-fullwidth">Let's Rock</button>
+                                    <button class="button is-block is-warning is-large is-fullwidth" onClick={this.login}>Let's Rock</button>
                                 </form>
                             </div>
                             <p class="has-text-grey has-text-center">

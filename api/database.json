@@ -1,0 +1,249 @@
+{
+    "users": [
+        {
+            "id": "",
+            "username": "",
+            "password": ""
+        }
+    ],
+    "keys": [
+        {
+            "name": "Cmaj",
+            "id": 1
+        },
+        {
+            "name": "Cmi",
+            "id": 2
+        },
+        {
+            "name": "Dmaj",
+            "id": 3
+        },
+        {
+            "name": "Dmi",
+            "id": 4
+        },
+        {
+            "name": "Emaj",
+            "id": 5
+        },
+        {
+            "name": "Emi",
+            "id": 6
+        },
+        {
+            "name": "Fmaj",
+            "id": 7
+        },
+        {
+            "name": "Fmi",
+            "id": 8
+        },
+        {
+            "name": "Gmaj",
+            "id": 9
+        },
+        {
+            "name": "Gmi",
+            "id": 10
+        },
+        {
+            "name": "Amaj",
+            "id": 11
+        },
+        {
+            "name": "Ami",
+            "id": 12
+        },
+        {
+            "name": "Bmaj",
+            "id": 13
+        },
+        {
+            "name": "Bmi",
+            "id": 14
+        }
+    ],
+    "chords": [
+        {
+            "name": "C",
+            "id": 1
+        },
+        {
+            "name": "Cm",
+            "id": 2
+        },
+        {
+            "name": "Cdim",
+            "id": 3
+        },
+        {
+            "name": "C♯",
+            "id": 4
+        },
+        {
+            "name": "C♯m",
+            "id": 5
+        },
+        {
+            "name": "C♯dim",
+            "id": 6
+        },
+        {
+            "name": "D",
+            "id": 7
+        },
+        {
+            "name": "Dm",
+            "id": 8
+        },
+        {
+            "name": "Ddim",
+            "id": 9
+        },
+        {
+            "name": "D♯",
+            "id": 10
+        },
+        {
+            "name": "D♯m",
+            "id": 11
+        },
+        {
+            "name": "D♯dim",
+            "id": 12
+        },
+        {
+            "name": "E",
+            "id": 13
+        },
+        {
+            "name": "Em",
+            "id": 14
+        },
+        {
+            "name": "Edim",
+            "id": 15
+        },
+        {
+            "name": "F",
+            "id": 16
+        },
+        {
+            "name": "Fm",
+            "id": 17
+        },
+        {
+            "name": "Fdim",
+            "id": 18
+        },
+        {
+            "name": "F♯",
+            "id": 19
+        },
+        {
+            "name": "F♯m",
+            "id": 20
+        },
+        {
+            "name": "F♯dim",
+            "id": 21
+        },
+        {
+            "name": "G",
+            "id": 22
+        },
+        {
+            "name": "Gm",
+            "id": 23
+        },
+        {
+            "name": "Gdim",
+            "id": 24
+        },
+        {
+            "name": "G♯",
+            "id": 25
+        },
+        {
+            "name": "G♯m",
+            "id": 26
+        },
+        {
+            "name": "G♯dim",
+            "id": 27
+        },
+        {
+            "name": "A",
+            "id": 28
+        },
+        {
+            "name": "Am",
+            "id": 29
+        },
+        {
+            "name": "Adim",
+            "id": 30
+        },
+        {
+            "name": "A#",
+            "id": 31
+        },
+        {
+            "name": "A#m",
+            "id": 32
+        },
+        {
+            "name": "A#dim",
+            "id": 33
+        },
+        {
+            "name": "B",
+            "id": 34
+        },
+        {
+            "name": "Bm",
+            "id": 35
+        },
+        {
+            "name": "Bdim",
+            "id": 36
+        },
+        {
+            "name": "B♯",
+            "id": 37
+        },
+        {
+            "name": "B♯m",
+            "id": 38
+        },
+        {
+            "name": "B♯dim",
+            "id": 39
+        }
+    ],
+    "KeyChords": [
+        {
+            "id": 1,
+            "keyId": 1,
+            "i": 1,
+            "ii": 8,
+            "iii": 14,
+            "iv": 16,
+            "v": 22,
+            "vi": 29,
+            "vii": 36
+        },
+        {
+            "id": 2,
+            "keyId": 2,
+            "i": 2,
+            "ii": 9,
+            "iii": 10,
+            "iv": 17,
+            "v": 23,
+            "vi": 25,
+            "vii": 31
+        }
+    ]
+}

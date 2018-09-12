@@ -3,20 +3,14 @@ const remoteURL = "http://localhost:8088"
 const getData = Object.create(null, {
     getUsers: {
         value: () => {
-            return fetch(`${remoteURL}/songs`)
+            return fetch(`${remoteURL}/users`)
                 .then(res => res.json())
         }
     },
-    getAllKeys: {
-        value: () => {
-            return fetch(`${remoteURL}/keys`)
-                .then(response => response.json())
-        }
-    },
-    getKey: {
-        value: (keyID) => {
-            return fetch(`${remoteURL}/keys/${keyID}`)
-                .then(response => response.json())
+    getUser: {
+        value: (loginUsername) => {
+            return fetch(`${remoteURL}/users?username=${loginUsername}`)
+                .then(res => res.json())
         }
     },
     getSongs: {

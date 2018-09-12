@@ -1,0 +1,179 @@
+{
+  "users": [
+    {
+      "username": "Jonathan",
+      "password": "j",
+      "id": 1
+    }
+  ],
+  "keys": [
+    {
+      "name": "Cmaj",
+      "id": "1",
+      "i": "C",
+      "ii": "Dmi",
+      "iii": "Emi",
+      "iv": "F",
+      "v": "G",
+      "vi": "Ami",
+      "vii": "B°"
+    },
+    {
+      "name": "Cmi",
+      "id": "2",
+      "i": "Cmi",
+      "ii": "D°",
+      "iii": "E♭",
+      "iv": "Fmi",
+      "v": "Gmi",
+      "vi": "A♭",
+      "vii": "B♭"
+    },
+    {
+      "name": "Dmaj",
+      "id": "3",
+      "i": "D",
+      "ii": "Emi",
+      "iii": "F♯mi",
+      "iv": "G",
+      "v": "A",
+      "vi": "Bmi",
+      "vii": "C♯°"
+    },
+    {
+      "name": "Dmi",
+      "id": "4",
+      "i": "Dmi",
+      "ii": "E°",
+      "iii": "F",
+      "iv": "Gmi",
+      "v": "Ami",
+      "vi": "B♭",
+      "vii": "C"
+    },
+    {
+      "name": "Emaj",
+      "id": "5",
+      "i": "E",
+      "ii": "F♯mi",
+      "iii": "G♯mi",
+      "iv": "A",
+      "v": "B",
+      "vi": "C♯mi",
+      "vii": "D♯°"
+    },
+    {
+      "name": "Emi",
+      "id": "6",
+      "i": "Emi",
+      "ii": "F♯°",
+      "iii": "G",
+      "iv": "Ami",
+      "v": "Bmi",
+      "vi": "C",
+      "vii": "D"
+    },
+    {
+      "name": "Fmaj",
+      "id": "7",
+      "i": "F",
+      "ii": "Gmi",
+      "iii": "Ami",
+      "iv": "B♭",
+      "v": "C",
+      "vi": "Dmi",
+      "vii": "E°"
+    },
+    {
+      "name": "Fmi",
+      "id": "8",
+      "i": "Fmi",
+      "ii": "G°",
+      "iii": "A♭",
+      "iv": "B♭mi",
+      "v": "Cmi",
+      "vi": "D♭",
+      "vii": "E♭"
+    },
+    {
+      "name": "Gmaj",
+      "id": "9",
+      "i": "G",
+      "ii": "Ami",
+      "iii": "Bmi",
+      "iv": "C",
+      "v": "D",
+      "vi": "Emi",
+      "vii": "F♯°"
+    },
+    {
+      "name": "Gmi",
+      "id": "10",
+      "i": "Gmi",
+      "ii": "A°",
+      "iii": "B♭",
+      "iv": "Cmi",
+      "v": "Dmi",
+      "vi": "E♭",
+      "vii": "F"
+    },
+    {
+      "name": "Amaj",
+      "id": "11",
+      "i": "A",
+      "ii": "Bmi",
+      "iii": "C♯mi",
+      "iv": "D",
+      "v": "E",
+      "vi": "F♯mi",
+      "vii": "G♯°"
+    },
+    {
+      "name": "Ami",
+      "id": "12",
+      "i": "Ami",
+      "ii": "B°",
+      "iii": "C",
+      "iv": "Dmi",
+      "v": "Emi",
+      "vi": "F",
+      "vii": "G"
+    },
+    {
+      "name": "Bmaj",
+      "id": "13",
+      "i": "B",
+      "ii": "C♯mi",
+      "iii": "D♯mi",
+      "iv": "E",
+      "v": "F♯",
+      "vi": "G♯mi",
+      "vii": "A♯°"
+    },
+    {
+      "name": "Bmi",
+      "id": "14",
+      "i": "Bmi",
+      "ii": "C♯°",
+      "iii": "D",
+      "iv": "Emi",
+      "v": "F♯mi",
+      "vi": "G",
+      "vii": "A"
+    }
+  ],
+  "songs": [
+    {
+      "title": "Test",
+      "key": "Emi",
+      "chord1": "D",
+      "chord2": "Emi",
+      "chord3": "Ami",
+      "chord4": "Emi",
+      "lyrics": "Test",
+      "description": "Test",
+      "public": false,
+      "id": 2
+    }
+  ]
+}
