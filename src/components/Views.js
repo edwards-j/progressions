@@ -44,7 +44,8 @@ export default class Views extends Component {
                 }} />
                 <Route path="/your-songs/:songId(\d+)" render={props => {
                     return <SongDetail {...props} 
-                    yourSongs={this.state.yourSongs}/>
+                    yourSongs={this.state.yourSongs}
+                    deleteSong={this.deleteSong}/>
                 }} />
             </React.Fragment>
         )

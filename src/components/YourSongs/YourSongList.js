@@ -11,7 +11,7 @@ export default class YourSongList extends Component {
                 <div className="columns">
                     <div className="column is-three-fifths is-offset-one-fifth">
                         {
-                            this.props.yourSongs.map((song) => <SongCard song={song} deleteSong={this.deleteSong}/>)
+                            this.props.yourSongs.map((song) => <SongCard song={song} deleteSong={this.props.deleteSong}/>)
                         }
                     </div>
                 </div>

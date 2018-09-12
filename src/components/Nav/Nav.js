@@ -12,19 +12,14 @@ export default class Nav extends Component {
 
     render() {
         return (
-            <nav className="navbar is-info">
+            <nav className="navbar has-background-grey-light">
                 <div className="navbar-brand">
                     <a className="navbar-item" href="">
                         <img src={logo} alt="logo" />
                     </a>
-                    <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
                 </div>
 
-                <div id="navbarExampleTransparentExample" className="navbar-menu">
+                <div id="" className="navbar-menu is-active">
                     <div className="navbar-start">
                         <Link className="navbar-item" to="/dashboard">Dashboard</Link>
                         <Link className="navbar-item" to="/new-song">New Song</Link>

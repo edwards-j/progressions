@@ -1,0 +1,45 @@
+.song-card {
+    margin: 2em;
+    box-shadow: none;
+    transform: scale(1);
+    transition: all .2s
+}
+.song-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 13px 52px -28px rgba(0,0,0,0.75);
+}
+
+.card-title {
+    padding: .5em;
+    border-radius: 5px 5px 0 0 ;
+    position: relative;
+}
+
+.card-body {
+    padding: .5em;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-radius: 0 0 5px 5px;
+}
+
+.delete-button {
+    position: absolute;
+    right: 1em;
+    top: .75em;
+    border: none;
+    transition: all .2s;
+    text-align: center;
+    transform: scale(1);
+    transition: all .2s;
+    transition-timing-function: cubic-bezier(.32,-0.39,.67,1.52)
+}
+
+.delete-button:hover {
+    color: white;
+    transform: scale(1.2)
+}
+
+.card-description {
+    margin: 1em
+}

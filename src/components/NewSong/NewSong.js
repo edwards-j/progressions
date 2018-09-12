@@ -11,7 +11,7 @@ import * as Scale from 'tonal-scale'
 export default class NewSong extends Component {
     state = {
         title: "",
-        selectedKey: [],
+        selectedKey: "C Major",
         chord1: "",
         chord2: "",
         chord3: "",
@@ -88,11 +88,43 @@ export default class NewSong extends Component {
             description: this.state.description,
             public: false
         }
-
         DataManager.saveData.saveSong(newSong)
+        .then(() => this.props.history.push("/your-songs"))
     }
 
     render() {
+        let playAudio = (e) => {
+            const audio = document.querySelector(`audio[data-key = "${e.keyCode}"]`);
+            const key = document.querySelector(`.key[data-key = "${e.keyCode}"]`);
+            console.log(key)
+        
+            if (!key) {
+                return; //Stops function from running if you press an invalid key
+            };
+            // if (!audio) {
+            //     return; //Stops function from running if you press an invalid key
+            // };
+
+            // audio.currentTime = 0;  //rewind audio to start each time the key is pressed
+        
+            // audio.play(); //Plays audio
+            key.classList.add("playing") //Adds styles to the pressed key
+        };
+        
+        function removeTransition(e) {
+            if (e.propertyName !== 'transform') {return} //Stops function if you press an invalid key
+            this.classList.remove("playing") //Removes styles after the transition has ended
+        }
+        
+        const keys = document.querySelectorAll(".key");
+        
+        window.addEventListener("keydown", playAudio) //Listens for key presses 
+        
+        keys.forEach(key =>
+            key.addEventListener('transitionend', removeTransition) 
+        )
+        
+        
         return (
             <div>
                 <div className="has-text-centered">
@@ -127,16 +159,21 @@ export default class NewSong extends Component {
                                 Key.degrees(this.state.selectedKey).map(deg => <p key={deg.index} className="column has-text-centered degree">{deg}</p>)
                             }
                         </div>
-                        <div className="columns">
-                            {
-                                Key.chords(this.state.selectedKey).map(chord => <p key={chord.index} className="column has-text-centered">{chord.split("7")}</p>)
-                            }
+                        <div className="columns keys">
+                                <div data-key="49" className="key column has-text-centered chord1">{Key.chords(this.state.selectedKey)[0].split("7")}</div>
+                                <div data-key="50" className="key column has-text-centered chord2">{Key.chords(this.state.selectedKey)[1].split("7")}</div>
+                                <div data-key="51" className="key column has-text-centered chord3">{Key.chords(this.state.selectedKey)[2].split("7")}</div>
+                                <div data-key="52" className="key column has-text-centered chord4">{Key.chords(this.state.selectedKey)[3].split("7")}</div>
+                                <div data-key="53" className="key column has-text-centered chord5">{Key.chords(this.state.selectedKey)[4].split("7")}</div>
+                                <div data-key="54" className="key column has-text-centered chord6">{Key.chords(this.state.selectedKey)[5].split("7")}</div>
+                                <div data-key="55" className="key column has-text-centered chord7">{Key.chords(this.state.selectedKey)[6].split("7")}</div>
+                            
                         </div>
 
                     </div>
                     <h4 className="is-size-4 has-text-centered">Your Chords</h4>
                     <div className="your-chords columns">
-                        <div className="chord has-text-centered column">
+                        <div className="chord has-text-centered column is-offset-3">
                             <select name="chord1" id="chord1" onChange={this.handleChord1Change}>
                                 <option value="---">---</option>
                                 {
