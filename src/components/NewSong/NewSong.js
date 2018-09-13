@@ -7,11 +7,14 @@ import UserSS from '../../modules/userSS'
 import ChordDisplayer from './ChordDisplayer';
 import * as Key from 'tonal-key'
 import * as Scale from 'tonal-scale'
+import Major from './Major'
+import Minor from './Minor'
 
 export default class NewSong extends Component {
     state = {
         title: "",
-        selectedKey: "C Major",
+        selectedKey: "C",
+        MajorMinor: "major",
         chord1: "",
         chord2: "",
         chord3: "",
@@ -63,10 +66,10 @@ export default class NewSong extends Component {
 
     handleChord4Change = evt => {
         this.setState({
-                "chord1": this.state.chord1,
-                "chord2": this.state.chord2,
-                "chord3": this.state.chord3,
-                "chord4": evt.target.value,
+            "chord1": this.state.chord1,
+            "chord2": this.state.chord2,
+            "chord3": this.state.chord3,
+            "chord4": evt.target.value,
         })
     }
 
@@ -79,6 +82,8 @@ export default class NewSong extends Component {
     constructNewSong = () => {
         const newSong = {
             userId: UserSS.loadUserIDFromSS(),
+            selectedKey: this.state.selectedKey,
+            MajorMinor: this.state.MajorMinor,
             title: this.state.title,
             chord1: this.state.chord1,
             chord2: this.state.chord2,
@@ -89,7 +94,7 @@ export default class NewSong extends Component {
             public: false
         }
         this.props.addSong(newSong)
-        .then(() => this.props.history.push("/your-songs"))
+            .then(() => this.props.history.push("/your-songs"))
     }
 
     render() {
@@ -97,7 +102,7 @@ export default class NewSong extends Component {
             const audio = document.querySelector(`audio[data-key = "${e.keyCode}"]`);
             const key = document.querySelector(`.key[data-key = "${e.keyCode}"]`);
             console.log(key)
-        
+
             if (!key) {
                 return; //Stops function from running if you press an invalid key
             };
@@ -106,26 +111,24 @@ export default class NewSong extends Component {
             // };
 
             // audio.currentTime = 0;  //rewind audio to start each time the key is pressed
-        
+
             // audio.play(); //Plays audio
             key.classList.add("playing") //Adds styles to the pressed key
         };
-        
+
         function removeTransition(e) {
-            if (e.propertyName !== 'transform') {return} //Stops function if you press an invalid key
+            if (e.propertyName !== 'transform') { return } //Stops function if you press an invalid key
             this.classList.remove("playing") //Removes styles after the transition has ended
         }
-        
+
         const keys = document.querySelectorAll(".key");
-        
+
         window.addEventListener("keydown", playAudio) //Listens for key presses 
-        
+
         keys.forEach(key =>
-            key.addEventListener('transitionend', removeTransition) 
+            key.addEventListener('transitionend', removeTransition)
         )
-        
-        
-        console.log(Key.chords("A Minor"))
+
         return (
             <div>
                 <div className="has-text-centered">
@@ -134,83 +137,47 @@ export default class NewSong extends Component {
                 </div>
                 Select Key:
                 <select name="selectedKey" id="selectedKey" onChange={this.handleFieldChange}>
-                    <option value="C Major">C Major</option>
-                    <option value="C Minor">C Minor</option>
-                    <option value="D Major">D Major</option>
-                    <option value="D Minor">D Minor</option>
-                    <option value="E Major">E Major</option>
-                    <option value="E Minor">E Minor</option>
-                    <option value="F Major">F Major</option>
-                    <option value="F Minor">F Minor</option>
-                    <option value="G Major">G Major</option>
-                    <option value="G Minor">G Minor</option>
-                    <option value="A Major">A Major</option>
-                    <option value="A Minor">A Minor</option>
-                    <option value="B Major">B Major</option>
-                    <option value="B Minor">B Minor</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                </select>
+                <select name="MajorMinor" id="MajorMinor" onChange={this.handleFieldChange}>
+                    <option value="major">Major</option>
+                    <option value="minor">Minor</option>
                 </select>
 
                 <div>
-                    <div>
-                        <h4 className="is-size-4 has-text-centered">Available Chords</h4>
 
+                    {(this.state.MajorMinor === "major") ?
+                        <Major
+                            chord1={this.state.chord1}
+                            chord2={this.state.chord2}
+                            chord3={this.state.chord3}
+                            chord4={this.state.chord4}
+                            handleChord1Change={this.handleChord1Change}
+                            handleChord2Change={this.handleChord2Change}
+                            handleChord3Change={this.handleChord3Change}
+                            handleChord4Change={this.handleChord4Change}
+                            selectedKey={this.state.selectedKey}
+                            MajorMinor={this.state.MajorMinor} />
+                        :
+                        <Minor
+                            chord1={this.state.chord1}
+                            chord2={this.state.chord2}
+                            chord3={this.state.chord3}
+                            chord4={this.state.chord4}
+                            handleChord1Change={this.handleChord1Change}
+                            handleChord2Change={this.handleChord2Change}
+                            handleChord3Change={this.handleChord3Change}
+                            handleChord4Change={this.handleChord4Change}
+                            selectedKey={this.state.selectedKey}
+                            MajorMinor={this.state.MajorMinor} />
+                    }
 
-                        <div className="columns is-gapless degrees">
-                            {
-                                Key.degrees(this.state.selectedKey).map(deg => <p key={deg.index} className="column has-text-centered degree">{deg}</p>)
-                            }
-                        </div>
-                        <div className="columns keys is-gapless">
-                                <div data-key="49" className="key column has-text-centered chord1">{Key.chords(this.state.selectedKey)[0].split("7")}</div>
-                                <div data-key="50" className="key column has-text-centered chord2">{Key.chords(this.state.selectedKey)[1].split("7")}</div>
-                                <div data-key="51" className="key column has-text-centered chord3">{Key.chords(this.state.selectedKey)[2].split("7")}</div>
-                                <div data-key="52" className="key column has-text-centered chord4">{Key.chords(this.state.selectedKey)[3].split("7")}</div>
-                                <div data-key="53" className="key column has-text-centered chord5">{Key.chords(this.state.selectedKey)[4].split("7")}</div>
-                                <div data-key="54" className="key column has-text-centered chord6">{Key.chords(this.state.selectedKey)[5].split("7")}</div>
-                                <div data-key="55" className="key column has-text-centered chord7">{Key.chords(this.state.selectedKey)[6].split("7")}</div>
-                            
-                        </div>
-
-                    </div>
-                    <h4 className="is-size-4 has-text-centered">Your Chords</h4>
-                    <div className="your-chords columns">
-                        <div className="chord has-text-centered column is-offset-3">
-                            <select name="chord1" id="chord1" onChange={this.handleChord1Change}>
-                                <option value="---">---</option>
-                                {
-                                    Key.chords(this.state.selectedKey).map(chord => <option key={chord.index} className="column has-text-centered" value={chord.split("7")}>{chord.split("7")}</option>)
-                                }
-                            </select>
-                            <ChordDisplayer.Chord1Displayer chord1={this.state.chord1} {...this.props} />
-                        </div>
-                        <div className="chord has-text-centered column">
-                            <select name="chord2" id="chord2" onChange={this.handleChord2Change}>
-                                <option value="---">---</option>
-                                {
-                                    Key.chords(this.state.selectedKey).map(chord => <option key={chord.index} className="column has-text-centered" value={chord.split("7")}>{chord.split("7")}</option>)
-                                }
-                            </select>
-                            <ChordDisplayer.Chord2Displayer chord2={this.state.chord2} {...this.props} />
-                        </div>
-                        <div className="chord has-text-centered column">
-                            <select name="chord3" id="chord3" onChange={this.handleChord3Change}>
-                                <option value="---">---</option>
-                                {
-                                    Key.chords(this.state.selectedKey).map(chord => <option key={chord.index} className="column has-text-centered" value={chord.split("7")}>{chord.split("7")}</option>)
-                                }
-                            </select>
-                            <ChordDisplayer.Chord3Displayer chord3={this.state.chord3} {...this.props} />
-                        </div>
-                        <div className="chord has-text-centered column">
-                            <select name="chord4" id="chord4" onChange={this.handleChord4Change}>
-                                <option value="---">---</option>
-                                {
-                                    Key.chords(this.state.selectedKey).map(chord => <option key={chord.index} className="column has-text-centered" value={chord.split("7")}>{chord.split("7")}</option>)
-                                }
-                            </select>
-                            <ChordDisplayer.Chord4Displayer chord4={this.state.chord4} {...this.props} />
-                        </div>
-                    </div>
                 </div>
                 <div className="has-text-centered">
                     <h4 className="is-size-4">Lyrics</h4>

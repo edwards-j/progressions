@@ -47,6 +47,20 @@
       "description": "The best song ever written",
       "public": false,
       "id": 3
+    },
+    {
+      "userId": 1,
+      "selectedKey": "A",
+      "MajorMinor": "minor",
+      "title": "Test",
+      "chord1": "Am",
+      "chord2": "F",
+      "chord3": "G",
+      "chord4": "F",
+      "lyrics": "Test",
+      "description": "Test",
+      "public": false,
+      "id": 4
     }
   ]
 }
