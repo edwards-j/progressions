@@ -125,6 +125,7 @@ export default class NewSong extends Component {
         )
         
         
+        console.log(Key.chords("A Minor"))
         return (
             <div>
                 <div className="has-text-centered">
@@ -154,12 +155,12 @@ export default class NewSong extends Component {
                         <h4 className="is-size-4 has-text-centered">Available Chords</h4>
 
 
-                        <div className="columns">
+                        <div className="columns is-gapless degrees">
                             {
                                 Key.degrees(this.state.selectedKey).map(deg => <p key={deg.index} className="column has-text-centered degree">{deg}</p>)
                             }
                         </div>
-                        <div className="columns keys">
+                        <div className="columns keys is-gapless">
                                 <div data-key="49" className="key column has-text-centered chord1">{Key.chords(this.state.selectedKey)[0].split("7")}</div>
                                 <div data-key="50" className="key column has-text-centered chord2">{Key.chords(this.state.selectedKey)[1].split("7")}</div>
                                 <div data-key="51" className="key column has-text-centered chord3">{Key.chords(this.state.selectedKey)[2].split("7")}</div>

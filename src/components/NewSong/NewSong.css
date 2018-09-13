@@ -15,7 +15,6 @@
 }
 
 .key {
-    border-radius: 5px;
     margin: 1rem;
     font-size: 1.5rem;
     padding: 1rem .5rem;
@@ -30,6 +29,10 @@
     transform: scale(1.1);
     border-color: dodgerblue;
     box-shadow: 0 0 1rem gray;
+  }
+
+  .degrees {
+      margin-bottom: 0 !important
   }
 
   .chord1 {
