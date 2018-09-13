@@ -76,7 +76,7 @@ export default class NewSong extends Component {
         this.setState(stateToChange)
     }
 
-    saveSong = () => {
+    constructNewSong = () => {
         const newSong = {
             userId: UserSS.loadUserIDFromSS(),
             title: this.state.title,
@@ -88,7 +88,7 @@ export default class NewSong extends Component {
             description: this.state.description,
             public: false
         }
-        DataManager.saveData.saveSong(newSong)
+        this.props.addSong(newSong)
         .then(() => this.props.history.push("/your-songs"))
     }
 
@@ -128,8 +128,8 @@ export default class NewSong extends Component {
         return (
             <div>
                 <div className="has-text-centered">
-                    <h4 className="is-size-4">Song Title</h4>
-                    <input type="text" id="title" onChange={this.handleFieldChange} /><br />
+                    <h2 className="is-size-2">{this.state.title}</h2>
+                    <input type="text" id="title" placeholder="Enter Song Title" onChange={this.handleFieldChange} /><br />
                 </div>
                 Select Key:
                 <select name="selectedKey" id="selectedKey" onChange={this.handleFieldChange}>
@@ -219,7 +219,7 @@ export default class NewSong extends Component {
                     <h4 className="is-size-4">Song Description</h4>
                     <input type="text" id="description" onChange={this.handleFieldChange} />
                 </div>
-                <button className="button is-info" onClick={this.saveSong}>Save Song</button>
+                <button className="button is-info" onClick={this.constructNewSong}>Save Song</button>
 
             </div>
         )

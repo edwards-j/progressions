@@ -29,7 +29,7 @@
   .playing {
     transform: scale(1.1);
     border-color: dodgerblue;
-    box-shadow: 0 0 1rem #FC5130;
+    box-shadow: 0 0 1rem gray;
   }
 
   .chord1 {

@@ -11,5 +11,42 @@
       "id": 2
     }
   ],
-  "songs": []
+  "songs": [
+    {
+      "userId": 2,
+      "title": "Two Weeks",
+      "chord1": "GMaj,",
+      "chord2": "Am,",
+      "chord3": "D,",
+      "chord4": "CMaj,",
+      "lyrics": "[Intro]\nOh Oh Oh Oh\nOh Oh Oh Oh\n\n[Verse 1]\nSave up all the days\nA routine malaise\nJust like yesterday\nI told you I would stay\nOh Oh Oh Oh\n\n[Chorus]\nWould you always?\nMaybe sometimes?\nMake it easy?\nTake your time\n\n[Verse 2]\nOh Oh Oh Oh\nThink of all the ways\nMomentary phase\nJust like yesterday\nI told you I would stay\nEvery time you try\nQuarter half a mile\nJust like yesterday\nI told you I would stay\nOh Oh Oh Oh\n\n[Chorus]\nWould you always?\nMaybe sometimes?\nMake it easy?\nTake your time\n\n[Chorus]\nWould you always?\nMaybe sometimes?\nMake it easy?\nTake your time\n\n[Post-Chorus]\nAlways\nSometimes\nEasy\nTime\n\n[Outro]\nOh Oh Oh Oh\nOh Oh Oh Oh",
+      "description": "This is a super good song about stuff",
+      "public": false,
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "title": "Test",
+      "chord1": "Em,",
+      "chord2": "Em,",
+      "chord3": "Bm,",
+      "chord4": "A,",
+      "lyrics": "There must be some kind of way outta here\nSaid the joker to the thief\nThere's too much confusion\nI can't get no relief\nBusiness men, they drink my wine\nPlowman dig my earth\nNone were level on the mind\nNobody up at his word\nHey, hey\nNo reason to get excited\nThe thief he kindly spoke\nThere are many here among us\nWho feel that life is but a joke\nBut, uh, but you and I, we've been through that\nAnd this is not our fate\nSo let us stop talkin' falsely now\nThe hour's getting late, hey\nAll along the watchtower\nPrinces kept the view\nWhile all the women came and went\nBarefoot servants, too\nOutside in the cold distance \nA wildcat did growl\nTwo riders were approaching\nAnd the wind began to howl",
+      "description": "Super rad song",
+      "public": false,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "title": "NSS National Anthem",
+      "chord1": "Em,",
+      "chord2": "Bm,",
+      "chord3": "CMaj,",
+      "chord4": "Am,",
+      "lyrics": "There must be some kind of way outta here\nSaid the joker to the thief\nThere's too much confusion\nI can't get no relief\nBusiness men, they drink my wine\nPlowman dig my earth\nNone were level on the mind\nNobody up at his word\nHey, hey\nNo reason to get excited\nThe thief he kindly spoke\nThere are many here among us\nWho feel that life is but a joke\nBut, uh, but you and I, we've been through that\nAnd this is not our fate\nSo let us stop talkin' falsely now\nThe hour's getting late, hey\nAll along the watchtower\nPrinces kept the view\nWhile all the women came and went\nBarefoot servants, too\nOutside in the cold distance \nA wildcat did growl\nTwo riders were approaching\nAnd the wind began to howl",
+      "description": "The best song ever written",
+      "public": false,
+      "id": 3
+    }
+  ]
 }

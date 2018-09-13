@@ -22,6 +22,12 @@ export default class Views extends Component {
             .then(songs => this.setState({ yourSongs: songs }))
     }
 
+    addSong = (song) => 
+        DataManager.saveData.saveSong(song)
+        .then((() => DataManager.getData.getUserSongs(UserSS.loadUserIDFromSS())))
+        .then(songs => this.setState({yourSongs: songs}))
+    
+
     deleteSong = (songID) => {
         DataManager.deleteData.deleteSong(songID)
             .then(() => {
@@ -36,7 +42,10 @@ export default class Views extends Component {
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/dashboard" component={Dashboard} />
-                <Route exact path ="/new-song" component={NewSong} />
+                <Route exact path ="/new-song" render={props => {
+                    return <NewSong {...props}
+                    addSong={this.addSong} />
+                }} />
                 <Route exact path ="/your-songs" render={props => {
                     return <YourSongList {...props} 
                     yourSongs={this.state.yourSongs}
