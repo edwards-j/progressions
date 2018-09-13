@@ -61,4 +61,20 @@ const deleteData = Object.create(null, {
 }
 )
 
-export default { getData, saveData, deleteData }
+const editData = Object.create(null, {
+    editSong: {
+        value: function (songID, updatedSong) {
+            return fetch(`${remoteURL}/songs/${songID}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(updatedSong)
+            })
+                .then(e => e.json())
+        }
+    }
+}
+)
+
+export default { getData, saveData, deleteData, editData }

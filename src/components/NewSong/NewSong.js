@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
-import Link from 'react-router-dom'
 import DataManager from '../../modules/DataManager'
 import './ChordDisplayer'
 import './NewSong.css'
 import UserSS from '../../modules/userSS'
-import ChordDisplayer from './ChordDisplayer';
-import * as Key from 'tonal-key'
-import * as Scale from 'tonal-scale'
 import Major from './Major'
 import Minor from './Minor'
 
