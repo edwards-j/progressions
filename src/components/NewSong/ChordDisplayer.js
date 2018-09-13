@@ -36,7 +36,7 @@ const Chord1Displayer = ({chord1}) => {
         return <img className="chordChart" src={Dflat} alt="D♭" />
     } else if (chord1 === "Dbm") {
         return <img className="chordChart" src={Dflatmi} alt="D" />
-    } else if (chord1 === "D,") {
+    } else if (chord1 === "Dm") {
         return <img className="chordChart" src={Dmi} alt="Dmi" />
     } else if (chord1 === "E") {
         return <img className="chordChart" src={E} alt="E" />
@@ -50,7 +50,7 @@ const Chord1Displayer = ({chord1}) => {
         return <img className="chordChart" src={F} alt="F" />
     } else if (chord1 === "F#") {
         return <img className="chordChart" src={Fsharp} alt="F#" />
-    } else if (chord1 === "F#m,") {
+    } else if (chord1 === "F#m") {
         return <img className="chordChart" src={Fsharpmi} alt="F#mi" />
     } else if (chord1 === "Fm") {
         return <img className="chordChart" src={Fmi} alt="Fmi" />
@@ -90,7 +90,7 @@ const Chord2Displayer = ({chord2}) => {
         return <img className="chordChart" src={Dflat} alt="D♭" />
     } else if (chord2 === "Dbm") {
         return <img className="chordChart" src={Dflatmi} alt="D" />
-    } else if (chord2 === "D,") {
+    } else if (chord2 === "Dm") {
         return <img className="chordChart" src={Dmi} alt="Dmi" />
     } else if (chord2 === "E") {
         return <img className="chordChart" src={E} alt="E" />
@@ -104,7 +104,7 @@ const Chord2Displayer = ({chord2}) => {
         return <img className="chordChart" src={F} alt="F" />
     } else if (chord2 === "F#") {
         return <img className="chordChart" src={Fsharp} alt="F#" />
-    } else if (chord2 === "F#m,") {
+    } else if (chord2 === "F#m") {
         return <img className="chordChart" src={Fsharpmi} alt="F#mi" />
     } else if (chord2 === "Fm") {
         return <img className="chordChart" src={Fmi} alt="Fmi" />
@@ -144,7 +144,7 @@ const Chord3Displayer = ({chord3}) => {
         return <img className="chordChart" src={Dflat} alt="D♭" />
     } else if (chord3 === "Dbm") {
         return <img className="chordChart" src={Dflatmi} alt="D" />
-    } else if (chord3 === "D,") {
+    } else if (chord3 === "Dm") {
         return <img className="chordChart" src={Dmi} alt="Dmi" />
     } else if (chord3 === "E") {
         return <img className="chordChart" src={E} alt="E" />
@@ -158,7 +158,7 @@ const Chord3Displayer = ({chord3}) => {
         return <img className="chordChart" src={F} alt="F" />
     } else if (chord3 === "F#") {
         return <img className="chordChart" src={Fsharp} alt="F#" />
-    } else if (chord3 === "F#m,") {
+    } else if (chord3 === "F#m") {
         return <img className="chordChart" src={Fsharpmi} alt="F#mi" />
     } else if (chord3 === "Fm") {
         return <img className="chordChart" src={Fmi} alt="Fmi" />
@@ -198,7 +198,7 @@ const Chord4Displayer = ({chord4}) => {
         return <img className="chordChart" src={Dflat} alt="D♭" />
     } else if (chord4 === "Dbm") {
         return <img className="chordChart" src={Dflatmi} alt="D" />
-    } else if (chord4 === "D,") {
+    } else if (chord4 === "Dm") {
         return <img className="chordChart" src={Dmi} alt="Dmi" />
     } else if (chord4 === "E") {
         return <img className="chordChart" src={E} alt="E" />
@@ -212,7 +212,7 @@ const Chord4Displayer = ({chord4}) => {
         return <img className="chordChart" src={F} alt="F" />
     } else if (chord4 === "F#") {
         return <img className="chordChart" src={Fsharp} alt="F#" />
-    } else if (chord4 === "F#m,") {
+    } else if (chord4 === "F#m") {
         return <img className="chordChart" src={Fsharpmi} alt="F#mi" />
     } else if (chord4 === "Fm") {
         return <img className="chordChart" src={Fmi} alt="Fmi" />
