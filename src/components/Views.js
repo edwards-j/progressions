@@ -17,7 +17,7 @@ export default class Views extends Component {
         yourSongs: []
     }
 
-    componentDidMount() {
+    getYourSongs = () => {
         DataManager.getData.getUserSongs(UserSS.loadUserIDFromSS())
             .then(songs => this.setState({ yourSongs: songs }))
     }
@@ -30,18 +30,16 @@ export default class Views extends Component {
 
     deleteSong = (songID) => {
         DataManager.deleteData.deleteSong(songID)
-            .then(() => {
-                DataManager.getData.getUserSongs(UserSS.loadUserIDFromSS())
-                    .then(songs => this.setState({ yourSongs: songs }))
-            })
+            .then(() => DataManager.getData.getUserSongs(UserSS.loadUserIDFromSS()))
+            .then(songs => this.setState({ yourSongs: songs }))
     }
 
     editSong = (songID, editedSong) => {
         DataManager.editData.editSong(songID, editedSong)
-        .then(() => {
-            DataManager.getData.getUserSongs(UserSS.loadUserIDFromSS())
-                .then(songs => this.setState({ yourSongs: songs }))
-        })
+            .then(() => {
+                return DataManager.getData.getUserSongs(UserSS.loadUserIDFromSS())
+                    .then(songs => this.setState({ yourSongs: songs }))
+            })
     }
 
     render() {
@@ -56,6 +54,7 @@ export default class Views extends Component {
                 }} />
                 <Route exact path="/your-songs" render={props => {
                     return <YourSongList {...props}
+                        getYourSongs={this.getYourSongs}
                         yourSongs={this.state.yourSongs}
                         deleteSong={this.deleteSong} />
                 }} />

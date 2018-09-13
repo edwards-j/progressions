@@ -71,12 +71,19 @@ export default class SongDetail extends Component {
             lyrics: this.state.lyrics,
         }
         this.props.editSong(this.props.yourSongs.find(s => s.id === parseInt(this.props.match.params.songId, 0)).id, editedSong)
-        this.setState({edit:false})
+        this.setState({ edit: false })
     }
 
     componentDidMount() {
         const song = this.props.yourSongs.find(s => s.id === parseInt(this.props.match.params.songId, 0)) || {}
-        this.setState({songID: song.id})
+        this.setState({
+            songID: song.id,
+            chord1: song.chord1,
+            chord2: song.chord2,
+            chord3: song.chord3,
+            chord4: song.chord4,
+            lyrics: "",
+        })
     }
 
     render() {
@@ -89,10 +96,10 @@ export default class SongDetail extends Component {
                     <div>
                         {(song.MajorMinor === "major") ?
                             <Major
-                                chord1={this.state.chord1}
-                                chord2={this.state.chord2}
-                                chord3={this.state.chord3}
-                                chord4={this.state.chord4}
+                                chord1={song.chord1}
+                                chord2={song.chord2}
+                                chord3={song.chord3}
+                                chord4={song.chord4}
                                 handleChord1Change={this.handleChord1Change}
                                 handleChord2Change={this.handleChord2Change}
                                 handleChord3Change={this.handleChord3Change}
@@ -102,10 +109,10 @@ export default class SongDetail extends Component {
                             />
                             :
                             <Minor
-                                chord1={this.state.chord1}
-                                chord2={this.state.chord2}
-                                chord3={this.state.chord3}
-                                chord4={this.state.chord4}
+                                chord1={song.chord1}
+                                chord2={song.chord2}
+                                chord3={song.chord3}
+                                chord4={song.chord4}
                                 handleChord1Change={this.handleChord1Change}
                                 handleChord2Change={this.handleChord2Change}
                                 handleChord3Change={this.handleChord3Change}

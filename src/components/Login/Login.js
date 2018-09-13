@@ -30,7 +30,6 @@ class Login extends Component {
                         .then((result) => {
                             let stringifiedUserObject = JSON.stringify(result);
                             sessionStorage.setItem("userInfo", stringifiedUserObject)
-                            
                         })
                         .then(() => this.props.history.push("/dashboard"))
                 }

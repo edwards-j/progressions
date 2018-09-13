@@ -13,6 +13,4 @@ const loadUserIDFromSS = () => {
     return parsedUser[0].username
  }
 
-
-
  module.exports = { loadUserIDFromSS, loadUserNameFromSS }

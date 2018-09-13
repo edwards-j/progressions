@@ -4,6 +4,10 @@ import DataManager from '../../modules/DataManager'
 import UserSS from '../../modules/userSS'
 
 export default class YourSongList extends Component {
+componentDidMount() {
+    this.props.getYourSongs()
+}
+
     render() {
         return (
             <div>
