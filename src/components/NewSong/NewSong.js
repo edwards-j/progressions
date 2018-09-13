@@ -16,7 +16,8 @@ export default class NewSong extends Component {
         chord3: "",
         chord4: "",
         lyrics: "",
-        description: ""
+        description: "",
+        public: false
 
     }
 
@@ -69,6 +70,8 @@ export default class NewSong extends Component {
         })
     }
 
+    handlePublic = () => (this.state.public) ? this.setState({public: false}) : this.setState({public: true})
+
     handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
@@ -78,6 +81,7 @@ export default class NewSong extends Component {
     constructNewSong = () => {
         const newSong = {
             userId: UserSS.loadUserIDFromSS(),
+            username: UserSS.loadUserNameFromSS(),
             selectedKey: this.state.selectedKey,
             MajorMinor: this.state.MajorMinor,
             title: this.state.title,
@@ -87,7 +91,7 @@ export default class NewSong extends Component {
             chord4: this.state.chord4,
             lyrics: this.state.lyrics,
             description: this.state.description,
-            public: false
+            public: this.state.public
         }
         this.props.addSong(newSong)
             .then(() => this.props.history.push("/your-songs"))
@@ -183,6 +187,8 @@ export default class NewSong extends Component {
                     <h4 className="is-size-4">Song Description</h4>
                     <input type="text" id="description" onChange={this.handleFieldChange} />
                 </div>
+                <label for="public">Make song public?</label>
+                <input type="checkbox" id="public" onChange={this.handlePublic}/>
                 <button className="button is-info" onClick={this.constructNewSong}>Save Song</button>
 
             </div>

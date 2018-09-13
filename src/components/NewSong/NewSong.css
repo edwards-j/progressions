@@ -37,7 +37,9 @@
 
   .chord1 {
       border: 5px solid #BDEAF9;
-      background-color: #BDEAF9
+      background-color: #BDEAF9;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
   }
   .chord2 {
       border: 5px solid #A6E3F7;
@@ -61,6 +63,7 @@
   }
   .chord7 {
       border: 5px solid #30BCED;
-      background-color: #30BCED
+      background-color: #30BCED;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
   }
-  

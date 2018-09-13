@@ -62,6 +62,8 @@ export default class SongDetail extends Component {
         })
     }
 
+    handlePublic = () => (this.state.public) ? this.setState({ public: false }) : this.setState({ public: true })
+
     saveEditedSong = () => {
         const editedSong = {
             chord1: this.state.chord1,
@@ -69,6 +71,7 @@ export default class SongDetail extends Component {
             chord3: this.state.chord3,
             chord4: this.state.chord4,
             lyrics: this.state.lyrics,
+            public: this.state.public
         }
         this.props.editSong(this.props.yourSongs.find(s => s.id === parseInt(this.props.match.params.songId, 0)).id, editedSong)
         this.setState({ edit: false })
@@ -96,10 +99,10 @@ export default class SongDetail extends Component {
                     <div>
                         {(song.MajorMinor === "major") ?
                             <Major
-                                chord1={song.chord1}
-                                chord2={song.chord2}
-                                chord3={song.chord3}
-                                chord4={song.chord4}
+                                chord1={this.state.chord1}
+                                chord2={this.state.chord2}
+                                chord3={this.state.chord3}
+                                chord4={this.state.chord4}
                                 handleChord1Change={this.handleChord1Change}
                                 handleChord2Change={this.handleChord2Change}
                                 handleChord3Change={this.handleChord3Change}
@@ -109,10 +112,10 @@ export default class SongDetail extends Component {
                             />
                             :
                             <Minor
-                                chord1={song.chord1}
-                                chord2={song.chord2}
-                                chord3={song.chord3}
-                                chord4={song.chord4}
+                                chord1={this.state.chord1}
+                                chord2={this.state.chord2}
+                                chord3={this.state.chord3}
+                                chord4={this.state.chord4}
                                 handleChord1Change={this.handleChord1Change}
                                 handleChord2Change={this.handleChord2Change}
                                 handleChord3Change={this.handleChord3Change}
@@ -123,6 +126,8 @@ export default class SongDetail extends Component {
                         <div className="has-text-centered">
                             <h4 className="is-size-4">Lyrics</h4>
                             <textarea id="lyrics" rows="20" cols="70" onChange={this.handleFieldChange} defaultValue={song.lyrics} />
+                            <label for="public">Make song public?</label>
+                            <input type="checkbox" id="public" onChange={this.handlePublic} />
                         </div>
                     </div>
                     :

@@ -13,38 +13,69 @@
   ],
   "songs": [
     {
-      "userId": 1,
+      "userId": 2,
       "selectedKey": "C",
       "MajorMinor": "major",
-      "title": "Jonathan",
+      "title": "Public test",
       "chord1": "",
       "chord2": "",
       "chord3": "",
       "chord4": "",
       "lyrics": "",
       "description": "",
-      "public": false,
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "selectedKey": "C",
-      "MajorMinor": "major",
-      "title": "Jonathan",
-      "chord1": "",
-      "chord2": "",
-      "chord3": "",
-      "chord4": "",
-      "lyrics": "",
-      "description": "",
-      "public": false,
-      "id": 2
+      "public": true,
+      "id": 3
     },
     {
       "userId": 2,
       "selectedKey": "C",
       "MajorMinor": "major",
-      "title": "Megan test",
+      "title": "Edit test",
+      "chord1": "",
+      "chord2": "",
+      "chord3": "",
+      "chord4": "",
+      "lyrics": "",
+      "description": "",
+      "public": true,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "username": "Jonathan",
+      "selectedKey": "A",
+      "MajorMinor": "minor",
+      "title": "Song Song",
+      "chord1": "C",
+      "chord2": "Am",
+      "chord3": "Em",
+      "chord4": "F",
+      "lyrics": "Test test test test",
+      "description": "Super great song!",
+      "public": true,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "username": "Jonathan",
+      "selectedKey": "E",
+      "MajorMinor": "major",
+      "title": "This is my title",
+      "chord1": "F#m",
+      "chord2": "C#m",
+      "chord3": "A",
+      "chord4": "B",
+      "lyrics": "",
+      "description": "Hipster Anthem",
+      "public": false,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "username": "Jonathan",
+      "selectedKey": "C",
+      "MajorMinor": "major",
+      "title": "",
       "chord1": "",
       "chord2": "",
       "chord3": "",
@@ -52,7 +83,7 @@
       "lyrics": "",
       "description": "",
       "public": false,
-      "id": 3
+      "id": 7
     }
   ]
 }

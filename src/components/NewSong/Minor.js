@@ -9,7 +9,7 @@ export default class Minor extends Component {
             <React.Fragment>
                 <div>
                     <h4 className="is-size-4 has-text-centered">Available Chords</h4>
-                    <div className="columns has-text-centered">
+                    <div className="columns has-text-centered is-gapless degrees has-text-weight-semibold">
                         <span className="column degree">i</span>
                         <span className="column degree">ii˚</span>
                         <span className="column degree">III</span>
@@ -18,7 +18,7 @@ export default class Minor extends Component {
                         <span className="column degree">VI</span>
                         <span className="column degree">VII</span>
                     </div>
-                    <div className="columns">
+                    <div className="columns is-gapless">
                         <div data-key="49" className="key column has-text-centered chord1">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[0]}m</div>
                         <div data-key="50" className="key column has-text-centered chord2">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[1]}dim</div>
                         <div data-key="51" className="key column has-text-centered chord3">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[2]}</div>

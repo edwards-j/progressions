@@ -14,9 +14,9 @@ export default class Nav extends Component {
         return (
             <nav className="navbar has-background-grey-light">
                 <div className="navbar-brand">
-                    <a className="navbar-item" href="">
+                    <Link className="navbar-item" to="/dashboard">
                         <img src={logo} alt="logo" />
-                    </a>
+                    </Link>
                 </div>
 
                 <div id="" className="navbar-menu is-active">
@@ -24,7 +24,7 @@ export default class Nav extends Component {
                         <Link className="navbar-item" to="/dashboard">Dashboard</Link>
                         <Link className="navbar-item" to="/new-song">New Song</Link>
                         <Link className="navbar-item" to="/your-songs">Your Songs</Link>
-                        <Link className="navbar-item" to="/your-songs">Public Songs</Link>
+                        <Link className="navbar-item" to="/public-songs">Public Songs</Link>
                     </div>
 
                     <div className="navbar-end">

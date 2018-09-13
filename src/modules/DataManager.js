@@ -18,6 +18,12 @@ const getData = Object.create(null, {
             return fetch(`${remoteURL}/songs?userId=${userID}`)
                 .then(res => res.json())
         }
+    },
+    getPublicSongs: {
+        value: () => {
+            return fetch(`${remoteURL}/songs?public=true`)
+                .then(res => res.json())
+        }
     }
 })
 
