@@ -43,47 +43,17 @@
     {
       "userId": 1,
       "username": "Jonathan",
-      "selectedKey": "A",
-      "MajorMinor": "minor",
-      "title": "Song Song",
-      "chord1": "C",
-      "chord2": "Am",
-      "chord3": "Em",
-      "chord4": "F",
-      "lyrics": "Test test test test",
-      "description": "Super great song!",
-      "public": true,
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "username": "Jonathan",
-      "selectedKey": "E",
-      "MajorMinor": "major",
-      "title": "This is my title",
-      "chord1": "F#m",
-      "chord2": "C#m",
-      "chord3": "A",
-      "chord4": "B",
-      "lyrics": "",
-      "description": "Hipster Anthem",
-      "public": false,
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "username": "Jonathan",
       "selectedKey": "C",
-      "MajorMinor": "major",
-      "title": "",
-      "chord1": "",
-      "chord2": "",
-      "chord3": "",
-      "chord4": "",
+      "MajorMinor": "minor",
+      "title": "Test!",
+      "chord1": "Eb",
+      "chord2": "Eb",
+      "chord3": "Eb",
+      "chord4": "Eb",
       "lyrics": "",
-      "description": "",
+      "description": "This is a radical track",
       "public": false,
-      "id": 7
+      "id": 5
     }
   ]
 }

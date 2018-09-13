@@ -13,7 +13,7 @@ export default class SongCard extends Component {
                 <div className="card-body">
                     <p className="card-description">{this.props.song.description}</p>
                     <div className="has-text-centered">
-                        <button className="button is-small is-rounded is-outlined"><Link to={`/your-songs/${this.props.song.id}`}>Details</Link></button>
+                        <button className="detail-button button is-small is-rounded is-outlined"><Link to={`/your-songs/${this.props.song.id}`}>Details</Link></button>
                     </div>
                 </div>
             </div>
