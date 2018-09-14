@@ -2,12 +2,15 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import DataManager from '../../modules/DataManager'
 import './Login.css'
+import logo from '../../img/logo.png'
+import tagline from '../../img/tagline.png'
 
 class Login extends Component {
     state = {
         username: "",
         password: "",
-        rememberMe: false
+        rememberMe: false,
+        showNav: false
     }
 
     handleFieldChange = evt => {
@@ -32,6 +35,7 @@ class Login extends Component {
                             sessionStorage.setItem("userInfo", stringifiedUserObject)
                         })
                         .then(() => this.props.history.push("/dashboard"))
+                        .then(() => this.props.handleNavChange())
                 }
             })
     }
@@ -40,11 +44,17 @@ class Login extends Component {
         return (
             <section class="hero login-form is-fullheight">
                 <div class="hero-body">
+                    <div>
+                    </div>
                     <div class="container has-text-centered">
                         <div class="column is-4 is-offset-4">
-                            <h3 class="title has-text-grey">Login</h3>
-                            <p class="subtitle has-text-grey">Please login to proceed.</p>
+                            <div className="logoLogin">
+                                <img src={logo} />
+                                <img src={tagline} />
+
+                            </div>
                             <div class="box">
+                                <p class="subtitle has-text-grey">Please login to proceed.</p>
                                 <form>
                                     <div class="field">
                                         <div class="control">
@@ -59,12 +69,13 @@ class Login extends Component {
                                             <input id="password" onChange={this.handleFieldChange} class="input is-large" type="password" placeholder="" />
                                         </div>
                                     </div>
-                                    <a class="button is-block is-warning is-large is-fullwidth"  onClick={this.login}>Let's Rock</a>
+                                    <a class="button is-block is-warning is-large is-fullwidth" onClick={this.login}>Let's Rock</a>
                                 </form>
                             </div>
                             <p class="has-text-grey has-text-center">
                                 <p className="has-text-white">New around here?</p>
-                                <Link to="/register" className="has-text-white">Sign Up</Link> &nbsp;·&nbsp;
+                                <Link to="/register" className="has-text-white"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up
+                                </Link> &nbsp;·&nbsp;
                             </p>
                         </div>
                     </div>

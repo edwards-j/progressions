@@ -14,7 +14,6 @@ import UserSS from '../modules/userSS'
 
 
 export default class Views extends Component {
-
     state = {
         allUsers: [{
             id: "",
@@ -63,18 +62,30 @@ export default class Views extends Component {
     render() {
         return (
             <React.Fragment>
-                <Route exact path="/login" component={Login} />
+                <Route exact path="/login" render={props => {
+                        return <Login {...props}
+                            handleNavChange={this.props.handleNavChange}
+                            addSong={this.addSong} />
+                }} />/>
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/new-song" render={props => {
-                    return <NewSong {...props}
-                        addSong={this.addSong} />
+                    if (this.props.isAuthenticated()) {
+                        return <NewSong {...props}
+                            addSong={this.addSong} />
+                    } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
                 <Route exact path="/your-songs" render={props => {
-                    return <YourSongList {...props}
-                        getYourSongs={this.getYourSongs}
-                        yourSongs={this.state.yourSongs}
-                        deleteSong={this.deleteSong} />
+                    if (this.props.isAuthenticated()) {
+                        return <YourSongList {...props}
+                            getYourSongs={this.getYourSongs}
+                            yourSongs={this.state.yourSongs}
+                            deleteSong={this.deleteSong} />
+                    } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
                 <Route path="/your-songs/:songId(\d+)" render={props => {
                     return <SongDetail {...props}
@@ -83,11 +94,15 @@ export default class Views extends Component {
                         deleteSong={this.deleteSong} />
                 }} />
                 <Route exact path="/public-songs/" render={props => {
-                    return <PublicSongList {...props}
-                        getAllUsers={this.getAllUsers}
-                        allUsers={this.state.allUsers}
-                        getPublic={this.getPublic}
-                        publicSongs={this.state.publicSongs} />
+                    if (this.props.isAuthenticated()) {
+                        return <PublicSongList {...props}
+                            getAllUsers={this.getAllUsers}
+                            allUsers={this.state.allUsers}
+                            getPublic={this.getPublic}
+                            publicSongs={this.state.publicSongs} />
+                    } else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
                 <Route path="/public-songs/:songId(\d+)" render={props => {
                     return <PublicSongDetails {...props}

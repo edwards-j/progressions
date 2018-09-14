@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ChordDisplayer from './ChordDisplayer';
-import * as Key from 'tonal-key'
 import * as Scale from 'tonal-scale'
 
 export default class Minor extends Component {
