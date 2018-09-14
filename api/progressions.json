@@ -46,13 +46,13 @@
       "selectedKey": "C",
       "MajorMinor": "minor",
       "title": "Test!",
-      "chord1": "Eb",
-      "chord2": "Eb",
-      "chord3": "Eb",
-      "chord4": "Eb",
+      "chord1": "Ab",
+      "chord2": "Bb",
+      "chord3": "Ab",
+      "chord4": "Bb",
       "lyrics": "",
       "description": "This is a radical track",
-      "public": false,
+      "public": true,
       "id": 5
     }
   ]

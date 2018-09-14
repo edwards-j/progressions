@@ -10,7 +10,7 @@ export default class SongDetail extends Component {
         return (
             <div>
                 <h1 className="is-size-1 has-text-centered">{song.title}</h1>
-                <h6 className="is-size-6 has-text-centered is-italic has-text-grey">Composer: {song.username} | Key: {song.selectedKey} {song.MajorMinor}</h6>
+                <h6 className="is-size-6 has-text-centered has-text-grey"><span className="is-italic"> Composer: {song.username} </span>| <span className="is-italic">Key: {song.selectedKey} {song.MajorMinor}</span></h6>
 
                 <h4 className="is-size-4 has-text-centered">Chords Used</h4>
                 <div key={song.id} className="">

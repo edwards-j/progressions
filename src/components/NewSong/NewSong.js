@@ -5,6 +5,7 @@ import './NewSong.css'
 import UserSS from '../../modules/userSS'
 import Major from './Major'
 import Minor from './Minor'
+import Audio from './Audio'
 
 export default class NewSong extends Component {
     state = {
@@ -103,16 +104,14 @@ export default class NewSong extends Component {
             const key = document.querySelector(`.key[data-key = "${e.keyCode}"]`);
             console.log(key)
 
-            if (!key) {
+           
+            if (!audio) {
                 return; //Stops function from running if you press an invalid key
             };
-            // if (!audio) {
-            //     return; //Stops function from running if you press an invalid key
-            // };
 
-            // audio.currentTime = 0;  //rewind audio to start each time the key is pressed
+            audio.currentTime = 0;  //rewind audio to start each time the key is pressed
 
-            // audio.play(); //Plays audio
+            audio.play(); //Plays audio
             key.classList.add("playing") //Adds styles to the pressed key
         };
 
@@ -187,10 +186,17 @@ export default class NewSong extends Component {
                     <h4 className="is-size-4">Song Description</h4>
                     <input type="text" id="description" onChange={this.handleFieldChange} />
                 </div>
-                <label for="public">Make song public?</label>
-                <input type="checkbox" id="public" onChange={this.handlePublic}/>
+                <label for="public">Make song public? </label>
+                <input type="checkbox" id="public" onChange={this.handlePublic}/><br />
                 <button className="button is-info" onClick={this.constructNewSong}>Save Song</button>
 
+                <div>
+                   {/* Renders audio to page based on state */}
+                   <Audio 
+                   selectedKey={this.state.selectedKey}
+                   MajorMinor={this.state.MajorMinor}
+                   />
+                </div>
             </div>
         )
     }
