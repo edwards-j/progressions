@@ -20,6 +20,7 @@ import Ddim from "../../audio/dim/Ddim.mp3"
 import Edim from "../../audio/dim/Edim.mp3"
 import Fdim from "../../audio/dim/Fdim.mp3"
 import Gdim from "../../audio/dim/Gdim.mp3"
+import clap from "../../audio/clap.mp3"
 
 const Audio = ({ selectedKey, MajorMinor }) => {
     if (selectedKey === "C" && MajorMinor === "major") {
@@ -32,8 +33,20 @@ const Audio = ({ selectedKey, MajorMinor }) => {
             <audio data-key="54" src={Am}></audio>
             <audio data-key="55" src={Bdim}></audio>
         </div>
-    } else {
-        return
+    } else if (selectedKey === "A" && MajorMinor === "minor") {
+        return <div>
+            <audio data-key="49" src={Am}></audio>
+            <audio data-key="50" src={Bdim}></audio>
+            <audio data-key="51" src={C}></audio>
+            <audio data-key="52" src={Dm}></audio>
+            <audio data-key="53" src={Em}></audio>
+            <audio data-key="54" src={F}></audio>
+            <audio data-key="55" src={G}></audio>
+        </div>
+    }
+
+    else {
+        return <div></div>
     }
 }
 

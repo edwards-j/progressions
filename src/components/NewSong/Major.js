@@ -6,9 +6,9 @@ export default class Major extends Component {
     render() {
         return (
             <React.Fragment>
-                <div>
+                <div className="availableChords">
                     <h4 className="is-size-4 has-text-centered">Available Chords</h4>
-                    <div className="container has-text-centered is-gapless degrees">
+                    <div className="container has-text-centered is-gapless degrees has-text-weight-semibold">
                         <div className="columns">
                             <span className="column">I</span>
                             <span className="column">ii</span>

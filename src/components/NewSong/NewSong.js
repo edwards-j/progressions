@@ -71,7 +71,7 @@ export default class NewSong extends Component {
         })
     }
 
-    handlePublic = () => (this.state.public) ? this.setState({public: false}) : this.setState({public: true})
+    handlePublic = () => (this.state.public) ? this.setState({ public: false }) : this.setState({ public: true })
 
     handleFieldChange = evt => {
         const stateToChange = {}
@@ -99,21 +99,38 @@ export default class NewSong extends Component {
     }
 
     render() {
+        let down = false;
         let playAudio = (e) => {
+
             const audio = document.querySelector(`audio[data-key = "${e.keyCode}"]`);
             const key = document.querySelector(`.key[data-key = "${e.keyCode}"]`);
-            console.log(key)
 
-           
             if (!audio) {
                 return; //Stops function from running if you press an invalid key
             };
+
+            if (down) return;
+            down = true;
 
             audio.currentTime = 0;  //rewind audio to start each time the key is pressed
 
             audio.play(); //Plays audio
             key.classList.add("playing") //Adds styles to the pressed key
         };
+
+        let stopAudio = (e) => {
+            const audio = document.querySelector(`audio[data-key = "${e.keyCode}"]`);
+
+            if (!audio) {
+                return; //Stops function from running if you press an invalid key
+            };
+
+            down = false
+
+            audio.pause(); //Stops audio
+            audio.currentTime = 0;  //rewind audio to start each time the key is pressed
+        };
+
 
         function removeTransition(e) {
             if (e.propertyName !== 'transform') { return } //Stops function if you press an invalid key
@@ -123,6 +140,7 @@ export default class NewSong extends Component {
         const keys = document.querySelectorAll(".key");
 
         window.addEventListener("keydown", playAudio) //Listens for key presses 
+        window.addEventListener("keyup", stopAudio) //Listens for key presses 
 
         keys.forEach(key =>
             key.addEventListener('transitionend', removeTransition)
@@ -130,26 +148,33 @@ export default class NewSong extends Component {
 
         return (
             <div>
-                <div className="has-text-centered">
-                    <h2 className="is-size-2">{this.state.title}</h2>
-                    <input type="text" id="title" placeholder="Enter Song Title" onChange={this.handleFieldChange} /><br />
-                </div>
-                Select Key:
-                <select name="selectedKey" id="selectedKey" onChange={this.handleFieldChange}>
-                    <option value="C">C</option>
-                    <option value="D">D</option>
-                    <option value="E">E</option>
-                    <option value="F">F</option>
-                    <option value="G">G</option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                </select>
-                <select name="MajorMinor" id="MajorMinor" onChange={this.handleFieldChange}>
-                    <option value="major">Major</option>
-                    <option value="minor">Minor</option>
-                </select>
+                <div className="">
+                    <div className="columns">
+                        <div className="column is-2 is-offset-5">
+                            <input className="titleInput input is-rounded is-info" type="text" id="title" placeholder="Enter Song Title" onChange={this.handleFieldChange} /><br />
+                        </div>
+                    </div>
+                    <h2 className="is-size-2 has-text-centered">{this.state.title}</h2>
 
-                <div>
+                </div>
+                <div className="has-text-centered keySelector">
+                    Select Key:
+                <select name="selectedKey" id="selectedKey" onChange={this.handleFieldChange}>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                    </select>
+                    <select name="MajorMinor" id="MajorMinor" onChange={this.handleFieldChange}>
+                        <option value="major">Major</option>
+                        <option value="minor">Minor</option>
+                    </select>
+                </div>
+
+                <div className="">
 
                     {(this.state.MajorMinor === "major") ?
                         <Major
@@ -178,24 +203,32 @@ export default class NewSong extends Component {
                     }
 
                 </div>
+                <div className="lyrics">
+                    <h4 className="is-size-4 has-text-centered">Lyrics</h4>
+                    <div className="columns">
+                        <div className="column is-6 is-offset-3">
+                            <textarea className="textarea is-info" id="lyrics" rows="10" cols="20" onChange={this.handleFieldChange} />
+                        </div>
+                    </div>
+                </div>
                 <div className="has-text-centered">
-                    <h4 className="is-size-4">Lyrics</h4>
-                    <textarea id="lyrics" rows="20" cols="70" onChange={this.handleFieldChange} />
-                </div>
-                <div>
+
                     <h4 className="is-size-4">Song Description</h4>
-                    <input type="text" id="description" onChange={this.handleFieldChange} />
+                    <div className="columns">
+                        <div className="column is-4 is-offset-4">
+                            <input className="input is-rounded is-info" type="text" id="description" onChange={this.handleFieldChange} /><br />
+                        </div>
+                    </div>
+                    <label for="public">Make song public? </label>
+                    <input type="checkbox" id="public" onChange={this.handlePublic} /><br />
+                    <button className="saveButton button is-outlined is-info" onClick={this.constructNewSong}>Save Song</button>
                 </div>
-                <label for="public">Make song public? </label>
-                <input type="checkbox" id="public" onChange={this.handlePublic}/><br />
-                <button className="button is-info" onClick={this.constructNewSong}>Save Song</button>
 
                 <div>
-                   {/* Renders audio to page based on state */}
-                   <Audio 
-                   selectedKey={this.state.selectedKey}
-                   MajorMinor={this.state.MajorMinor}
-                   />
+                    <Audio
+                        selectedKey={this.state.selectedKey}
+                        MajorMinor={this.state.MajorMinor}
+                    />
                 </div>
             </div>
         )
