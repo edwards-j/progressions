@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import logo from '../img/logo.png'
 import './Dashboard.css'
+import Tilt from 'react-tilt'
 
 
 export default class Dashboard extends Component {
@@ -16,19 +17,25 @@ export default class Dashboard extends Component {
                 </div>
                 <div className="dash-header has-text-centered">
                     <div>
-                        <h3 className="subtitle ">Would you like to...</h3>
+                        <h3 className="subtitle dashSubtitle ">Would you like to...</h3>
                         <div class="field is-grouped">
                             <p class="control">
-                                <Link to="/new-song" className="button dash-button is-warning">
-                                    Start a new song</Link>
+                                <Tilt className="Tilt song-card" options={{ reverse: true, max: 30 }} >
+                                    <Link to="/new-song" className="Tilt-inner button dash-button is-medium">
+                                        Start a new song</Link>
+                                </Tilt >
                             </p>
                             <p class="control">
-                                <Link to="/your-songs" className="button dash-button is-warning">
-                                    View your songs</Link>
+                                <Tilt className="Tilt song-card" options={{ reverse: true, max: 30 }} >
+                                    <Link to="/your-songs" className="Tilt-inner button dash-button is-medium">
+                                        View your songs</Link>
+                                </Tilt>
                             </p>
                             <p class="control">
-                                <Link to="/public-songs" className="button dash-button is-warning">
-                                    View Public Songs</Link>
+                                <Tilt className="Tilt song-card" options={{ reverse: true, max: 30 }} >
+                                    <Link to="/public-songs" className="Tilt-inner button dash-button is-medium">
+                                        View Public Songs</Link>
+                                </Tilt>
                             </p>
                         </div>
                     </div>

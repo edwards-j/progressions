@@ -54,21 +54,6 @@
       "description": "This is a radical track",
       "public": true,
       "id": 5
-    },
-    {
-      "userId": 1,
-      "username": "Jonathan",
-      "selectedKey": "C",
-      "MajorMinor": "major",
-      "title": "",
-      "chord1": "",
-      "chord2": "",
-      "chord3": "",
-      "chord4": "",
-      "lyrics": "",
-      "description": "",
-      "public": false,
-      "id": 6
     }
   ]
 }

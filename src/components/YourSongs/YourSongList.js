@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import SongCard from './SongCard'
-import DataManager from '../../modules/DataManager'
-import UserSS from '../../modules/userSS'
 
 export default class YourSongList extends Component {
 componentDidMount() {
