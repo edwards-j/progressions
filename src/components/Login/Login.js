@@ -43,19 +43,16 @@ class Login extends Component {
     render() {
         return (
             <section class="hero login-form is-fullheight">
-                <div class="hero-body">
+                <div class="">
                     <div>
                     </div>
                     <div class="container has-text-centered">
-                        <div class="column is-4 is-offset-4">
                             <div className="logoLogin">
                                 <img src={logo} />
                                 <img src={tagline} />
-
                             </div>
-                            <div class="box">
-                                <p class="subtitle has-text-grey">Please login to proceed.</p>
-                                <form>
+                        <div class="column is-4 is-offset-4 form">
+                            <div class="">
                                     <div class="field">
                                         <div class="control">
                                             <label className="login-flag">Username</label>
@@ -70,7 +67,6 @@ class Login extends Component {
                                         </div>
                                     </div>
                                     <a class="button is-block is-warning is-large is-fullwidth" onClick={this.login}>Let's Rock</a>
-                                </form>
                             </div>
                             <p class="has-text-grey has-text-center">
                                 <p className="has-text-white">New around here?</p>

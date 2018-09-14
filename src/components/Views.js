@@ -66,7 +66,7 @@ export default class Views extends Component {
                         return <Login {...props}
                             handleNavChange={this.props.handleNavChange}
                             addSong={this.addSong} />
-                }} />/>
+                }} />
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/new-song" render={props => {
