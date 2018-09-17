@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ChordDisplayer from '../NewSong/ChordDisplayer'
 import Major from '../NewSong/Major'
 import Minor from '../NewSong/Minor'
+import './SongDetails.css'
 
 export default class SongDetail extends Component {
     state = {
@@ -125,9 +126,9 @@ export default class SongDetail extends Component {
                         }
                         <div className="has-text-centered">
                             <h4 className="is-size-4">Lyrics</h4>
-                            <textarea id="lyrics" rows="20" cols="70" onChange={this.handleFieldChange} defaultValue={song.lyrics} />
-                            <label for="public">Make song public?</label>
-                            <input type="checkbox" id="public" onChange={this.handlePublic} />
+                            <textarea id="lyrics" className="lyricInput" rows="20" cols="70" onChange={this.handleFieldChange} defaultValue={song.lyrics} /><br />
+                            <label for="public">Make song public? </label>
+                            <input type="checkbox" id="public" onChange={this.handlePublic} /><br />
                         </div>
                     </div>
                     :
@@ -153,15 +154,14 @@ export default class SongDetail extends Component {
                         </div>
                     </div>
                 }
-
                 {(this.state.edit) ?
                     <div className="has-text-centered">
-                        <button className="button is-info is-outlined is-rounded" onClick={this.saveEditedSong}>Save</button>
+                        <button className="saveButton button is-outlined" onClick={this.saveEditedSong}>Save</button>
                     </div>
                     :
-                    <div className="has-text-centered">
-                        <button className="button is-danger is-outlined is-rounded" onClick={() => this.props.deleteSong(song.id)}><i className="fas fa-trash-alt"></i></button>
-                        <button className="button is-warning is-outlined is-rounded" onClick={this.handleEditClicked}><i className="far fa-edit"></i></button>
+                    <div className="songDetailButtons columns">
+                        <button className="button is-danger is-outlined is-rounded column is-1 is-offset-4 is-paddingless" onClick={() => this.props.deleteSong(song.id)}><i className="fas fa-trash-alt"></i></button>
+                        <button className="button is-warning is-outlined is-rounded column is-1 is-offset-2 is-paddingless" onClick={this.handleEditClicked}><i className="far fa-edit"></i></button>
                     </div>
                 }
             </div>

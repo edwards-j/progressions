@@ -49,11 +49,11 @@ export default class Register extends Component {
                                         </div>
                                     </div>
 
-                                    <button class="button is-block is-warning is-large is-fullwidth" onClick={this.registerNewUser}>Signup</button>
+                                    <button class="button is-block login-button is-large is-fullwidth" onClick={this.registerNewUser}>Signup</button>
                                 </div>
                             </div>
                             <p class="has-text-grey">
-                                <Link to="/login">Cancel</Link> &nbsp;·&nbsp;
+                                <Link to="/login" className="has-text-white-ter">Cancel</Link> &nbsp;·&nbsp;
                                      </p>
                         </div>
                     </div>

@@ -1,17 +1,17 @@
 .logoLogin {
     width: 60%;
-    margin: 5em auto 3em auto
+    margin: 3.5em auto 3em auto
 }
 
 .login-button {
-    background-color: rgba(255, 229, 34, 0.904) !important
+    background-color: rgba(255, 229, 34, 0.904) !important;
 }
 .login-button:hover {
     background-color: rgba(255, 229, 34, 1) !important
 }
 
 .login-form {
-    background: url("./LoginBG2.svg") no-repeat;
+    background: url("./LoginBG.svg") no-repeat;
     background-size: cover;
     height: 100vh;
 }
@@ -29,12 +29,18 @@
     margin: auto
 }
 
+.loginRegisterText {
+    color: #33C6F7
+}
+
 .tagline {
     color: #30BCED
 }
 
 .form {
-background-color: rgba(255,255,255,0.2);
+background-color: rgba(255,255,255,0.9);
 border-radius: 5px;
 box-shadow: 0px 0px 50px 5px rgba(0,0,0,0.31);
 }
+
+

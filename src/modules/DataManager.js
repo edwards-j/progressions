@@ -24,7 +24,13 @@ const getData = Object.create(null, {
             return fetch(`${remoteURL}/songs?public=true`)
                 .then(res => res.json())
         }
-    }
+    },
+    getRandomLyrics: {
+        value: () => {
+            return fetch(`${remoteURL}/lyrics`)
+                .then(res => res.json())
+        }
+    },
 })
 
 const saveData = Object.create(null, {

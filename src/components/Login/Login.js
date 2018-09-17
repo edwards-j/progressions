@@ -55,22 +55,22 @@ class Login extends Component {
                             <div class="">
                                     <div class="field">
                                         <div class="control">
-                                            <label className="login-flag">Username</label>
-                                            <input id="username" onChange={this.handleFieldChange} class="input is-large" type="text" placeholder="" />
+                                            <label className="login-flag">Username</label> 
+                                            <input id="username" onChange={this.handleFieldChange} class="input is-large is-rounded" type="text" placeholder="" />
                                         </div>
                                     </div>
 
                                     <div class="field">
                                         <div class="control">
                                             <label className="login-flag">Password</label>
-                                            <input id="password" onChange={this.handleFieldChange} class="input is-large" type="password" placeholder="" />
+                                            <input id="password" onChange={this.handleFieldChange} className="input is-large is-rounded" type="password" placeholder="" />
                                         </div>
                                     </div>
-                                    <a class="button is-block login-button is-large is-fullwidth" onClick={this.login}>Let's Rock</a>
+                                    <a class="button is-block login-button is-large is-fullwidth is-rounded" onClick={this.login}>Let's Rock</a>
                             </div>
                             <p class="has-text-grey has-text-center">
-                                <p className="has-text-white">New around here?</p>
-                                <Link to="/register" className="has-text-white"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up
+                                <p className="loginRegisterText">New around here?</p>
+                                <Link to="/register" className="loginRegisterText"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up
                                 </Link> &nbsp;·&nbsp;
                             </p>
                         </div>

@@ -26,15 +26,15 @@ export default class Nav extends Component {
 
                                 <div id="" className="navbar-menu is-active">
                                     <div className="navbar-start">
-                                        <Link className="navbar-item" to="/dashboard">Dashboard</Link>
-                                        <Link className="navbar-item" to="/new-song">New Song</Link>
-                                        <Link className="navbar-item" to="/your-songs">Your Songs</Link>
-                                        <Link className="navbar-item" to="/public-songs">Public Songs</Link>
+                                        <Link className="navLink navbar-item" to="/dashboard">Dashboard</Link>
+                                        <Link className="navLink navbar-item" to="/new-song">New Song</Link>
+                                        <Link className="navLink navbar-item" to="/your-songs">Your Songs</Link>
+                                        <Link className="navLink navbar-item" to="/public-songs">Public Songs</Link>
                                     </div>
 
                                     <div className="navbar-end">
                                         <div className="navbar-item">
-                                            <Link className="navbar-item" to="/login" onClick={this.logout}>Logout</Link>
+                                            <Link className="navLink navbar-item button is-rounded" to="/login" onClick={this.logout}>Logout</Link>
                                         </div>
                                     </div>
                                 </div>

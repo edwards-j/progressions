@@ -9,6 +9,11 @@
       "username": "Megan",
       "password": "m",
       "id": 2
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 3
     }
   ],
   "songs": [
@@ -43,32 +48,73 @@
     {
       "userId": 1,
       "username": "Jonathan",
-      "selectedKey": "C",
-      "MajorMinor": "minor",
-      "title": "Test!",
-      "chord1": "Ab",
-      "chord2": "Bb",
-      "chord3": "Ab",
-      "chord4": "Bb",
-      "lyrics": "",
-      "description": "This is a radical track",
-      "public": true,
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "username": "Jonathan",
       "selectedKey": "A",
       "MajorMinor": "minor",
-      "title": "Song title!",
+      "title": "This is my title",
       "chord1": "C",
       "chord2": "C",
       "chord3": "C",
       "chord4": "C",
-      "lyrics": "",
-      "description": "This is a tribute",
+      "lyrics": "These are the new words",
+      "description": "Best song ever",
       "public": true,
-      "id": 6
+      "id": 7
+    },
+    {
+      "userId": 3,
+      "username": "",
+      "selectedKey": "C",
+      "MajorMinor": "major",
+      "title": "",
+      "chord1": "",
+      "chord2": "",
+      "chord3": "",
+      "chord4": "",
+      "lyrics": "",
+      "description": "",
+      "public": false,
+      "id": 8
+    },
+    {
+      "userId": 3,
+      "username": "",
+      "selectedKey": "C",
+      "MajorMinor": "major",
+      "title": "",
+      "chord1": "",
+      "chord2": "",
+      "chord3": "",
+      "chord4": "",
+      "lyrics": "",
+      "description": "",
+      "public": false,
+      "id": 9
+    }
+  ],
+  "lyrics": [
+    {
+      "id": 1,
+      "words": "Where the small trees stand And the dry igloos surround, I will ride my red truck with you by my side"
+    },
+    {
+      "id": 1,
+      "words": "Don't live your life like a muppet. Today might feel a time to be like a muppet, But that ain't no way to lead a life"
+    },
+    {
+      "id": 1,
+      "words": "We're all going to a summer barbecue. No more acting for a week or two. Hideous balloons and bumpy cats at our summer barbecue. No more lifeless bananas for me or you. For a week or two"
+    },
+    {
+      "id": 1,
+      "words": "I wish they all could be ... I wish they all could be ... I wish they all could be balloons of my office"
+    },
+    {
+      "id": 1,
+      "words": "Master of gardening I'm pulling your strings. Twisting your truth and smashing your plates. Blinded by me, you can't see the stings. Just call my name, 'cause I'll hear you demonstrate"
+    },
+    {
+      "id": 1,
+      "words": "But still, he is in my thoughts. I think about how it all changed that morning, That crazy autumn morning. My heart... ouch! When I think of that jolly lawyer, That jolly lawyer and me."
     }
   ]
 }
