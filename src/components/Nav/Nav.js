@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import 'bulma'
-import logo from '../../img/logo.png'
+import logo from '../../img/logo2.png'
 import './Nav.css'
 
 
@@ -15,9 +15,9 @@ export default class Nav extends Component {
         return (
             <div>
                 {(this.props.showNav) ?
-                    <div id="fullNav" className="has-background-grey-light">
+                    <div id="fullNav" className="fullNav">
                         <div className="container">
-                            <nav className="navbar has-background-grey-light">
+                            <nav className="navbar fullNav">
                                 <div className="navbar-brand">
                                     <Link className="navbar-item" to="/dashboard">
                                         <img src={logo} alt="logo" />

@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import DataManager from '../../modules/DataManager'
 import './Login.css'
-import logo from '../../img/logo.png'
-import tagline from '../../img/tagline.png'
+import logo from '../../img/logo2.png'
+import tagline from '../../img/tagline2.png'
 
 class Login extends Component {
     state = {
@@ -66,7 +66,7 @@ class Login extends Component {
                                             <input id="password" onChange={this.handleFieldChange} class="input is-large" type="password" placeholder="" />
                                         </div>
                                     </div>
-                                    <a class="button is-block is-warning is-large is-fullwidth" onClick={this.login}>Let's Rock</a>
+                                    <a class="button is-block login-button is-large is-fullwidth" onClick={this.login}>Let's Rock</a>
                             </div>
                             <p class="has-text-grey has-text-center">
                                 <p className="has-text-white">New around here?</p>

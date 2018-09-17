@@ -1,3 +1,7 @@
+.dashboard {
+    margin-top: 2em;
+}
+
 .dash-header{
     display: flex;
     justify-content: center;
@@ -7,17 +11,21 @@
     margin: 2em 0 0 0 !important
 }
 
+.button-group {
+    margin-top: 1em;
+}
+
 .dash-button {
     transform: scale(1);
     box-shadow: none;
     transition: all .2s;
-    background-color: #FFE152 !important;
-    border: 1px solid #77D4F3 !important
+    background-color: #59D9E8 !important;
+    border: 2px solid #33C6F7 !important
 }
 .dash-button:hover {
     transform: scale(1.1); 
     box-shadow: 0px 4px 20px -4px rgba(0,0,0,0.5);
-    border: 3px solid #30BCED !important;
+    border: 3px solid #455AFF !important;
 }
 
 .dash-logo {

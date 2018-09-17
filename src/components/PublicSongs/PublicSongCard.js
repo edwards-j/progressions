@@ -9,7 +9,7 @@ export default class SongCard extends Component {
     }
     render() {
         return (
-            <Tilt className="Tilt song-card" options={{ reverse: true, max: 20 }} >
+            <Tilt className="Tilt song-card" options={{scale: 1.03, max: 5}} >
                 <div className="Tilt-inner">
                         <div className="card-title">
                             <h5 className="is-size-5 has-text-white">{this.props.song.title}</h5>

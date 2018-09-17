@@ -1,42 +1,38 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
-import logo from '../img/logo.png'
+import logo from '../img/logo2.png'
 import './Dashboard.css'
+import UserSS from '../modules/userSS'
 import Tilt from 'react-tilt'
 
 
 export default class Dashboard extends Component {
 
     render() {
+        const currentUser = UserSS.loadUserNameFromSS()
         return (
-            <div>
+            <div className="dashboard">
                 <div className="dash-header">
                     <div>
-                        <h2 className="title has-text-centered">Welcome to</h2>
+                        <h2 className="title has-text-centered">Hey {currentUser}, welcome to</h2>
                         <img className="dash-logo" src={logo} alt="logo" />
                     </div>
                 </div>
                 <div className="dash-header has-text-centered">
                     <div>
                         <h3 className="subtitle dashSubtitle ">Would you like to...</h3>
-                        <div class="field is-grouped">
+                        <div class="field is-grouped button-group ">
                             <p class="control">
-                                <Tilt className="Tilt song-card" options={{ reverse: true, max: 30 }} >
-                                    <Link to="/new-song" className="Tilt-inner button dash-button is-medium">
-                                        Start a new song</Link>
-                                </Tilt >
+                                <Link to="/new-song" className="button dash-button is-medium has-text-white">
+                                    Start a new song</Link>
                             </p>
                             <p class="control">
-                                <Tilt className="Tilt song-card" options={{ reverse: true, max: 30 }} >
-                                    <Link to="/your-songs" className="Tilt-inner button dash-button is-medium">
-                                        View your songs</Link>
-                                </Tilt>
+                                <Link to="/your-songs" className="button dash-button is-medium has-text-white">
+                                    View your songs</Link>
                             </p>
                             <p class="control">
-                                <Tilt className="Tilt song-card" options={{ reverse: true, max: 30 }} >
-                                    <Link to="/public-songs" className="Tilt-inner button dash-button is-medium">
-                                        View Public Songs</Link>
-                                </Tilt>
+                                <Link to="/public-songs" className="button dash-button is-medium has-text-white">
+                                    View all public songs</Link>
                             </p>
                         </div>
                     </div>

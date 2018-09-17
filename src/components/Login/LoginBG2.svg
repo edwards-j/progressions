@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1502px" height="806px" viewBox="0 0 1502 806" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>Login BG</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-28.8090371%" y1="15.8926111%" x2="116.001454%" y2="84.7713837%" id="linearGradient-1">
+            <stop stop-color="#5433FF" offset="0%"></stop>
+            <stop stop-color="#20BDFF" offset="55.5341647%"></stop>
+            <stop stop-color="#A5FEC9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Login-BG" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Rectangle-12-Copy" fill="url(#linearGradient-1)" points="0 646.090717 1502 223 1502 1024 0 1024"></polygon>
+    </g>
+</svg>
