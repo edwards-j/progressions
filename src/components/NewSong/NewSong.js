@@ -82,11 +82,11 @@ export default class NewSong extends Component {
     }
 
     showModal = () => {
-        this.setState({modal: true})
+        this.setState({ modal: true })
     }
 
     hideModal = () => {
-        this.setState({modal: false})
+        this.setState({ modal: false })
     }
 
     constructNewSong = () => {
@@ -225,9 +225,9 @@ export default class NewSong extends Component {
                     <div className="has-text-centered">
                         <p>Need some help with those lyrics?</p>
                         <button className="button is-rounded lyricHelperButton" onClick={this.showModal}>Click Here</button>
-                        <LyricGenerator 
-                        modal={this.state.modal}
-                        hideModal={this.hideModal}
+                        <LyricGenerator
+                            modal={this.state.modal}
+                            hideModal={this.hideModal}
                         />
                     </div>
                 </div>
@@ -239,9 +239,11 @@ export default class NewSong extends Component {
                             <input className="input is-rounded descInput" type="text" id="description" onChange={this.handleFieldChange} /><br />
                         </div>
                     </div>
-                    <label for="public">Make song public? </label>
-                    <input type="checkbox" id="public" onChange={this.handlePublic} /><br />
-                    <button className="saveButton button is-outlined" onClick={this.constructNewSong}>Save Song</button>
+                    <div className="saveNewSong">
+                        <label for="public" className="has-text-weight-semibold	">Make song public? </label>
+                        <input type="checkbox" id="public" onChange={this.handlePublic} /><br />
+                        <button className="saveButton button is-outlined has-text-weight-bold	" onClick={this.constructNewSong}>Save Song</button>
+                    </div>
                 </div>
 
                 <div>

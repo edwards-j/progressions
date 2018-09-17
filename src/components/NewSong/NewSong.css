@@ -117,7 +117,10 @@
     transform: scale(1);
     transition: all .3s;
     border-radius: 50px !important;
-    border: 1px solid #5433FF !important
+    border: 1px solid #5433FF !important;
+    background-color: rgb(0, 0, 0, 0) !important;
+    color: white !important;
+    
   }
 
   .saveButton:hover {
@@ -133,6 +136,17 @@
     -webkit-box-shadow: 0px 6px 20px -6px rgba(0,0,0,0.39);
     -moz-box-shadow: 0px 6px 20px -6px rgba(0,0,0,0.39);
     box-shadow: 0px 6px 20px -6px rgba(0,0,0,0.39);
+  }
+
+  .saveNewSong {
+    background: linear-gradient(0.25turn, #5433FF, #20BDFF, #A5FEC9);
+    color: white;
+    height: 100px;
+    width: 33%;
+    margin: auto;
+    padding-top: .75em;
+    margin-bottom: 1.5em;
+    border-radius: 50px;
   }
 
   

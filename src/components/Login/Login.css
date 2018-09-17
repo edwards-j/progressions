@@ -30,7 +30,8 @@
 }
 
 .loginRegisterText {
-    color: #33C6F7
+    color: #33C6F7;
+    margin-top: 1.5em
 }
 
 .tagline {
@@ -38,9 +39,9 @@
 }
 
 .form {
-background-color: rgba(255,255,255,0.9);
+background-color: rgba(255,255,255,1);
 border-radius: 5px;
-box-shadow: 0px 0px 50px 5px rgba(0,0,0,0.31);
+box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.31);
 }
 
 

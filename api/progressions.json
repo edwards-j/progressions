@@ -89,6 +89,21 @@
       "description": "",
       "public": false,
       "id": 9
+    },
+    {
+      "userId": 1,
+      "username": "Jonathan",
+      "selectedKey": "C",
+      "MajorMinor": "major",
+      "title": "Test",
+      "chord1": "C",
+      "chord2": "Dm",
+      "chord3": "C",
+      "chord4": "Dm",
+      "lyrics": "Test test test",
+      "description": "testing test test",
+      "public": false,
+      "id": 10
     }
   ],
   "lyrics": [

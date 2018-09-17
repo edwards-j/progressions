@@ -16,16 +16,16 @@ export default class SongDetail extends Component {
                 <div key={song.id} className="">
                     <div className="">
                         <div className="your-chords columns">
-                            <div className="column chord is-offset-3">
+                            <div className="column chord is-offset-3 yourChord1">
                                 <ChordDisplayer.Chord1Displayer chord1={song.chord1} {...this.props} />
                             </div>
-                            <div className="column chord">
+                            <div className="column chord yourChord2">
                                 <ChordDisplayer.Chord2Displayer chord2={song.chord2} {...this.props} />
                             </div>
-                            <div className="column chord">
+                            <div className="column chord yourChord3">
                                 <ChordDisplayer.Chord3Displayer chord3={song.chord3} {...this.props} />
                             </div>
-                            <div className="column chord">
+                            <div className="column chord yourChord4">
                                 <ChordDisplayer.Chord4Displayer chord4={song.chord4} {...this.props} />
                             </div>
                         </div>
