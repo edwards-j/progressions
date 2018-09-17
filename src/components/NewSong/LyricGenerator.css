@@ -1,0 +1,31 @@
+.modal-title {
+    margin-bottom: .5em
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between !important;
+}
+
+.close-button {
+    color: #5433FF !important;
+    background-color: white !important;
+    transition: all .2s
+}
+
+.try-again-button {
+    color: #28A9FF !important;
+    background-color: white !important;
+    transition: all .2s;
+}
+
+.close-button:hover {
+    color: white !important;
+    background-color: #5433FF !important
+}
+
+.try-again-button:hover {
+    color: white !important;
+    background-color: #28A9FF !important
+}

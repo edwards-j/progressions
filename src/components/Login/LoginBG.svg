@@ -4,13 +4,23 @@
     <title>Login BG</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <radialGradient cx="0.25781251%" cy="49.7500002%" fx="0.25781251%" fy="49.7500002%" r="189.390762%" gradientTransform="translate(0.002578,0.497500),scale(0.533289,1.000000),translate(-0.002578,-0.497500)" id="radialGradient-1">
-            <stop stop-color="#30BCED" offset="0%"></stop>
-            <stop stop-color="#53A0FD" offset="47.918172%"></stop>
-            <stop stop-color="#BDEAF9" offset="100%"></stop>
-        </radialGradient>
+        <linearGradient x1="2.65494331%" y1="37.5536467%" x2="100%" y2="74.2948605%" id="linearGradient-1">
+            <stop stop-color="#5433FF" offset="0%"></stop>
+            <stop stop-color="#20BDFF" offset="49.2120156%"></stop>
+            <stop stop-color="#A5FEC9" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="-44 646.090717 1513 223 1513 1024 -44 1024"></polygon>
+        <filter x="-1.6%" y="-3.1%" width="103.2%" height="106.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="12" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="26" dy="11" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
     </defs>
     <g id="Login-BG" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Rectangle-12-Copy" fill="url(#radialGradient-1)" points="0 646.090717 1502 223 1502 1024 0 1024"></polygon>
+        <g id="Rectangle-12-Copy">
+            <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+        </g>
     </g>
 </svg>

@@ -23,15 +23,15 @@ export default class Dashboard extends Component {
                         <h3 className="subtitle dashSubtitle ">Would you like to...</h3>
                         <div class="field is-grouped button-group ">
                             <p class="control">
-                                <Link to="/new-song" className="button dash-button is-medium has-text-white">
+                                <Link to="/new-song" className="is-rounded button dash-button is-medium">
                                     Start a new song</Link>
                             </p>
                             <p class="control">
-                                <Link to="/your-songs" className="button dash-button is-medium has-text-white">
+                                <Link to="/your-songs" className="is-rounded button dash-button is-medium">
                                     View your songs</Link>
                             </p>
                             <p class="control">
-                                <Link to="/public-songs" className="button dash-button is-medium has-text-white">
+                                <Link to="/public-songs" className="is-rounded button dash-button is-medium">
                                     View all public songs</Link>
                             </p>
                         </div>

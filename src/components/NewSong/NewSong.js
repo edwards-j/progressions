@@ -6,6 +6,7 @@ import UserSS from '../../modules/userSS'
 import Major from './Major'
 import Minor from './Minor'
 import Audio from './Audio'
+import LyricGenerator from './LyricGenerator'
 
 export default class NewSong extends Component {
     state = {
@@ -18,7 +19,8 @@ export default class NewSong extends Component {
         chord4: "",
         lyrics: "",
         description: "",
-        public: false
+        public: false,
+        modal: false
 
     }
 
@@ -77,6 +79,14 @@ export default class NewSong extends Component {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
+    }
+
+    showModal = () => {
+        this.setState({modal: true})
+    }
+
+    hideModal = () => {
+        this.setState({modal: false})
     }
 
     constructNewSong = () => {
@@ -153,7 +163,7 @@ export default class NewSong extends Component {
                 <div className="">
                     <div className="columns">
                         <div className="column is-2 is-offset-5">
-                            <input className="titleInput input is-rounded is-info" type="text" id="title" placeholder="Enter Song Title" onChange={this.handleFieldChange} /><br />
+                            <input className="titleInput input is-rounded" type="text" id="title" placeholder="Enter Song Title" onChange={this.handleFieldChange} /><br />
                         </div>
                     </div>
                     <h2 className="is-size-2 has-text-centered">{this.state.title}</h2>
@@ -209,8 +219,16 @@ export default class NewSong extends Component {
                     <h4 className="is-size-4 has-text-centered">Lyrics</h4>
                     <div className="columns">
                         <div className="column is-6 is-offset-3">
-                            <textarea className="textarea is-info" id="lyrics" rows="10" cols="20" onChange={this.handleFieldChange} />
+                            <textarea className="textarea lyricInput" id="lyrics" rows="10" cols="20" onChange={this.handleFieldChange} />
                         </div>
+                    </div>
+                    <div className="has-text-centered">
+                        <p>Need some help with those lyrics?</p>
+                        <button className="button is-rounded lyricHelperButton" onClick={this.showModal}>Click Here</button>
+                        <LyricGenerator 
+                        modal={this.state.modal}
+                        hideModal={this.hideModal}
+                        />
                     </div>
                 </div>
                 <div className="has-text-centered">
@@ -218,12 +236,12 @@ export default class NewSong extends Component {
                     <h4 className="is-size-4">Song Description</h4>
                     <div className="columns">
                         <div className="column is-4 is-offset-4">
-                            <input className="input is-rounded is-info" type="text" id="description" onChange={this.handleFieldChange} /><br />
+                            <input className="input is-rounded descInput" type="text" id="description" onChange={this.handleFieldChange} /><br />
                         </div>
                     </div>
                     <label for="public">Make song public? </label>
                     <input type="checkbox" id="public" onChange={this.handlePublic} /><br />
-                    <button className="saveButton button is-outlined is-info" onClick={this.constructNewSong}>Save Song</button>
+                    <button className="saveButton button is-outlined" onClick={this.constructNewSong}>Save Song</button>
                 </div>
 
                 <div>

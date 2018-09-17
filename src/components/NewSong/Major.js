@@ -35,7 +35,7 @@ export default class Major extends Component {
                 <div>
                     <div className="container">
                         <div className="columns">
-                            <div className="chord has-text-centered column">
+                            <div className="chord has-text-centered column yourChord1">
                                 <select name="chord1" id="chord1" onChange={this.props.handleChord1Change}>
                                     <option value="---">---</option>
                                     <option className="column has-text-centered" value={Scale.notes(this.props.selectedKey, this.props.MajorMinor)[0]}>{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[0]}</option>
@@ -50,7 +50,7 @@ export default class Major extends Component {
                                 </select>
                                 <ChordDisplayer.Chord1Displayer chord1={this.props.chord1} {...this.props} />
                             </div>
-                            <div className="chord has-text-centered column">
+                            <div className="chord has-text-centered column yourChord2">
                                 <select name="chord2" id="chord2" onChange={this.props.handleChord2Change}>
                                     <option value="---">---</option>
                                     <option className="column has-text-centered" value={Scale.notes(this.props.selectedKey, this.props.MajorMinor)[0]}>{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[0]}</option>
@@ -63,7 +63,7 @@ export default class Major extends Component {
                                 </select>
                                 <ChordDisplayer.Chord2Displayer chord2={this.props.chord2} {...this.props} />
                             </div>
-                            <div className="chord has-text-centered column">
+                            <div className="chord has-text-centered column yourChord3">
                                 <select name="chord3" id="chord3" onChange={this.props.handleChord3Change}>
                                     <option value="---">---</option>
                                     <option className="column has-text-centered" value={Scale.notes(this.props.selectedKey, this.props.MajorMinor)[0]}>{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[0]}</option>
@@ -76,7 +76,7 @@ export default class Major extends Component {
                                 </select>
                                 <ChordDisplayer.Chord3Displayer chord3={this.props.chord3} {...this.props} />
                             </div>
-                            <div className="chord has-text-centered column">
+                            <div className="chord has-text-centered column yourChord4">
                                 <select name="chord4" id="chord4" onChange={this.props.handleChord4Change}>
                                     <option value="---">---</option>
                                     <option className="column has-text-centered" value={Scale.notes(this.props.selectedKey, this.props.MajorMinor)[0]}>{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[0]}</option>
