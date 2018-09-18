@@ -11,8 +11,8 @@ import LyricGenerator from './LyricGenerator'
 export default class NewSong extends Component {
     state = {
         title: "",
-        selectedKey: "C",
-        MajorMinor: "major",
+        selectedKey: "---",
+        MajorMinor: "---",
         chord1: "",
         chord2: "",
         chord3: "",
@@ -173,6 +173,7 @@ export default class NewSong extends Component {
                 <div className="has-text-centered keySelector">
                     Select Key:
                 <select name="selectedKey" id="selectedKey" onChange={this.handleFieldChange}>
+                        <option value="---">---</option>
                         <option value="C">C</option>
                         <option value="D">D</option>
                         <option value="E">E</option>
@@ -182,37 +183,84 @@ export default class NewSong extends Component {
                         <option value="B">B</option>
                     </select>
                     <select name="MajorMinor" id="MajorMinor" onChange={this.handleFieldChange}>
+                        <option value="---">---</option>
                         <option value="major">Major</option>
                         <option value="minor">Minor</option>
                     </select>
                 </div>
 
                 <div className="">
+                    {(this.state.selectedKey === "---") ?
+                        <div className="availableChords ">
+                            <h4 className="is-size-4 has-text-centered">Available Chords</h4>
+                            <div className="container is-gapless">
+                                <div className="columns">
+                                    <div data-key="49" className="key column has-text-centered chord1 emptyColors"></div>
+                                    <div data-key="50" className="key column has-text-centered chord2 emptyColors"></div>
+                                    <div data-key="51" className="key column has-text-centered chord3 emptyColors"></div>
+                                    <div data-key="52" className="key column has-text-centered chord4 emptyColors"></div>
+                                    <div data-key="53" className="key column has-text-centered chord5 emptyColors"></div>
+                                    <div data-key="54" className="key column has-text-centered chord6 emptyColors"></div>
+                                    <div data-key="55" className="key column has-text-centered chord7 emptyColors"></div>
+                                </div>
+                            </div>
+                            <h4 className="is-size-4 has-text-centered emptyChords">Your Chords</h4>
+                            <div>
+                                <div className="container">
+                                    <div className="columns">
+                                        <div className="chord has-text-centered column yourChord1">
+                                            <select name="chord1" id="chord1" onChange={this.props.handleChord1Change}>
+                                                <option value="---">---</option>
+                                            </select>
+                                        </div>
+                                        <div className="chord has-text-centered column yourChord2">
+                                            <select name="chord2" id="chord2" onChange={this.props.handleChord2Change}>
+                                                <option value="---">---</option>
+                                            </select>
+                                        </div>
+                                        <div className="chord has-text-centered column yourChord3">
+                                            <select name="chord3" id="chord3" onChange={this.props.handleChord3Change}>
+                                                <option value="---">---</option>
+                                            </select>
+                                        </div>
+                                        <div className="chord has-text-centered column yourChord4">
+                                            <select name="chord4" id="chord4" onChange={this.props.handleChord4Change}>
+                                                <option value="---">---</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    {(this.state.MajorMinor === "major") ?
-                        <Major
-                            chord1={this.state.chord1}
-                            chord2={this.state.chord2}
-                            chord3={this.state.chord3}
-                            chord4={this.state.chord4}
-                            handleChord1Change={this.handleChord1Change}
-                            handleChord2Change={this.handleChord2Change}
-                            handleChord3Change={this.handleChord3Change}
-                            handleChord4Change={this.handleChord4Change}
-                            selectedKey={this.state.selectedKey}
-                            MajorMinor={this.state.MajorMinor} />
                         :
-                        <Minor
-                            chord1={this.state.chord1}
-                            chord2={this.state.chord2}
-                            chord3={this.state.chord3}
-                            chord4={this.state.chord4}
-                            handleChord1Change={this.handleChord1Change}
-                            handleChord2Change={this.handleChord2Change}
-                            handleChord3Change={this.handleChord3Change}
-                            handleChord4Change={this.handleChord4Change}
-                            selectedKey={this.state.selectedKey}
-                            MajorMinor={this.state.MajorMinor} />
+                        <div>
+                            {(this.state.MajorMinor === "major") ?
+                                <Major
+                                    chord1={this.state.chord1}
+                                    chord2={this.state.chord2}
+                                    chord3={this.state.chord3}
+                                    chord4={this.state.chord4}
+                                    handleChord1Change={this.handleChord1Change}
+                                    handleChord2Change={this.handleChord2Change}
+                                    handleChord3Change={this.handleChord3Change}
+                                    handleChord4Change={this.handleChord4Change}
+                                    selectedKey={this.state.selectedKey}
+                                    MajorMinor={this.state.MajorMinor} />
+                                :
+                                <Minor
+                                    chord1={this.state.chord1}
+                                    chord2={this.state.chord2}
+                                    chord3={this.state.chord3}
+                                    chord4={this.state.chord4}
+                                    handleChord1Change={this.handleChord1Change}
+                                    handleChord2Change={this.handleChord2Change}
+                                    handleChord3Change={this.handleChord3Change}
+                                    handleChord4Change={this.handleChord4Change}
+                                    selectedKey={this.state.selectedKey}
+                                    MajorMinor={this.state.MajorMinor} />
+                            }
+                        </div>
                     }
 
                 </div>
