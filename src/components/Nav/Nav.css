@@ -22,7 +22,7 @@ background-color: #33C6F7 !important
     /* color: white !important */
     border: none !important;
     padding: 0;
-    transition: all .3s
+    transition: all .2s
 }
 
 .logout-button:hover {

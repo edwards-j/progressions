@@ -14,7 +14,7 @@ export default class SaveSongModal extends Component {
                         <ModalCard>
                             <ModalCardHeader>
                                 <div>
-                                    <ModalCardTitle className="modal-title">Great job!</ModalCardTitle>
+                                    <ModalCardTitle className="modal-title">Great job! Your song is awesome, I think even Jimi Hendrix would be jealous of this one</ModalCardTitle>
                                 </div>
                             </ModalCardHeader>
                             <ModalCardBody>
