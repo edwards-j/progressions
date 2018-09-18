@@ -14,6 +14,11 @@
       "username": "megannicole",
       "password": "Mcgizzle3",
       "id": 4
+    },
+    {
+      "username": "afont",
+      "password": "al",
+      "id": 5
     }
   ],
   "songs": [
@@ -33,32 +38,17 @@
       "id": 11
     },
     {
-      "userId": 3,
-      "username": "",
-      "selectedKey": "---",
-      "MajorMinor": "---",
-      "title": "",
-      "chord1": "",
-      "chord2": "",
-      "chord3": "",
-      "chord4": "",
-      "lyrics": "",
-      "description": "",
-      "public": false,
-      "id": 19
-    },
-    {
-      "userId": 1,
-      "username": "Jonathan",
+      "userId": 5,
+      "username": "afont",
       "selectedKey": "A",
       "MajorMinor": "minor",
-      "title": "Test",
-      "chord1": "C",
-      "chord2": "C",
-      "chord3": "C",
-      "chord4": "C",
-      "lyrics": "We're all going to a summer barbecue. No more acting for a week or two. Hideous balloons and bumpy cats at our summer barbecue. No more lifeless bananas for me or you. For a week or two\nWe're all going to a summer barbecue. No more acting for a week or two. Hideous balloons and bumpy cats at our summer barbecue. No more lifeless bananas for me or you. For a week or two\nWe're all going to a summer barbecue. No more acting for a week or two. Hideous balloons and bumpy cats at our summer barbecue. No more lifeless bananas for me or you. For a week or two\nWe're all going to a summer barbecue. No more acting for a week or two. Hideous balloons and bumpy cats at our summer barbecue. No more lifeless bananas for me or you. For a week or two",
-      "description": "My first song",
+      "title": "Best Song",
+      "chord1": "Am",
+      "chord2": "Em",
+      "chord3": "Am",
+      "chord4": "Em",
+      "lyrics": "I wanna feel alive\n\nI wish they all could be ... I wish they all could be ... I wish they all could be balloons of my office",
+      "description": "Sad, slow, ballad",
       "public": true,
       "id": 20
     },
@@ -67,36 +57,6 @@
       "username": "Jonathan",
       "selectedKey": "---",
       "MajorMinor": "---",
-      "title": "Test 1",
-      "chord1": "",
-      "chord2": "",
-      "chord3": "",
-      "chord4": "",
-      "lyrics": "test 1",
-      "description": "test 1",
-      "public": false,
-      "id": 21
-    },
-    {
-      "userId": 1,
-      "username": "Jonathan",
-      "selectedKey": "---",
-      "MajorMinor": "---",
-      "title": "test 2",
-      "chord1": "",
-      "chord2": "",
-      "chord3": "",
-      "chord4": "",
-      "lyrics": "test 2",
-      "description": "test 2",
-      "public": false,
-      "id": 22
-    },
-    {
-      "userId": 1,
-      "username": "Jonathan",
-      "selectedKey": "---",
-      "MajorMinor": "---",
       "title": "",
       "chord1": "",
       "chord2": "",
@@ -105,7 +65,7 @@
       "lyrics": "",
       "description": "",
       "public": false,
-      "id": 23
+      "id": 21
     }
   ],
   "lyrics": [

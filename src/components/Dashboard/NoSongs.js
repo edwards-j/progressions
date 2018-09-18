@@ -8,7 +8,7 @@ export default class Dashboard extends Component {
         return (
             <div className="dashboard">
                 <div className="has-text-centered">
-                    <p>It doesn't look like you've written any songs yet, let's get started!</p>
+                    <p>It doesn't look like you've written any songs yet, so let's get started!</p>
                 </div>
                 <div className="dash-header has-text-centered">
                     <div>

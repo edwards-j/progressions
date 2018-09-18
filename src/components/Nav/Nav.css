@@ -2,10 +2,6 @@
     border-radius: 0 !important;
 }
 
-.navLink {
-    color: white !important;
-    background-color: #33C6F7 !important
-}
 .navLink:hover {
     color: #33C6F7 !important;
     background-color: white !important;
@@ -15,4 +11,24 @@
 .fullNav{
 background-color: #33C6F7 !important
 }
+
+.activeNavLink {
+    background-color: white;
+    color: #33C6F7 !important;
+}
+
+.logout-button {
+    background-color: #33C6F7 !important;
+    /* color: white !important */
+    border: none !important;
+    padding: 0;
+    transition: all .3s
+}
+
+.logout-button:hover {
+    background-color: white !important;
+    color: #33C6F7 !important;
+}
+
+
 

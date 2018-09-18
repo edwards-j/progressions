@@ -7,8 +7,8 @@ export default class Dashboard extends Component {
 
         return (
             <div className="dashboard">
-                <div className="has-text-centered">
-                    <p>Looks like you've written <span className="your-song-count">{this.props.yourSongs.length}</span> songs so far. Keep up the great work!</p>
+                <div className="has-text-centered columns">
+                    <p className="column is-6 is-offset-3">It looks like you've written <span className="your-song-count">{this.props.yourSongs.length}</span> songs so far. Sounds like you're on the way to becoming a real-life rockstar. Keep up the great work!</p>
                 </div>
                 <div className="dash-header has-text-centered">
                     <div>

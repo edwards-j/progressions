@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import 'bulma'
-import logo from '../../img/logo2.png'
+import logo from '../../img/LogoWhite.png'
 import './Nav.css'
 
 
@@ -26,15 +26,15 @@ export default class Nav extends Component {
 
                                 <div id="" className="navbar-menu is-active">
                                     <div className="navbar-start">
-                                        <Link className="navLink navbar-item" to="/dashboard">Dashboard</Link>
-                                        <Link className="navLink navbar-item" to="/new-song">New Song</Link>
-                                        <Link className="navLink navbar-item" to="/your-songs">Your Songs</Link>
-                                        <Link className="navLink navbar-item" to="/public-songs">Public Songs</Link>
+                                        <NavLink activeClassName="activeNavLink" className=" navbar-item" to="/dashboard">Dashboard</NavLink>
+                                        <NavLink activeClassName="activeNavLink" className=" navbar-item" to="/new-song">New Song</NavLink>
+                                        <NavLink activeClassName="activeNavLink" className=" navbar-item" to="/your-songs">Your Songs</NavLink>
+                                        <NavLink activeClassName="activeNavLink" className=" navbar-item" to="/public-songs">Public Songs</NavLink>
                                     </div>
 
                                     <div className="navbar-end">
                                         <div className="navbar-item">
-                                            <Link className="navLink navbar-item button is-rounded" to="/login" onClick={this.logout}>Logout</Link>
+                                            <Link className="logout-button navbar-item button is-rounded" to="/login" onClick={this.logout}>Logout</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -45,6 +45,6 @@ export default class Nav extends Component {
                     <div></div>
                 }
             </div>
-            )
-        }
+        )
+    }
 }

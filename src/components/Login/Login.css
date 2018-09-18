@@ -44,4 +44,18 @@ border-radius: 5px;
 box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.31);
 }
 
+.register-title{
+    color: #455AFF !important
+}
+.register-subtitle{
+    color: #28A9FF !important
+}
+
+.cancel-register {
+    color: rgba(255,255,255,.5);
+}
+.cancel-register:hover {
+    color: rgba(255,255,255,1);
+}
+
 
