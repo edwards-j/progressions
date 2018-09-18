@@ -31,6 +31,7 @@ export default class LyricGenerator extends Component {
                                 <div>
                                     <ModalCardTitle className="modal-title">Random Lyric Generator</ModalCardTitle>
                                     <p>Sometimes the hardest part of writing a song is coming up with lyrics that don't suck. Hopefully these will spark some inspiration, or atleast give you a laugh.</p>
+                                    <p className="modal-intructions">If any of these lyrics tickle your fancy, feel free to copy and paste the words into the lyrics section of your song</p>
                                 </div>
                             </ModalCardHeader>
                             <ModalCardBody>

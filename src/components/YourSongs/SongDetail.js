@@ -156,12 +156,12 @@ export default class SongDetail extends Component {
                 }
                 {(this.state.edit) ?
                     <div className="has-text-centered">
-                        <button className="saveButton button is-outlined" onClick={this.saveEditedSong}>Save</button>
+                        <button className="save-edits-button button is-rounded" onClick={this.saveEditedSong}>Save Changes <i class="far fa-save"></i></button>
                     </div>
                     :
                     <div className="songDetailButtons columns">
-                        <button className="button is-danger is-outlined is-rounded column is-1 is-offset-4 is-paddingless" onClick={() => this.props.deleteSong(song.id)}><i className="fas fa-trash-alt"></i></button>
-                        <button className="button is-warning is-outlined is-rounded column is-1 is-offset-2 is-paddingless" onClick={this.handleEditClicked}><i className="far fa-edit"></i></button>
+                        <button className="delete-song-button button is-rounded column is-1 is-offset-4 is-paddingless" onClick={() => this.props.deleteSong(song.id)}><i className="fas fa-trash-alt"></i></button>
+                        <button className="edit-song-button button is-rounded column is-1 is-offset-2 is-paddingless" onClick={this.handleEditClicked}><i className="far fa-edit"></i></button>
                     </div>
                 }
             </div>

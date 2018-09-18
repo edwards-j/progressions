@@ -163,6 +163,7 @@ export default class NewSong extends Component {
                 <div className="">
                     <div className="columns">
                         <div className="column is-2 is-offset-5">
+                            <h4 className="is-size-4 has-text-centered new-song-title">Song Title</h4>
                             <input className="titleInput input is-rounded" type="text" id="title" placeholder="Enter Song Title" onChange={this.handleFieldChange} /><br />
                         </div>
                     </div>

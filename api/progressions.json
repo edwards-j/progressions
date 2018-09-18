@@ -6,45 +6,17 @@
       "id": 1
     },
     {
-      "username": "Megan",
-      "password": "m",
-      "id": 2
-    },
-    {
       "username": "",
       "password": "",
       "id": 3
+    },
+    {
+      "username": "megannicole",
+      "password": "Mcgizzle3",
+      "id": 4
     }
   ],
   "songs": [
-    {
-      "userId": 2,
-      "selectedKey": "C",
-      "MajorMinor": "major",
-      "title": "Public test",
-      "chord1": "",
-      "chord2": "",
-      "chord3": "",
-      "chord4": "",
-      "lyrics": "",
-      "description": "",
-      "public": true,
-      "id": 3
-    },
-    {
-      "userId": 2,
-      "selectedKey": "C",
-      "MajorMinor": "major",
-      "title": "Edit test",
-      "chord1": "",
-      "chord2": "",
-      "chord3": "",
-      "chord4": "",
-      "lyrics": "",
-      "description": "",
-      "public": true,
-      "id": 4
-    },
     {
       "userId": 1,
       "username": "Jonathan",
@@ -61,36 +33,6 @@
       "id": 7
     },
     {
-      "userId": 3,
-      "username": "",
-      "selectedKey": "C",
-      "MajorMinor": "major",
-      "title": "",
-      "chord1": "",
-      "chord2": "",
-      "chord3": "",
-      "chord4": "",
-      "lyrics": "",
-      "description": "",
-      "public": false,
-      "id": 8
-    },
-    {
-      "userId": 3,
-      "username": "",
-      "selectedKey": "C",
-      "MajorMinor": "major",
-      "title": "",
-      "chord1": "",
-      "chord2": "",
-      "chord3": "",
-      "chord4": "",
-      "lyrics": "",
-      "description": "",
-      "public": false,
-      "id": 9
-    },
-    {
       "userId": 1,
       "username": "Jonathan",
       "selectedKey": "C",
@@ -104,6 +46,36 @@
       "description": "testing test test",
       "public": false,
       "id": 10
+    },
+    {
+      "userId": 4,
+      "username": "megannicole",
+      "selectedKey": "C",
+      "MajorMinor": "major",
+      "title": "Lily Girl",
+      "chord1": "Am",
+      "chord2": "C",
+      "chord3": "Em",
+      "chord4": "G",
+      "lyrics": "My sweet Lily girl\nShe's a diamond, not a pearl\nShe licks my hand all the time\nIt's annoying, but I don't mind ",
+      "description": "A song about my doggo.",
+      "public": true,
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "username": "Jonathan",
+      "selectedKey": "C",
+      "MajorMinor": "major",
+      "title": "",
+      "chord1": "",
+      "chord2": "",
+      "chord3": "",
+      "chord4": "",
+      "lyrics": "",
+      "description": "",
+      "public": false,
+      "id": 12
     }
   ],
   "lyrics": [

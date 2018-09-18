@@ -2,6 +2,11 @@
     margin-bottom: .5em
 }
 
+.modal-intructions {
+    font-size: .75em;
+    margin: 2em 1em 0 1em;
+}
+
 .modal-buttons {
     display: flex;
     flex-direction: row;

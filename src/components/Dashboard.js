@@ -3,20 +3,33 @@ import { Link } from "react-router-dom"
 import logo from '../img/logo2.png'
 import './Dashboard.css'
 import UserSS from '../modules/userSS'
-import Tilt from 'react-tilt'
-
+import DataManager from '../modules/DataManager'
 
 export default class Dashboard extends Component {
+    state = {
+        username: "",
+        yourSongs: []
+    }
+
+    componentDidMount() {
+        const currentUser = UserSS.loadUserNameFromSS()
+        this.setState({ username: currentUser })
+
+        DataManager.getData.getUserSongs(UserSS.loadUserIDFromSS())
+            .then(songs => this.setState({ yourSongs: songs }))
+    }
 
     render() {
-        const currentUser = UserSS.loadUserNameFromSS()
         return (
             <div className="dashboard">
                 <div className="dash-header">
                     <div>
-                        <h2 className="title has-text-centered">Hey {currentUser}, welcome to</h2>
+                        <h2 className="title has-text-centered">Hey {this.state.username}, welcome to</h2>
                         <img className="dash-logo" src={logo} alt="logo" />
                     </div>
+                </div>
+                <div>
+                    <p>Looks like you've only got {this.state.yourSongs.length} songs so far. Let's change that.</p>
                 </div>
                 <div className="dash-header has-text-centered">
                     <div>
