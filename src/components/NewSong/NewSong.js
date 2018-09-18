@@ -7,6 +7,7 @@ import Major from './Major'
 import Minor from './Minor'
 import Audio from './Audio'
 import LyricGenerator from './LyricGenerator'
+import SaveSongModal from './SaveSongModal'
 
 export default class NewSong extends Component {
     state = {
@@ -20,8 +21,8 @@ export default class NewSong extends Component {
         lyrics: "",
         description: "",
         public: false,
-        modal: false
-
+        lyricModal: false,
+        saveSongModal: false
     }
 
     handleKeyChange = evt => {
@@ -81,12 +82,34 @@ export default class NewSong extends Component {
         this.setState(stateToChange)
     }
 
-    showModal = () => {
-        this.setState({ modal: true })
+    showLyricModal = () => {
+        this.setState({ lyricModal: true })
     }
 
-    hideModal = () => {
-        this.setState({ modal: false })
+    hideLyricModal = () => {
+        this.setState({ lyricModal: false })
+    }
+
+    showSaveSongModal = () => {
+        this.setState({ saveSongModal: true })
+    }
+
+    hideSaveSongModal = () => {
+        this.setState({
+            title: "",
+            selectedKey: "---",
+            MajorMinor: "---",
+            chord1: "",
+            chord2: "",
+            chord3: "",
+            chord4: "",
+            lyrics: "",
+            description: "",
+            public: false,
+            lyricModal: false,
+            saveSongModal: false
+        })
+        window.scrollTo(0, 0)
     }
 
     constructNewSong = () => {
@@ -105,7 +128,7 @@ export default class NewSong extends Component {
             public: this.state.public
         }
         this.props.addSong(newSong)
-            .then(() => this.props.history.push("/your-songs"))
+            .then(() => this.showSaveSongModal())
     }
 
     render() {
@@ -164,7 +187,7 @@ export default class NewSong extends Component {
                     <div className="columns">
                         <div className="column is-2 is-offset-5">
                             <h4 className="is-size-4 has-text-centered new-song-title">Song Title</h4>
-                            <input className="titleInput input is-rounded" type="text" id="title" placeholder="Enter Song Title" onChange={this.handleFieldChange} /><br />
+                            <input className="titleInput input is-rounded" type="text" id="title" placeholder="Enter Song Title" onChange={this.handleFieldChange} value={this.state.title}/><br />
                         </div>
                     </div>
                     <h2 className="is-size-2 has-text-centered">{this.state.title}</h2>
@@ -267,15 +290,15 @@ export default class NewSong extends Component {
                     <h4 className="is-size-4 has-text-centered">Lyrics</h4>
                     <div className="columns">
                         <div className="column is-6 is-offset-3">
-                            <textarea className="textarea lyricInput" id="lyrics" rows="10" cols="20" onChange={this.handleFieldChange} />
+                            <textarea className="textarea lyricInput" id="lyrics" rows="10" cols="20" onChange={this.handleFieldChange} value={this.state.lyrics}/>
                         </div>
                     </div>
                     <div className="has-text-centered">
                         <p>Need some help with those lyrics?</p>
-                        <button className="button is-rounded lyricHelperButton" onClick={this.showModal}>Click Here</button>
+                        <button className="button is-rounded lyricHelperButton" onClick={this.showLyricModal}>Click Here</button>
                         <LyricGenerator
-                            modal={this.state.modal}
-                            hideModal={this.hideModal}
+                            modal={this.state.lyricModal}
+                            hideModal={this.hideLyricModal}
                         />
                     </div>
                 </div>
@@ -284,13 +307,17 @@ export default class NewSong extends Component {
                     <h4 className="is-size-4">Song Description</h4>
                     <div className="columns">
                         <div className="column is-4 is-offset-4">
-                            <input className="input is-rounded descInput" type="text" id="description" placeholder="A few words describing what this song is about" onChange={this.handleFieldChange} /><br />
+                            <input className="input is-rounded descInput" type="text" id="description" placeholder="A few words describing what this song is about" onChange={this.handleFieldChange} value={this.state.description}/><br />
                         </div>
                     </div>
                     <div className="saveNewSong">
                         <label for="public" className="has-text-weight-semibold	">Make song public? </label>
                         <input type="checkbox" id="public" onChange={this.handlePublic} /><br />
-                        <button className="saveButton button is-outlined has-text-weight-bold	" onClick={this.constructNewSong}>Save Song</button>
+                        <button className="saveButton button is-outlined has-text-weight-bold" onClick={this.constructNewSong}>Save Song</button>
+                        <SaveSongModal
+                            modal={this.state.saveSongModal}
+                            hideSaveSongModal={this.hideSaveSongModal}
+                        />
                     </div>
                 </div>
 
