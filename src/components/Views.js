@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Redirect } from "react-router-dom"
 import Login from './Login/Login'
-import Dashboard from './Dashboard'
+import Dashboard from './Dashboard/Dashboard'
 import NewSong from './NewSong/NewSong'
 import Register from './Login/Register'
 import YourSongList from './YourSongs/YourSongList'

@@ -7,6 +7,12 @@
     justify-content: center;
 }
 
+.your-song-count {
+    color: #5433FF;
+    font-size: 1.2em;
+    font-weight: 600
+}
+
 .dashSubtitle {
     margin: 2em 0 0 0 !important
 }

@@ -33,21 +33,6 @@
       "id": 7
     },
     {
-      "userId": 1,
-      "username": "Jonathan",
-      "selectedKey": "C",
-      "MajorMinor": "major",
-      "title": "Test",
-      "chord1": "C",
-      "chord2": "Dm",
-      "chord3": "C",
-      "chord4": "Dm",
-      "lyrics": "Test test test",
-      "description": "testing test test",
-      "public": false,
-      "id": 10
-    },
-    {
       "userId": 4,
       "username": "megannicole",
       "selectedKey": "C",
@@ -65,8 +50,8 @@
     {
       "userId": 1,
       "username": "Jonathan",
-      "selectedKey": "C",
-      "MajorMinor": "major",
+      "selectedKey": "---",
+      "MajorMinor": "---",
       "title": "",
       "chord1": "",
       "chord2": "",
@@ -76,6 +61,21 @@
       "description": "",
       "public": false,
       "id": 12
+    },
+    {
+      "userId": 3,
+      "username": "",
+      "selectedKey": "---",
+      "MajorMinor": "---",
+      "title": "",
+      "chord1": "",
+      "chord2": "",
+      "chord3": "",
+      "chord4": "",
+      "lyrics": "",
+      "description": "",
+      "public": false,
+      "id": 19
     }
   ],
   "lyrics": [

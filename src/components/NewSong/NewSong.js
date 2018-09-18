@@ -190,7 +190,7 @@ export default class NewSong extends Component {
                 </div>
 
                 <div className="">
-                    {(this.state.selectedKey === "---") ?
+                    {(this.state.MajorMinor === "---") ?
                         <div className="availableChords ">
                             <h4 className="is-size-4 has-text-centered">Available Chords</h4>
                             <div className="container is-gapless">
@@ -232,7 +232,6 @@ export default class NewSong extends Component {
                                 </div>
                             </div>
                         </div>
-
                         :
                         <div>
                             {(this.state.MajorMinor === "major") ?
@@ -285,7 +284,7 @@ export default class NewSong extends Component {
                     <h4 className="is-size-4">Song Description</h4>
                     <div className="columns">
                         <div className="column is-4 is-offset-4">
-                            <input className="input is-rounded descInput" type="text" id="description" onChange={this.handleFieldChange} /><br />
+                            <input className="input is-rounded descInput" type="text" id="description" placeholder="A few words describing what this song is about" onChange={this.handleFieldChange} /><br />
                         </div>
                     </div>
                     <div className="saveNewSong">
