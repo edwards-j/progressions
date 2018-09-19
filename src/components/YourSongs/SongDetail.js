@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import ChordDisplayer from '../NewSong/ChordDisplayer'
 import Major from '../NewSong/Major'
 import Minor from '../NewSong/Minor'
@@ -126,13 +127,16 @@ export default class SongDetail extends Component {
                         }
                         <div className="has-text-centered">
                             <h4 className="is-size-4">Lyrics</h4>
-                            <textarea id="lyrics" className="lyricInput" rows="20" cols="70" onChange={this.handleFieldChange} defaultValue={song.lyrics} /><br />
+                            <div className="column is-6 is-offset-3">
+                                <textarea id="lyrics" className="textarea lyricInput" rows="10" cols="20" onChange={this.handleFieldChange} defaultValue={song.lyrics} /><br />
+                            </div>
                             <label for="public">Make song public? </label>
                             <input type="checkbox" id="public" onChange={this.handlePublic} /><br />
                         </div>
                     </div>
                     :
                     <div key={song.id} className="">
+                        <h4 className="is-size-4 has-text-centered">Chords Used</h4>
                         <div className="">
                             <div className="your-chords columns">
                                 <div className="column chord is-offset-3 yourChord1">
@@ -160,7 +164,7 @@ export default class SongDetail extends Component {
                     </div>
                     :
                     <div className="songDetailButtons columns">
-                        <button className="delete-song-button button is-rounded column is-1 is-offset-4 is-paddingless" onClick={() => this.props.deleteSong(song.id)}><i className="fas fa-trash-alt"></i></button>
+                        <Link to="/your-songs" className="delete-song-button button is-rounded column is-1 is-offset-4 is-paddingless" onClick={() => this.props.deleteSong(song.id)}><i className="fas fa-trash-alt"></i></Link>
                         <button className="edit-song-button button is-rounded column is-1 is-offset-2 is-paddingless" onClick={this.handleEditClicked}><i className="far fa-edit"></i></button>
                     </div>
                 }

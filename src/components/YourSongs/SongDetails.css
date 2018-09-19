@@ -28,6 +28,7 @@
 }
 
 .delete-song-button{
+    display: inherit !important;
     transform: scale(1);
     box-shadow: none;
     border: 1px solid rgb(255, 76, 92) !important;
