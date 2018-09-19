@@ -8,6 +8,12 @@
     border: none
 }
 
+.nav-link {
+    color: white;
+    margin: auto;
+    padding: 1em;
+}
+
 .fullNav{
 background-color: #33C6F7 !important
 }

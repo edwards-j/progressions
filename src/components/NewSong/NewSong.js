@@ -213,17 +213,31 @@ export default class NewSong extends Component {
             key.addEventListener('transitionend', removeTransition)
         )
 
-        const progress = {
-            width: this.state.progress+"%",
-            transition: "width .4s",
-            transitionTimingFunction: "cubic-bezier(.46,-0.36,.61,1.47)"
+        let progress;
+        if (this.state.progress < 100) {
+            progress = {
+                width: this.state.progress + "%",
+                maxWidth: "100%",
+                transition: "width .5s",
+                transitionTimingFunction: "cubic-bezier(.46,-0.36,.61,1.47)",
+                background: "linear-gradient(to right, #5433FF, #33C6F7,#A4FEC9)"
+            }
+        } else {
+            progress = {
+                width: this.state.progress + "%",
+                maxWidth: "100%",
+                transition: "width .4s",
+                transitionTimingFunction: "cubic-bezier(.46,-0.36,.61,1.47)",
+                background: "#5FFF4C"
+            }
         }
-
         return (
             <div>
-                {/* <Progress isColor="red" className="progress-bar" value={this.state.progress} max={90} /> */}
-                <div class="meter">
-                    <span style={progress}></span>
+                <div className="progress-section column is-6 is-offset-3">
+                    <p className="has-text-centered has-text-grey-light	">Your song is {this.state.progress}% complete</p>
+                    <div class="meter">
+                        <span style={progress}></span>
+                    </div>
                 </div>
                 <div className="">
                     <div className="columns">
@@ -232,8 +246,7 @@ export default class NewSong extends Component {
                             <input className="titleInput input is-rounded" type="text" id="title" placeholder="Enter Song Title" onChange={this.handleFieldChange} value={this.state.title} /><br />
                         </div>
                     </div>
-                    <h2 className="is-size-2 has-text-centered">{this.state.title}</h2>
-
+                    {/* <h2 className="is-size-2 has-text-centered">{this.state.title}</h2> */}
                 </div>
                 <div className="has-text-centered keySelector">
                     Select Key:

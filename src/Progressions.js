@@ -13,6 +13,14 @@ export default class Progressions extends Component {
     (this.state.showNav) ? this.setState({ showNav: false }) : this.setState({ showNav: true })
   }
 
+  componentWillMount() {
+    if (this.isAuthenticated()) {
+      this.setState({ showNav: true })
+    } else {
+      return
+    }
+  }
+
   render() {
     return (
       <div>

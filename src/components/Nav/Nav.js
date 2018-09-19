@@ -26,10 +26,10 @@ export default class Nav extends Component {
 
                                 <div id="" className="navbar-menu is-active">
                                     <div className="navbar-start">
-                                        <NavLink activeClassName="activeNavLink" className=" navbar-item" to="/dashboard">Dashboard</NavLink>
-                                        <NavLink activeClassName="activeNavLink" className=" navbar-item" to="/new-song">New Song</NavLink>
-                                        <NavLink activeClassName="activeNavLink" className=" navbar-item" to="/your-songs">Your Songs</NavLink>
-                                        <NavLink activeClassName="activeNavLink" className=" navbar-item" to="/public-songs">Public Songs</NavLink>
+                                        <NavLink activeClassName="activeNavLink" className="nav-link" to="/dashboard">Dashboard</NavLink>
+                                        <NavLink activeClassName="activeNavLink" className=" nav-link" to="/new-song">New Song</NavLink>
+                                        <NavLink activeClassName="activeNavLink" className=" nav-link" to="/your-songs">Your Songs</NavLink>
+                                        <NavLink activeClassName="activeNavLink" className=" nav-link" to="/public-songs">Public Songs</NavLink>
                                     </div>
 
                                     <div className="navbar-end">
