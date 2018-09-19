@@ -8,6 +8,7 @@ import Minor from './Minor'
 import Audio from './Audio'
 import LyricGenerator from './LyricGenerator'
 import SaveSongModal from './SaveSongModal'
+import './ProgressBar.css'
 
 import { Progress } from 'bloomer'
 
@@ -47,7 +48,7 @@ export default class NewSong extends Component {
             "chord2": this.state.chord2,
             "chord3": this.state.chord3,
             "chord4": this.state.chord4,
-            "progress": this.state.progress + 10
+            "progress": this.state.progress + 11
         })
     }
 
@@ -57,7 +58,7 @@ export default class NewSong extends Component {
             "chord2": evt.target.value,
             "chord3": this.state.chord3,
             "chord4": this.state.chord4,
-            "progress": this.state.progress + 10
+            "progress": this.state.progress + 11
         })
     }
 
@@ -67,7 +68,7 @@ export default class NewSong extends Component {
             "chord2": this.state.chord2,
             "chord3": evt.target.value,
             "chord4": this.state.chord4,
-            "progress": this.state.progress + 10
+            "progress": this.state.progress + 11
         })
     }
 
@@ -77,7 +78,7 @@ export default class NewSong extends Component {
             "chord2": this.state.chord2,
             "chord3": this.state.chord3,
             "chord4": evt.target.value,
-            "progress": this.state.progress + 10
+            "progress": this.state.progress + 11
         })
     }
 
@@ -86,23 +87,23 @@ export default class NewSong extends Component {
     handleFieldChange = evt => {
         if (evt.target.id === "title" && this.state.title === "") {
             this.setState({
-                "progress": this.state.progress + 10
+                "progress": this.state.progress + 11
             })
         } else if (evt.target.id === "selectedKey" && this.state.selectedKey === "---") {
             this.setState({
-                "progress": this.state.progress + 10
+                "progress": this.state.progress + 11
             })
         } else if (evt.target.id === "MajorMinor" && this.state.MajorMinor === "---") {
             this.setState({
-                "progress": this.state.progress + 10
+                "progress": this.state.progress + 11
             })
         } else if (evt.target.id === "lyrics" && this.state.lyrics === "") {
             this.setState({
-                "progress": this.state.progress + 10
+                "progress": this.state.progress + 11
             })
         } else if (evt.target.id === "description" && this.state.description === "") {
             this.setState({
-                "progress": this.state.progress + 10
+                "progress": this.state.progress + 12
             })
         }
 
@@ -212,9 +213,18 @@ export default class NewSong extends Component {
             key.addEventListener('transitionend', removeTransition)
         )
 
+        const progress = {
+            width: this.state.progress+"%",
+            transition: "width .4s",
+            transitionTimingFunction: "cubic-bezier(.46,-0.36,.61,1.47)"
+        }
+
         return (
             <div>
-                <Progress isColor="red" className="progress-bar" value={this.state.progress} max={90} />
+                {/* <Progress isColor="red" className="progress-bar" value={this.state.progress} max={90} /> */}
+                <div class="meter">
+                    <span style={progress}></span>
+                </div>
                 <div className="">
                     <div className="columns">
                         <div className="column is-2 is-offset-5">
