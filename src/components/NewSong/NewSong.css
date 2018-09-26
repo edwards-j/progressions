@@ -89,8 +89,9 @@
   }
 
   .yourChord1 {
-      border: 2px solid #28A9FF
+      border: 2px solid #28A9FF;
   }
+  
   .yourChord2 {
     border: 2px solid #33C6F7
   }

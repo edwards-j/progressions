@@ -10,8 +10,6 @@ import LyricGenerator from './LyricGenerator'
 import SaveSongModal from './SaveSongModal'
 import './ProgressBar.css'
 
-import { Progress } from 'bloomer'
-
 export default class NewSong extends Component {
     state = {
         title: "",
@@ -249,7 +247,7 @@ export default class NewSong extends Component {
                     {/* <h2 className="is-size-2 has-text-centered">{this.state.title}</h2> */}
                 </div>
                 <div className="has-text-centered keySelector">
-                    Select Key:
+                    Select Key: 
                 <select name="selectedKey" id="selectedKey" onChange={this.handleFieldChange}>
                         <option value="---">---</option>
                         <option value="C">C</option>

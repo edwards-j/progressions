@@ -1,30 +1,30 @@
 import React, { Component } from 'react'
-// import Ab from "../../audio/maj/Ab.wav"
+import Ab from "../../audio/maj/Ab.wav"
 import A from "../../audio/maj/A.wav"
 import B from "../../audio/maj/B.wav"
 import Bb from "../../audio/maj/Bb.wav"
 import C from "../../audio/maj/C.wav"
 import D from "../../audio/maj/D.wav"
-// import Eb from "../../audio/maj/Eb.wav"
+import Eb from "../../audio/maj/Eb.wav"
 import E from "../../audio/maj/E.wav"
 import F from "../../audio/maj/F.wav"
 import G from "../../audio/maj/G.wav"
 import Am from "../../audio/mi/Am.wav"
 import Bm from "../../audio/mi/Bm.wav"
-// import Cm from "../../audio/mi/Cm.wav"
+import Cm from "../../audio/mi/Cm.wav"
 import Csharpm from "../../audio/mi/C#m.wav"
 import Dm from "../../audio/mi/Dm.wav"
 import Dsharpm from "../../audio/mi/D#m.wav"
 import Em from "../../audio/mi/Em.wav"
 import Fsharp from "../../audio/maj/F#.wav"
 import Fsharpm from "../../audio/mi/F#m.wav"
-// import Fm from "../../audio/mi/Fm.wav"
+import Fm from "../../audio/mi/Fm.wav"
 import Gsharpm from "../../audio/mi/G#m.wav"
 import Gm from "../../audio/mi/Gm.wav"
 import Asharpdim from "../../audio/dim/A#dim.wav"
 import Bdim from "../../audio/dim/Bdim.wav"
 import Csharpdim from "../../audio/dim/C#dim.wav"
-// import Ddim from "../../audio/dim/Ddim.wav"
+import Ddim from "../../audio/dim/Ddim.wav"
 import Dsharpdim from "../../audio/dim/D#dim.wav"
 import Edim from "../../audio/dim/Edim.wav"
 import Fsharpdim from "../../audio/dim/F#dim.wav"
@@ -104,13 +104,13 @@ const Audio = ({ selectedKey, MajorMinor }) => {
         </div>
     } else if (selectedKey === "C" && MajorMinor === "minor") {
         return <div>
-            {/* <audio data-key="49" src={Cm}></audio>
-            <audio data-key="50" src={Cm}></audio>
-            <audio data-key="51" src={Cm}></audio>
-            <audio data-key="52" src={Cm}></audio>
-            <audio data-key="53" src={Cm}></audio>
-            <audio data-key="54" src={Cm}></audio>
-            <audio data-key="55" src={Cm}></audio> */}
+            <audio data-key="49" src={Cm}></audio>
+            <audio data-key="50" src={Ddim}></audio>
+            <audio data-key="51" src={Eb}></audio>
+            <audio data-key="52" src={Fm}></audio>
+            <audio data-key="53" src={Gm}></audio>
+            <audio data-key="54" src={Ab}></audio>
+            <audio data-key="55" src={Bb}></audio>
         </div>
     } else if (selectedKey === "D" && MajorMinor === "minor") {
         return <div>
@@ -147,9 +147,9 @@ const Audio = ({ selectedKey, MajorMinor }) => {
             <audio data-key="49" src={Gm}></audio>
             {/* <audio data-key="50" src={Adim}></audio> */}
             <audio data-key="51" src={Bb}></audio>
-            {/* <audio data-key="52" src={Cm}></audio> */}
+            <audio data-key="52" src={Cm}></audio>
             <audio data-key="53" src={Dm}></audio>
-            {/* <audio data-key="54" src={Eb}></audio> */}
+            <audio data-key="54" src={Eb}></audio>
             <audio data-key="55" src={F}></audio>
         </div>
     } else if (selectedKey === "A" && MajorMinor === "minor") {
