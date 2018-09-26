@@ -19,13 +19,29 @@ import Eflat from '../../img/png/E♭.png'
 import Eflatmi from '../../img/png/E♭mi.png'
 import Emi from '../../img/png/Emi.png'
 import F from '../../img/png/F.png'
-import Fsharp from '../../img/png/F♯.png'
-import Fsharpmi from '../../img/png/F♯mi.png'
+import Fsharp from '../../img/png/Fsharp.png'
+import Fsharpmi from '../../img/png/Fsharpmi.png'
 import Fmi from '../../img/png/Fmi.png'
 import G from '../../img/png/G.png'
 import Gmi from '../../img/png/Gmi.png'
 
-const Chord1Displayer = ({chord1}) => {
+import Asharpdim from '../../img/png/Asharpdim.png'
+import Adim from '../../img/png/Adim.png'
+import Bdim from '../../img/png/Bdim.png'
+import Csharpdim from '../../img/png/Csharpdim.png'
+import Csharpmi from '../../img/png/Csharpm.png'
+import Dsharpdim from '../../img/png/Dsharpdim.png'
+import Dsharpmi from '../../img/png/Dsharpm.png'
+import Ddim from '../../img/png/Ddim.png'
+import Edim from '../../img/png/Edim.png'
+import Fsharpdim from '../../img/png/Fsharpdim.png'
+import Gsharpdim from '../../img/png/Gsharpdim.png'
+import Gsharpmi from '../../img/png/Gsharpm.png'
+import Gdim from '../../img/png/Gdim.png'
+
+
+
+const Chord1Displayer = ({ chord1 }) => {
     if (chord1 === "C") {
         return <img className="chordChart" src={C} alt="C" />
     } else if (chord1 === "Cm") {
@@ -74,12 +90,38 @@ const Chord1Displayer = ({chord1}) => {
         return <img className="chordChart" src={B} alt="B" />
     } else if (chord1 === "Bm") {
         return <img className="chordChart" src={Bmi} alt="Bmi" />
+    } else if (chord1 === "A#dim") {
+        return <img className="chordChart" src={Asharpdim} alt="A#dim" />
+    } else if (chord1 === "Adim") {
+        return <img className="chordChart" src={Adim} alt="Adim" />
+    } else if (chord1 === "Bdim") {
+        return <img className="chordChart" src={Bdim} alt="Bdim" />
+    } else if (chord1 === "C#dim") {
+        return <img className="chordChart" src={Csharpdim} alt="C#dim" />
+    } else if (chord1 === "C#m") {
+        return <img className="chordChart" src={Csharpmi} alt="C#m" />
+    } else if (chord1 === "D#dim") {
+        return <img className="chordChart" src={Dsharpdim} alt="D#dim" />
+    } else if (chord1 === "D#m") {
+        return <img className="chordChart" src={Dsharpmi} alt="D#mi" />
+    } else if (chord1 === "Ddim") {
+        return <img className="chordChart" src={Ddim} alt="Ddim" />
+    } else if (chord1 === "Edim") {
+        return <img className="chordChart" src={Edim} alt="Edim" />
+    } else if (chord1 === "F#dim") {
+        return <img className="chordChart" src={Fsharpdim} alt="F#dim" />
+    } else if (chord1 === "G#dim") {
+        return <img className="chordChart" src={Gsharpdim} alt="G#dim" />
+    } else if (chord1 === "G#m") {
+        return <img className="chordChart" src={Gsharpmi} alt="G#mi" />
+    } else if (chord1 === "Gdim") {
+        return <img className="chordChart" src={Gdim} alt="Gdim" />
     } else {
         return <div className="emptyCard"></div>
     }
 }
 
-const Chord2Displayer = ({chord2}) => {
+const Chord2Displayer = ({ chord2 }) => {
     if (chord2 === "C") {
         return <img className="chordChart" src={C} alt="C" />
     } else if (chord2 === "Cm") {
@@ -128,12 +170,38 @@ const Chord2Displayer = ({chord2}) => {
         return <img className="chordChart" src={B} alt="B" />
     } else if (chord2 === "Bm") {
         return <img className="chordChart" src={Bmi} alt="Bmi" />
+    } else if (chord2 === "A#dim") {
+        return <img className="chordChart" src={Asharpdim} alt="A#dim" />
+    } else if (chord2 === "Adim") {
+        return <img className="chordChart" src={Adim} alt="Adim" />
+    } else if (chord2 === "Bdim") {
+        return <img className="chordChart" src={Bdim} alt="Bdim" />
+    } else if (chord2 === "C#dim") {
+        return <img className="chordChart" src={Csharpdim} alt="C#dim" />
+    } else if (chord2 === "C#m") {
+        return <img className="chordChart" src={Csharpmi} alt="C#m" />
+    } else if (chord2 === "D#dim") {
+        return <img className="chordChart" src={Dsharpdim} alt="D#dim" />
+    } else if (chord2 === "D#m") {
+        return <img className="chordChart" src={Dsharpmi} alt="D#mi" />
+    } else if (chord2 === "Ddim") {
+        return <img className="chordChart" src={Ddim} alt="Ddim" />
+    } else if (chord2 === "Edim") {
+        return <img className="chordChart" src={Edim} alt="Edim" />
+    } else if (chord2 === "F#dim") {
+        return <img className="chordChart" src={Fsharpdim} alt="F#dim" />
+    } else if (chord2 === "G#dim") {
+        return <img className="chordChart" src={Gsharpdim} alt="G#dim" />
+    } else if (chord2 === "G#m") {
+        return <img className="chordChart" src={Gsharpmi} alt="G#mi" />
+    } else if (chord2 === "Gdim") {
+        return <img className="chordChart" src={Gdim} alt="Gdim" />
     } else {
         return <div className="emptyCard"></div>
     }
 }
 
-const Chord3Displayer = ({chord3}) => {
+const Chord3Displayer = ({ chord3 }) => {
     if (chord3 === "C") {
         return <img className="chordChart" src={C} alt="C" />
     } else if (chord3 === "Cm") {
@@ -182,12 +250,38 @@ const Chord3Displayer = ({chord3}) => {
         return <img className="chordChart" src={B} alt="B" />
     } else if (chord3 === "Bm") {
         return <img className="chordChart" src={Bmi} alt="Bmi" />
+    } else if (chord3 === "A#dim") {
+        return <img className="chordChart" src={Asharpdim} alt="A#dim" />
+    } else if (chord3 === "Adim") {
+        return <img className="chordChart" src={Adim} alt="Adim" />
+    } else if (chord3 === "Bdim") {
+        return <img className="chordChart" src={Bdim} alt="Bdim" />
+    } else if (chord3 === "C#dim") {
+        return <img className="chordChart" src={Csharpdim} alt="C#dim" />
+    } else if (chord3 === "C#m") {
+        return <img className="chordChart" src={Csharpmi} alt="C#m" />
+    } else if (chord3 === "D#dim") {
+        return <img className="chordChart" src={Dsharpdim} alt="D#dim" />
+    } else if (chord3 === "D#m") {
+        return <img className="chordChart" src={Dsharpmi} alt="D#mi" />
+    } else if (chord3 === "Ddim") {
+        return <img className="chordChart" src={Ddim} alt="Ddim" />
+    } else if (chord3 === "Edim") {
+        return <img className="chordChart" src={Edim} alt="Edim" />
+    } else if (chord3 === "F#dim") {
+        return <img className="chordChart" src={Fsharpdim} alt="F#dim" />
+    } else if (chord3 === "G#dim") {
+        return <img className="chordChart" src={Gsharpdim} alt="G#dim" />
+    } else if (chord3 === "G#m") {
+        return <img className="chordChart" src={Gsharpmi} alt="G#mi" />
+    } else if (chord3 === "Gdim") {
+        return <img className="chordChart" src={Gdim} alt="Gdim" />
     } else {
         return <div className="emptyCard"></div>
     }
 }
 
-const Chord4Displayer = ({chord4}) => {
+const Chord4Displayer = ({ chord4 }) => {
     if (chord4 === "C") {
         return <img className="chordChart" src={C} alt="C" />
     } else if (chord4 === "Cm") {
@@ -236,9 +330,35 @@ const Chord4Displayer = ({chord4}) => {
         return <img className="chordChart" src={B} alt="B" />
     } else if (chord4 === "Bm") {
         return <img className="chordChart" src={Bmi} alt="Bmi" />
+    } else if (chord4 === "A#dim") {
+        return <img className="chordChart" src={Asharpdim} alt="A#dim" />
+    } else if (chord4 === "Adim") {
+        return <img className="chordChart" src={Adim} alt="Adim" />
+    } else if (chord4 === "Bdim") {
+        return <img className="chordChart" src={Bdim} alt="Bdim" />
+    } else if (chord4 === "C#dim") {
+        return <img className="chordChart" src={Csharpdim} alt="C#dim" />
+    } else if (chord4 === "C#m") {
+        return <img className="chordChart" src={Csharpmi} alt="C#m" />
+    } else if (chord4 === "D#dim") {
+        return <img className="chordChart" src={Dsharpdim} alt="D#dim" />
+    } else if (chord4 === "D#m") {
+        return <img className="chordChart" src={Dsharpmi} alt="D#mi" />
+    } else if (chord4 === "Ddim") {
+        return <img className="chordChart" src={Ddim} alt="Ddim" />
+    } else if (chord4 === "Edim") {
+        return <img className="chordChart" src={Edim} alt="Edim" />
+    } else if (chord4 === "F#dim") {
+        return <img className="chordChart" src={Fsharpdim} alt="F#dim" />
+    } else if (chord4 === "G#dim") {
+        return <img className="chordChart" src={Gsharpdim} alt="G#dim" />
+    } else if (chord4 === "G#m") {
+        return <img className="chordChart" src={Gsharpmi} alt="G#mi" />
+    } else if (chord4 === "Gdim") {
+        return <img className="chordChart" src={Gdim} alt="Gdim" />
     } else {
         return <div className="emptyCard"></div>
     }
 }
 
-export default  {Chord1Displayer, Chord2Displayer, Chord3Displayer, Chord4Displayer}
+export default { Chord1Displayer, Chord2Displayer, Chord3Displayer, Chord4Displayer }

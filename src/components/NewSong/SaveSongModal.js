@@ -12,9 +12,9 @@ export default class SaveSongModal extends Component {
                     <Modal isActive>
                         <ModalBackground />
                         <ModalCard>
-                            <ModalCardHeader>
+                            <ModalCardHeader className="has-text-centered">
                                 <div>
-                                    <ModalCardTitle className="modal-title">Great job! Your song is awesome, I think even Jimi Hendrix would be jealous of this one</ModalCardTitle>
+                                    <ModalCardTitle className="modal-title">Great job!<br /> <span className="is-size-6">Your song is awesome, I think even Jimi Hendrix would be jealous of this one.</span></ModalCardTitle>
                                 </div>
                             </ModalCardHeader>
                             <ModalCardBody>
