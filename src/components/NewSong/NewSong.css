@@ -48,7 +48,7 @@
   .playing {
     transform: scale(1.1);
     border-color: dodgerblue;
-    box-shadow: 0 0 1rem gray;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .8);
   }
 
   .degrees {
