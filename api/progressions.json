@@ -85,68 +85,23 @@
     {
       "userId": 1,
       "username": "Jonathan",
-      "selectedKey": "A",
-      "MajorMinor": "minor",
-      "title": "Song title",
-      "chord1": "Am",
-      "chord2": "Em",
-      "chord3": "F",
-      "chord4": "G",
-      "lyrics": "Song lyrics go here\n\nI wish they all could be ... I wish they all could be ... I wish they all could be balloons of my office",
-      "description": "My very first song ever",
+      "selectedKey": "---",
+      "MajorMinor": "---",
+      "title": "",
+      "chord1": "",
+      "chord2": "",
+      "chord3": "",
+      "chord4": "",
+      "lyrics": "",
+      "description": "",
       "public": false,
       "id": 25
-    },
-    {
-      "userId": 1,
-      "username": "Jonathan",
-      "selectedKey": "A",
-      "MajorMinor": "minor",
-      "title": "NSS Alma Mater",
-      "chord1": "C",
-      "chord2": "Bdim",
-      "chord3": "C",
-      "chord4": "Bdim",
-      "lyrics": "",
-      "description": "The official anthem of the Nashville Software School",
-      "public": false,
-      "id": 26
-    },
-    {
-      "userId": 1,
-      "username": "Jonathan",
-      "selectedKey": "A",
-      "MajorMinor": "minor",
-      "title": "My song title",
-      "chord1": "Am",
-      "chord2": "Em",
-      "chord3": "F",
-      "chord4": "G",
-      "lyrics": "Song lyrics go here\n\nWhere the small trees stand And the dry igloos surround, I will ride my red truck with you by my side",
-      "description": "My very first song ever",
-      "public": false,
-      "id": 27
-    },
-    {
-      "userId": 1,
-      "username": "Jonathan",
-      "selectedKey": "D",
-      "MajorMinor": "minor",
-      "title": "My song title",
-      "chord1": "F",
-      "chord2": "Am",
-      "chord3": "Am",
-      "chord4": "C",
-      "lyrics": "Master of gardening I'm pulling your strings. Twisting your truth and smashing your plates. Blinded by me, you can't see the stings. Just call my name, 'cause I'll hear you demonstrate",
-      "description": "Awesome song about all kinds of cool stuff",
-      "public": false,
-      "id": 28
     }
   ],
   "lyrics": [
     {
       "id": 1,
-      "words": "Where the small trees stand And the dry igloos surround, I will ride my red truck with you by my side"
+      "words": "Where the small trees stand, I will ride in my red truck with you by my side"
     },
     {
       "id": 1,
@@ -154,7 +109,7 @@
     },
     {
       "id": 1,
-      "words": "We're all going to a summer barbecue. No more acting for a week or two. Hideous balloons and bumpy cats at our summer barbecue. No more lifeless bananas for me or you. For a week or two"
+      "words": "We're all going to a summer barbecue. No more coding for a week or two. Cold brew and little debbie snacks at our summer barbecue. No more github for me or you. For a week or two"
     },
     {
       "id": 1,

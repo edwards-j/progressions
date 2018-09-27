@@ -27,7 +27,7 @@ class Login extends Component {
                     return this.state.username === result.username && this.state.password === result.password
                 })
                 if (!user) {
-                    alert("Username does not exist")
+                    alert("Please enter a valid username and password. If you are a new user, please register")
                 } else {
                     return DataManager.getData.getUser(this.state.username)
                         .then((result) => {
