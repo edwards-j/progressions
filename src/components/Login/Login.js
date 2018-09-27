@@ -8,6 +8,9 @@ import tagline from '../../img/tagline2.png'
 import { headShake } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const styles = {
     headShake: {
         animation: 'x 1s',
@@ -24,7 +27,7 @@ class Login extends Component {
         failedLogin: false
     }
 
-    resetState = () => this.setState({failedLogin: false})
+    resetState = () => this.setState({ failedLogin: false })
 
     handleFieldChange = evt => {
         const stateToChange = {}
@@ -41,8 +44,16 @@ class Login extends Component {
                 })
                 if (!user) {
                     this.setState({ failedLogin: true })
-                    // alert("Please enter a valid username and password. If you are a new user, please register")
+                    toast.error('Please enter a valid username and password', {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true
+                        });
                     window.setTimeout(this.resetState, 1000)
+                    return
                 } else {
                     return DataManager.getData.getUser(this.state.username)
                         .then((result) => {
@@ -58,6 +69,7 @@ class Login extends Component {
     render() {
         return (
             <section class="hero login-form is-fullheight">
+               
                 <div class="">
                     <div>
                     </div>
@@ -120,6 +132,15 @@ class Login extends Component {
                         }
                     </div>
                 </div>
+                <ToastContainer position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnVisibilityChange
+                    draggable
+                    pauseOnHover/>
             </section>
         )
     }
