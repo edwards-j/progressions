@@ -24,7 +24,16 @@ export default class NewSong extends Component {
         public: false,
         lyricModal: false,
         saveSongModal: false,
-        progress: 0
+        progress: 0,
+        titleEmpty: true,
+        keyEmpty: true,
+        majminEmpty: true,
+        lyricsEmpty: true,
+        descEmpty: true,
+        chord1Empty: true,
+        chord2Empty: true,
+        chord3Empty: true,
+        chord4Empty: true
     }
 
     handleKeyChange = evt => {
@@ -41,74 +50,151 @@ export default class NewSong extends Component {
     }
 
     handleChord1Change = evt => {
-        this.setState({
-            "chord1": evt.target.value,
-            "chord2": this.state.chord2,
-            "chord3": this.state.chord3,
-            "chord4": this.state.chord4,
-            "progress": this.state.progress + 11
-        })
+        if (this.state.chord1Empty === true) {
+            this.setState({
+                "chord1": evt.target.value,
+                "chord2": this.state.chord2,
+                "chord3": this.state.chord3,
+                "chord4": this.state.chord4,
+                "progress": this.state.progress + 11,
+                "chord1Empty": false
+            })
+        } else if (evt.target.value === "---") {
+            this.setState({
+                "chord1": evt.target.value,
+                "chord2": this.state.chord2,
+                "chord3": this.state.chord3,
+                "chord4": this.state.chord4,
+                "progress": this.state.progress - 11,
+                "chord1Empty": true
+            })
+        }
     }
 
     handleChord2Change = evt => {
-        this.setState({
-            "chord1": this.state.chord1,
-            "chord2": evt.target.value,
-            "chord3": this.state.chord3,
-            "chord4": this.state.chord4,
-            "progress": this.state.progress + 11
-        })
+        if (this.state.chord2Empty === true) {
+            this.setState({
+                "chord1": this.state.chord1,
+                "chord2": evt.target.value,
+                "chord3": this.state.chord3,
+                "chord4": this.state.chord4,
+                "progress": this.state.progress + 11,
+                "chord2Empty": false
+            })
+        } else if (evt.target.value === "---") {
+            this.setState({
+                "chord1": this.state.chord1,
+                "chord2": evt.target.value,
+                "chord3": this.state.chord3,
+                "chord4": this.state.chord4,
+                "progress": this.state.progress - 11,
+                "chord2Empty": true
+            })
+        }
     }
 
     handleChord3Change = evt => {
-        this.setState({
-            "chord1": this.state.chord1,
-            "chord2": this.state.chord2,
-            "chord3": evt.target.value,
-            "chord4": this.state.chord4,
-            "progress": this.state.progress + 11
-        })
+        if (this.state.chord3Empty === true) {
+            this.setState({
+                "chord1": this.state.chord1,
+                "chord2": this.state.chord2,
+                "chord3": evt.target.value,
+                "chord4": this.state.chord4,
+                "progress": this.state.progress + 11,
+                "chord3Empty": false
+            })
+        } else if (evt.target.value === "---") {
+            this.setState({
+                "chord1": this.state.chord1,
+                "chord2": this.state.chord2,
+                "chord3": evt.target.value,
+                "chord4": this.state.chord4,
+                "progress": this.state.progress - 11,
+                "chord3Empty": true
+            })
+        }
     }
 
     handleChord4Change = evt => {
-        this.setState({
-            "chord1": this.state.chord1,
-            "chord2": this.state.chord2,
-            "chord3": this.state.chord3,
-            "chord4": evt.target.value,
-            "progress": this.state.progress + 11
-        })
+        if (this.state.chord4Empty === true) {
+            this.setState({
+                "chord1": this.state.chord1,
+                "chord2": this.state.chord2,
+                "chord3": this.state.chord3,
+                "chord4": evt.target.value,
+                "progress": this.state.progress + 11,
+                "chord4Empty": false
+            })
+        } else if (evt.target.value === "---") {
+            this.setState({
+                "chord1": this.state.chord1,
+                "chord2": this.state.chord2,
+                "chord3": this.state.chord3,
+                "chord4": evt.target.value,
+                "progress": this.state.progress - 11,
+                "chord4Empty": true
+            })
+        }
     }
 
     handlePublic = () => (this.state.public) ? this.setState({ public: false }) : this.setState({ public: true })
 
     handleFieldChange = evt => {
-        if (evt.target.id === "title" && this.state.title === "") {
+        if (evt.target.id === "title" && this.state.titleEmpty === true) {
             this.setState({
+                "titleEmpty": false,
                 "progress": this.state.progress + 11
             })
-        } else if (evt.target.id === "selectedKey" && this.state.selectedKey === "---") {
+        } else if (evt.target.id === "title" && evt.target.value === "") {
             this.setState({
+                "titleEmpty": true,
+                "progress": this.state.progress - 11
+            })
+        } else if (evt.target.id === "selectedKey" && this.state.keyEmpty === true) {
+            this.setState({
+                "keyEmpty": false,
                 "progress": this.state.progress + 11
             })
-        } else if (evt.target.id === "MajorMinor" && this.state.MajorMinor === "---") {
+        } else if (evt.target.id === "selectedKey" && evt.target.value === "---") {
             this.setState({
+                "keyEmpty": true,
+                "progress": this.state.progress - 11
+            })
+        } else if (evt.target.id === "MajorMinor" && this.state.majminEmpty === true) {
+            this.setState({
+                "majminEmpty": false,
                 "progress": this.state.progress + 11
             })
-        } else if (evt.target.id === "lyrics" && this.state.lyrics === "") {
+        } else if (evt.target.id === "MajorMinor" && evt.target.value === "---") {
             this.setState({
+                "majminEmpty": true,
+                "progress": this.state.progress - 11
+            })
+        } else if (evt.target.id === "lyrics" && this.state.lyricsEmpty === true) {
+            this.setState({
+                "lyricsEmpty": false,
                 "progress": this.state.progress + 11
             })
-        } else if (evt.target.id === "description" && this.state.description === "") {
+        } else if (evt.target.id === "lyrics" && evt.target.value === "") {
             this.setState({
+                "lyricsEmpty": true,
+                "progress": this.state.progress - 11
+            })
+        } else if (evt.target.id === "description" && this.state.descEmpty === true) {
+            this.setState({
+                "descEmpty": false,
                 "progress": this.state.progress + 12
+            })
+        } else if (evt.target.id === "description" && evt.target.value === "") {
+            this.setState({
+                "descEmpty": true,
+                "progress": this.state.progress - 12
             })
         }
 
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
-
     }
 
     showLyricModal = () => {
@@ -247,7 +333,7 @@ export default class NewSong extends Component {
                     {/* <h2 className="is-size-2 has-text-centered">{this.state.title}</h2> */}
                 </div>
                 <div className="has-text-centered keySelector">
-                    Select Key: 
+                    Select Key:
                 <select name="selectedKey" id="selectedKey" onChange={this.handleFieldChange}>
                         <option value="---">---</option>
                         <option value="C">C</option>

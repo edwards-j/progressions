@@ -81,21 +81,6 @@
       "description": "",
       "public": false,
       "id": 24
-    },
-    {
-      "userId": 1,
-      "username": "Jonathan",
-      "selectedKey": "---",
-      "MajorMinor": "---",
-      "title": "",
-      "chord1": "",
-      "chord2": "",
-      "chord3": "",
-      "chord4": "",
-      "lyrics": "",
-      "description": "",
-      "public": false,
-      "id": 25
     }
   ],
   "lyrics": [
