@@ -34,7 +34,7 @@ export default class SongCard extends Component {
         }
 
         return (
-            <StyleRoot id={`songCard--${this.props.song.id}`} className="animated fadeIn">
+            <StyleRoot id={`songCard--${this.props.song.id}`} className="animated fadeIn faster">
                 <Tilt className="Tilt song-card" options={{ scale: 1.03, max: 10 }}  >
                     <div className="Tilt-inner" >
                         <div className="card-title">

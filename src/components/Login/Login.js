@@ -5,13 +5,26 @@ import './Login.css'
 import logo from '../../img/logo2.png'
 import tagline from '../../img/tagline2.png'
 
+import { headShake } from 'react-animations';
+import Radium, { StyleRoot } from 'radium';
+
+const styles = {
+    headShake: {
+        animation: 'x 1s',
+        animationName: Radium.keyframes(headShake, 'headShake')
+    }
+}
+
 class Login extends Component {
     state = {
         username: "",
         password: "",
         rememberMe: false,
-        showNav: false
+        showNav: false,
+        failedLogin: false
     }
+
+    resetState = () => this.setState({failedLogin: false})
 
     handleFieldChange = evt => {
         const stateToChange = {}
@@ -27,7 +40,9 @@ class Login extends Component {
                     return this.state.username === result.username && this.state.password === result.password
                 })
                 if (!user) {
-                    alert("Please enter a valid username and password. If you are a new user, please register")
+                    this.setState({ failedLogin: true })
+                    // alert("Please enter a valid username and password. If you are a new user, please register")
+                    window.setTimeout(this.resetState, 1000)
                 } else {
                     return DataManager.getData.getUser(this.state.username)
                         .then((result) => {
@@ -47,15 +62,43 @@ class Login extends Component {
                     <div>
                     </div>
                     <div class="container has-text-centered">
-                            <div className="logoLogin">
-                                <img src={logo} />
-                                <img src={tagline} />
-                            </div>
-                        <div class="column is-4 is-offset-4 form">
-                            <div class="">
+                        <div className="logoLogin">
+                            <img src={logo} />
+                            <img src={tagline} />
+                        </div>
+                        {(this.state.failedLogin) ?
+                            <StyleRoot>
+                                <div class="column is-4 is-offset-4 form" style={styles.headShake}>
+                                    <div class="" >
+                                        <div class="field">
+                                            <div class="control">
+                                                <label className="login-flag">Username</label>
+                                                <input id="username" onChange={this.handleFieldChange} class="input is-large is-rounded" type="text" placeholder="" />
+                                            </div>
+                                        </div>
+
+                                        <div class="field">
+                                            <div class="control">
+                                                <label className="login-flag">Password</label>
+                                                <input id="password" onChange={this.handleFieldChange} className="input is-large is-rounded" type="password" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <a class="button is-block login-button is-large is-fullwidth is-rounded" onClick={this.login}>Let's Rock</a>
+                                    </div>
+                                    <p class="has-text-grey has-text-center">
+                                        <p className="loginRegisterText">New around here?</p>
+                                        <Link to="/register" className="loginRegisterText"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up
+                                </Link> &nbsp;·&nbsp;
+                            </p>
+                                </div>
+                            </StyleRoot>
+
+                            :
+                            <div class="column is-4 is-offset-4 form">
+                                <div class="">
                                     <div class="field">
                                         <div class="control">
-                                            <label className="login-flag">Username</label> 
+                                            <label className="login-flag">Username</label>
                                             <input id="username" onChange={this.handleFieldChange} class="input is-large is-rounded" type="text" placeholder="" />
                                         </div>
                                     </div>
@@ -67,13 +110,14 @@ class Login extends Component {
                                         </div>
                                     </div>
                                     <a class="button is-block login-button is-large is-fullwidth is-rounded" onClick={this.login}>Let's Rock</a>
-                            </div>
-                            <p class="has-text-grey has-text-center">
-                                <p className="loginRegisterText">New around here?</p>
-                                <Link to="/register" className="loginRegisterText"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up
+                                </div>
+                                <p class="has-text-grey has-text-center">
+                                    <p className="loginRegisterText">New around here?</p>
+                                    <Link to="/register" className="loginRegisterText"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up
                                 </Link> &nbsp;·&nbsp;
                             </p>
-                        </div>
+                            </div>
+                        }
                     </div>
                 </div>
             </section>
