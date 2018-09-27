@@ -39,83 +39,91 @@ import Gsharpdim from '../../img/png/Gsharpdim.png'
 import Gsharpmi from '../../img/png/Gsharpm.png'
 import Gdim from '../../img/png/Gdim.png'
 
+import { zoomIn } from 'react-animations';
+import Radium, { StyleRoot } from 'radium';
 
+const styles = {
+    zoomIn: {
+        animation: 'x .75s',
+        animationName: Radium.keyframes(zoomIn, 'zoomIn')
+    }
+}
 
 const Chord1Displayer = ({ chord1 }) => {
     if (chord1 === "C") {
-        return <img className="chordChart" src={C} alt="C" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={C} alt="C" /></StyleRoot>
     } else if (chord1 === "Cm") {
-        return <img className="chordChart" src={Cmi} alt="Cmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Cmi} alt="Cmi" /></StyleRoot>
     } else if (chord1 === "D") {
-        return <img className="chordChart" src={D} alt="D" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={D} alt="D" /></StyleRoot>
     } else if (chord1 === "Db") {
-        return <img className="chordChart" src={Dflat} alt="D♭" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dflat} alt="D♭" /></StyleRoot>
     } else if (chord1 === "Dbm") {
-        return <img className="chordChart" src={Dflatmi} alt="D" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dflatmi} alt="D" /></StyleRoot>
     } else if (chord1 === "Dm") {
-        return <img className="chordChart" src={Dmi} alt="Dmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dmi} alt="Dmi" /></StyleRoot>
     } else if (chord1 === "E") {
-        return <img className="chordChart" src={E} alt="E" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={E} alt="E" /></StyleRoot>
     } else if (chord1 === "Eb") {
-        return <img className="chordChart" src={Eflat} alt="E♭" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Eflat} alt="E♭" /></StyleRoot>
     } else if (chord1 === "Ebm") {
-        return <img className="chordChart" src={Eflatmi} alt="E♭mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Eflatmi} alt="E♭mi" /></StyleRoot>
     } else if (chord1 === "Em") {
-        return <img className="chordChart" src={Emi} alt="Emi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Emi} alt="Emi" /></StyleRoot>
     } else if (chord1 === "F") {
-        return <img className="chordChart" src={F} alt="F" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={F} alt="F" /></StyleRoot>
     } else if (chord1 === "F#") {
-        return <img className="chordChart" src={Fsharp} alt="F#" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fsharp} alt="F#" /></StyleRoot>
     } else if (chord1 === "F#m") {
-        return <img className="chordChart" src={Fsharpmi} alt="F#mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fsharpmi} alt="F#mi" /></StyleRoot>
     } else if (chord1 === "Fm") {
-        return <img className="chordChart" src={Fmi} alt="Fmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fmi} alt="Fmi" /></StyleRoot>
     } else if (chord1 === "G") {
-        return <img className="chordChart" src={G} alt="G" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={G} alt="G" /></StyleRoot>
     } else if (chord1 === "Gm") {
-        return <img className="chordChart" src={Gmi} alt="Gmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gmi} alt="Gmi" /></StyleRoot>
     } else if (chord1 === "Ab") {
-        return <img className="chordChart" src={Aflat} alt="Ab" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Aflat} alt="Ab" /></StyleRoot>
     } else if (chord1 === "Abm") {
-        return <img className="chordChart" src={Aflatmi} alt="Ab" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Aflatmi} alt="Ab" /></StyleRoot>
     } else if (chord1 === "A") {
-        return <img className="chordChart" src={A} alt="A" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={A} alt="A" /></StyleRoot>
     } else if (chord1 === "Am") {
-        return <img className="chordChart" src={Ami} alt="Ami" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Ami} alt="Ami" /></StyleRoot>
     } else if (chord1 === "Bb") {
-        return <img className="chordChart" src={Bflat} alt="Bb" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bflat} alt="Bb" /></StyleRoot>
     } else if (chord1 === "Bbm") {
-        return <img className="chordChart" src={Bflatmi} alt="Bb" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bflatmi} alt="Bb" /></StyleRoot>
     } else if (chord1 === "B") {
-        return <img className="chordChart" src={B} alt="B" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={B} alt="B" /></StyleRoot>
     } else if (chord1 === "Bm") {
-        return <img className="chordChart" src={Bmi} alt="Bmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bmi} alt="Bmi" /></StyleRoot>
     } else if (chord1 === "A#dim") {
-        return <img className="chordChart" src={Asharpdim} alt="A#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Asharpdim} alt="A#dim" /></StyleRoot>
     } else if (chord1 === "Adim") {
-        return <img className="chordChart" src={Adim} alt="Adim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Adim} alt="Adim" /></StyleRoot>
     } else if (chord1 === "Bdim") {
-        return <img className="chordChart" src={Bdim} alt="Bdim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bdim} alt="Bdim" /></StyleRoot>
     } else if (chord1 === "C#dim") {
-        return <img className="chordChart" src={Csharpdim} alt="C#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Csharpdim} alt="C#dim" /></StyleRoot>
     } else if (chord1 === "C#m") {
-        return <img className="chordChart" src={Csharpmi} alt="C#m" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Csharpmi} alt="C#m" /></StyleRoot>
     } else if (chord1 === "D#dim") {
-        return <img className="chordChart" src={Dsharpdim} alt="D#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dsharpdim} alt="D#dim" /></StyleRoot>
     } else if (chord1 === "D#m") {
-        return <img className="chordChart" src={Dsharpmi} alt="D#mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dsharpmi} alt="D#mi" /></StyleRoot>
     } else if (chord1 === "Ddim") {
-        return <img className="chordChart" src={Ddim} alt="Ddim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Ddim} alt="Ddim" /></StyleRoot>
     } else if (chord1 === "Edim") {
-        return <img className="chordChart" src={Edim} alt="Edim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Edim} alt="Edim" /></StyleRoot>
     } else if (chord1 === "F#dim") {
-        return <img className="chordChart" src={Fsharpdim} alt="F#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fsharpdim} alt="F#dim" /></StyleRoot>
     } else if (chord1 === "G#dim") {
-        return <img className="chordChart" src={Gsharpdim} alt="G#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gsharpdim} alt="G#dim" /></StyleRoot>
     } else if (chord1 === "G#m") {
-        return <img className="chordChart" src={Gsharpmi} alt="G#mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gsharpmi} alt="G#mi" /></StyleRoot>
     } else if (chord1 === "Gdim") {
-        return <img className="chordChart" src={Gdim} alt="Gdim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gdim} alt="Gdim" /></StyleRoot>
     } else {
         return <div className="emptyCard"></div>
     }
@@ -123,79 +131,79 @@ const Chord1Displayer = ({ chord1 }) => {
 
 const Chord2Displayer = ({ chord2 }) => {
     if (chord2 === "C") {
-        return <img className="chordChart" src={C} alt="C" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={C} alt="C" /></StyleRoot>
     } else if (chord2 === "Cm") {
-        return <img className="chordChart" src={Cmi} alt="Cmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Cmi} alt="Cmi" /></StyleRoot>
     } else if (chord2 === "D") {
-        return <img className="chordChart" src={D} alt="D" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={D} alt="D" /></StyleRoot>
     } else if (chord2 === "Db") {
-        return <img className="chordChart" src={Dflat} alt="D♭" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dflat} alt="D♭" /></StyleRoot>
     } else if (chord2 === "Dbm") {
-        return <img className="chordChart" src={Dflatmi} alt="D" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dflatmi} alt="D" /></StyleRoot>
     } else if (chord2 === "Dm") {
-        return <img className="chordChart" src={Dmi} alt="Dmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dmi} alt="Dmi" /></StyleRoot>
     } else if (chord2 === "E") {
-        return <img className="chordChart" src={E} alt="E" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={E} alt="E" /></StyleRoot>
     } else if (chord2 === "Eb") {
-        return <img className="chordChart" src={Eflat} alt="E♭" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Eflat} alt="E♭" /></StyleRoot>
     } else if (chord2 === "Ebm") {
-        return <img className="chordChart" src={Eflatmi} alt="E♭mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Eflatmi} alt="E♭mi" /></StyleRoot>
     } else if (chord2 === "Em") {
-        return <img className="chordChart" src={Emi} alt="Emi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Emi} alt="Emi" /></StyleRoot>
     } else if (chord2 === "F") {
-        return <img className="chordChart" src={F} alt="F" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={F} alt="F" /></StyleRoot>
     } else if (chord2 === "F#") {
-        return <img className="chordChart" src={Fsharp} alt="F#" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fsharp} alt="F#" /></StyleRoot>
     } else if (chord2 === "F#m") {
-        return <img className="chordChart" src={Fsharpmi} alt="F#mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fsharpmi} alt="F#mi" /></StyleRoot>
     } else if (chord2 === "Fm") {
-        return <img className="chordChart" src={Fmi} alt="Fmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fmi} alt="Fmi" /></StyleRoot>
     } else if (chord2 === "G") {
-        return <img className="chordChart" src={G} alt="G" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={G} alt="G" /></StyleRoot>
     } else if (chord2 === "Gm") {
-        return <img className="chordChart" src={Gmi} alt="Gmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gmi} alt="Gmi" /></StyleRoot>
     } else if (chord2 === "Ab") {
-        return <img className="chordChart" src={Aflat} alt="Ab" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Aflat} alt="Ab" /></StyleRoot>
     } else if (chord2 === "Abm") {
-        return <img className="chordChart" src={Aflatmi} alt="Ab" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Aflatmi} alt="Ab" /></StyleRoot>
     } else if (chord2 === "A") {
-        return <img className="chordChart" src={A} alt="A" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={A} alt="A" /></StyleRoot>
     } else if (chord2 === "Am") {
-        return <img className="chordChart" src={Ami} alt="Ami" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Ami} alt="Ami" /></StyleRoot>
     } else if (chord2 === "Bb") {
-        return <img className="chordChart" src={Bflat} alt="Bb" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bflat} alt="Bb" /></StyleRoot>
     } else if (chord2 === "Bbm") {
-        return <img className="chordChart" src={Bflatmi} alt="Bb" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bflatmi} alt="Bb" /></StyleRoot>
     } else if (chord2 === "B") {
-        return <img className="chordChart" src={B} alt="B" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={B} alt="B" /></StyleRoot>
     } else if (chord2 === "Bm") {
-        return <img className="chordChart" src={Bmi} alt="Bmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bmi} alt="Bmi" /></StyleRoot>
     } else if (chord2 === "A#dim") {
-        return <img className="chordChart" src={Asharpdim} alt="A#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Asharpdim} alt="A#dim" /></StyleRoot>
     } else if (chord2 === "Adim") {
-        return <img className="chordChart" src={Adim} alt="Adim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Adim} alt="Adim" /></StyleRoot>
     } else if (chord2 === "Bdim") {
-        return <img className="chordChart" src={Bdim} alt="Bdim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bdim} alt="Bdim" /></StyleRoot>
     } else if (chord2 === "C#dim") {
-        return <img className="chordChart" src={Csharpdim} alt="C#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Csharpdim} alt="C#dim" /></StyleRoot>
     } else if (chord2 === "C#m") {
-        return <img className="chordChart" src={Csharpmi} alt="C#m" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Csharpmi} alt="C#m" /></StyleRoot>
     } else if (chord2 === "D#dim") {
-        return <img className="chordChart" src={Dsharpdim} alt="D#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dsharpdim} alt="D#dim" /></StyleRoot>
     } else if (chord2 === "D#m") {
-        return <img className="chordChart" src={Dsharpmi} alt="D#mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dsharpmi} alt="D#mi" /></StyleRoot>
     } else if (chord2 === "Ddim") {
-        return <img className="chordChart" src={Ddim} alt="Ddim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Ddim} alt="Ddim" /></StyleRoot>
     } else if (chord2 === "Edim") {
-        return <img className="chordChart" src={Edim} alt="Edim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Edim} alt="Edim" /></StyleRoot>
     } else if (chord2 === "F#dim") {
-        return <img className="chordChart" src={Fsharpdim} alt="F#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fsharpdim} alt="F#dim" /></StyleRoot>
     } else if (chord2 === "G#dim") {
-        return <img className="chordChart" src={Gsharpdim} alt="G#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gsharpdim} alt="G#dim" /></StyleRoot>
     } else if (chord2 === "G#m") {
-        return <img className="chordChart" src={Gsharpmi} alt="G#mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gsharpmi} alt="G#mi" /></StyleRoot>
     } else if (chord2 === "Gdim") {
-        return <img className="chordChart" src={Gdim} alt="Gdim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gdim} alt="Gdim" /></StyleRoot>
     } else {
         return <div className="emptyCard"></div>
     }
@@ -203,79 +211,79 @@ const Chord2Displayer = ({ chord2 }) => {
 
 const Chord3Displayer = ({ chord3 }) => {
     if (chord3 === "C") {
-        return <img className="chordChart" src={C} alt="C" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={C} alt="C" /></StyleRoot>
     } else if (chord3 === "Cm") {
-        return <img className="chordChart" src={Cmi} alt="Cmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Cmi} alt="Cmi" /></StyleRoot>
     } else if (chord3 === "D") {
-        return <img className="chordChart" src={D} alt="D" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={D} alt="D" /></StyleRoot>
     } else if (chord3 === "Db") {
-        return <img className="chordChart" src={Dflat} alt="D♭" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dflat} alt="D♭" /></StyleRoot>
     } else if (chord3 === "Dbm") {
-        return <img className="chordChart" src={Dflatmi} alt="D" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dflatmi} alt="D" /></StyleRoot>
     } else if (chord3 === "Dm") {
-        return <img className="chordChart" src={Dmi} alt="Dmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dmi} alt="Dmi" /></StyleRoot>
     } else if (chord3 === "E") {
-        return <img className="chordChart" src={E} alt="E" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={E} alt="E" /></StyleRoot>
     } else if (chord3 === "Eb") {
-        return <img className="chordChart" src={Eflat} alt="E♭" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Eflat} alt="E♭" /></StyleRoot>
     } else if (chord3 === "Ebm") {
-        return <img className="chordChart" src={Eflatmi} alt="E♭mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Eflatmi} alt="E♭mi" /></StyleRoot>
     } else if (chord3 === "Em") {
-        return <img className="chordChart" src={Emi} alt="Emi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Emi} alt="Emi" /></StyleRoot>
     } else if (chord3 === "F") {
-        return <img className="chordChart" src={F} alt="F" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={F} alt="F" /></StyleRoot>
     } else if (chord3 === "F#") {
-        return <img className="chordChart" src={Fsharp} alt="F#" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fsharp} alt="F#" /></StyleRoot>
     } else if (chord3 === "F#m") {
-        return <img className="chordChart" src={Fsharpmi} alt="F#mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fsharpmi} alt="F#mi" /></StyleRoot>
     } else if (chord3 === "Fm") {
-        return <img className="chordChart" src={Fmi} alt="Fmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fmi} alt="Fmi" /></StyleRoot>
     } else if (chord3 === "G") {
-        return <img className="chordChart" src={G} alt="G" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={G} alt="G" /></StyleRoot>
     } else if (chord3 === "Gm") {
-        return <img className="chordChart" src={Gmi} alt="Gmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gmi} alt="Gmi" /></StyleRoot>
     } else if (chord3 === "Ab") {
-        return <img className="chordChart" src={Aflat} alt="Ab" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Aflat} alt="Ab" /></StyleRoot>
     } else if (chord3 === "Abm") {
-        return <img className="chordChart" src={Aflatmi} alt="Ab" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Aflatmi} alt="Ab" /></StyleRoot>
     } else if (chord3 === "A") {
-        return <img className="chordChart" src={A} alt="A" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={A} alt="A" /></StyleRoot>
     } else if (chord3 === "Am") {
-        return <img className="chordChart" src={Ami} alt="Ami" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Ami} alt="Ami" /></StyleRoot>
     } else if (chord3 === "Bb") {
-        return <img className="chordChart" src={Bflat} alt="Bb" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bflat} alt="Bb" /></StyleRoot>
     } else if (chord3 === "Bbm") {
-        return <img className="chordChart" src={Bflatmi} alt="Bb" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bflatmi} alt="Bb" /></StyleRoot>
     } else if (chord3 === "B") {
-        return <img className="chordChart" src={B} alt="B" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={B} alt="B" /></StyleRoot>
     } else if (chord3 === "Bm") {
-        return <img className="chordChart" src={Bmi} alt="Bmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bmi} alt="Bmi" /></StyleRoot>
     } else if (chord3 === "A#dim") {
-        return <img className="chordChart" src={Asharpdim} alt="A#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Asharpdim} alt="A#dim" /></StyleRoot>
     } else if (chord3 === "Adim") {
-        return <img className="chordChart" src={Adim} alt="Adim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Adim} alt="Adim" /></StyleRoot>
     } else if (chord3 === "Bdim") {
-        return <img className="chordChart" src={Bdim} alt="Bdim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bdim} alt="Bdim" /></StyleRoot>
     } else if (chord3 === "C#dim") {
-        return <img className="chordChart" src={Csharpdim} alt="C#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Csharpdim} alt="C#dim" /></StyleRoot>
     } else if (chord3 === "C#m") {
-        return <img className="chordChart" src={Csharpmi} alt="C#m" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Csharpmi} alt="C#m" /></StyleRoot>
     } else if (chord3 === "D#dim") {
-        return <img className="chordChart" src={Dsharpdim} alt="D#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dsharpdim} alt="D#dim" /></StyleRoot>
     } else if (chord3 === "D#m") {
-        return <img className="chordChart" src={Dsharpmi} alt="D#mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dsharpmi} alt="D#mi" /></StyleRoot>
     } else if (chord3 === "Ddim") {
-        return <img className="chordChart" src={Ddim} alt="Ddim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Ddim} alt="Ddim" /></StyleRoot>
     } else if (chord3 === "Edim") {
-        return <img className="chordChart" src={Edim} alt="Edim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Edim} alt="Edim" /></StyleRoot>
     } else if (chord3 === "F#dim") {
-        return <img className="chordChart" src={Fsharpdim} alt="F#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fsharpdim} alt="F#dim" /></StyleRoot>
     } else if (chord3 === "G#dim") {
-        return <img className="chordChart" src={Gsharpdim} alt="G#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gsharpdim} alt="G#dim" /></StyleRoot>
     } else if (chord3 === "G#m") {
-        return <img className="chordChart" src={Gsharpmi} alt="G#mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gsharpmi} alt="G#mi" /></StyleRoot>
     } else if (chord3 === "Gdim") {
-        return <img className="chordChart" src={Gdim} alt="Gdim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gdim} alt="Gdim" /></StyleRoot>
     } else {
         return <div className="emptyCard"></div>
     }
@@ -283,79 +291,79 @@ const Chord3Displayer = ({ chord3 }) => {
 
 const Chord4Displayer = ({ chord4 }) => {
     if (chord4 === "C") {
-        return <img className="chordChart" src={C} alt="C" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={C} alt="C" /></StyleRoot>
     } else if (chord4 === "Cm") {
-        return <img className="chordChart" src={Cmi} alt="Cmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Cmi} alt="Cmi" /></StyleRoot>
     } else if (chord4 === "D") {
-        return <img className="chordChart" src={D} alt="D" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={D} alt="D" /></StyleRoot>
     } else if (chord4 === "Db") {
-        return <img className="chordChart" src={Dflat} alt="D♭" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dflat} alt="D♭" /></StyleRoot>
     } else if (chord4 === "Dbm") {
-        return <img className="chordChart" src={Dflatmi} alt="D" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dflatmi} alt="D" /></StyleRoot>
     } else if (chord4 === "Dm") {
-        return <img className="chordChart" src={Dmi} alt="Dmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dmi} alt="Dmi" /></StyleRoot>
     } else if (chord4 === "E") {
-        return <img className="chordChart" src={E} alt="E" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={E} alt="E" /></StyleRoot>
     } else if (chord4 === "Eb") {
-        return <img className="chordChart" src={Eflat} alt="E♭" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Eflat} alt="E♭" /></StyleRoot>
     } else if (chord4 === "Ebm") {
-        return <img className="chordChart" src={Eflatmi} alt="E♭mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Eflatmi} alt="E♭mi" /></StyleRoot>
     } else if (chord4 === "Em") {
-        return <img className="chordChart" src={Emi} alt="Emi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Emi} alt="Emi" /></StyleRoot>
     } else if (chord4 === "F") {
-        return <img className="chordChart" src={F} alt="F" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={F} alt="F" /></StyleRoot>
     } else if (chord4 === "F#") {
-        return <img className="chordChart" src={Fsharp} alt="F#" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fsharp} alt="F#" /></StyleRoot>
     } else if (chord4 === "F#m") {
-        return <img className="chordChart" src={Fsharpmi} alt="F#mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fsharpmi} alt="F#mi" /></StyleRoot>
     } else if (chord4 === "Fm") {
-        return <img className="chordChart" src={Fmi} alt="Fmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fmi} alt="Fmi" /></StyleRoot>
     } else if (chord4 === "G") {
-        return <img className="chordChart" src={G} alt="G" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={G} alt="G" /></StyleRoot>
     } else if (chord4 === "Gm") {
-        return <img className="chordChart" src={Gmi} alt="Gmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gmi} alt="Gmi" /></StyleRoot>
     } else if (chord4 === "Ab") {
-        return <img className="chordChart" src={Aflat} alt="Ab" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Aflat} alt="Ab" /></StyleRoot>
     } else if (chord4 === "Abm") {
-        return <img className="chordChart" src={Aflatmi} alt="Ab" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Aflatmi} alt="Ab" /></StyleRoot>
     } else if (chord4 === "A") {
-        return <img className="chordChart" src={A} alt="A" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={A} alt="A" /></StyleRoot>
     } else if (chord4 === "Am") {
-        return <img className="chordChart" src={Ami} alt="Ami" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Ami} alt="Ami" /></StyleRoot>
     } else if (chord4 === "Bb") {
-        return <img className="chordChart" src={Bflat} alt="Bb" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bflat} alt="Bb" /></StyleRoot>
     } else if (chord4 === "Bbm") {
-        return <img className="chordChart" src={Bflatmi} alt="Bb" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bflatmi} alt="Bb" /></StyleRoot>
     } else if (chord4 === "B") {
-        return <img className="chordChart" src={B} alt="B" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={B} alt="B" /></StyleRoot>
     } else if (chord4 === "Bm") {
-        return <img className="chordChart" src={Bmi} alt="Bmi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bmi} alt="Bmi" /></StyleRoot>
     } else if (chord4 === "A#dim") {
-        return <img className="chordChart" src={Asharpdim} alt="A#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Asharpdim} alt="A#dim" /></StyleRoot>
     } else if (chord4 === "Adim") {
-        return <img className="chordChart" src={Adim} alt="Adim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Adim} alt="Adim" /></StyleRoot>
     } else if (chord4 === "Bdim") {
-        return <img className="chordChart" src={Bdim} alt="Bdim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Bdim} alt="Bdim" /></StyleRoot>
     } else if (chord4 === "C#dim") {
-        return <img className="chordChart" src={Csharpdim} alt="C#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Csharpdim} alt="C#dim" /></StyleRoot>
     } else if (chord4 === "C#m") {
-        return <img className="chordChart" src={Csharpmi} alt="C#m" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Csharpmi} alt="C#m" /></StyleRoot>
     } else if (chord4 === "D#dim") {
-        return <img className="chordChart" src={Dsharpdim} alt="D#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dsharpdim} alt="D#dim" /></StyleRoot>
     } else if (chord4 === "D#m") {
-        return <img className="chordChart" src={Dsharpmi} alt="D#mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Dsharpmi} alt="D#mi" /></StyleRoot>
     } else if (chord4 === "Ddim") {
-        return <img className="chordChart" src={Ddim} alt="Ddim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Ddim} alt="Ddim" /></StyleRoot>
     } else if (chord4 === "Edim") {
-        return <img className="chordChart" src={Edim} alt="Edim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Edim} alt="Edim" /></StyleRoot>
     } else if (chord4 === "F#dim") {
-        return <img className="chordChart" src={Fsharpdim} alt="F#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Fsharpdim} alt="F#dim" /></StyleRoot>
     } else if (chord4 === "G#dim") {
-        return <img className="chordChart" src={Gsharpdim} alt="G#dim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gsharpdim} alt="G#dim" /></StyleRoot>
     } else if (chord4 === "G#m") {
-        return <img className="chordChart" src={Gsharpmi} alt="G#mi" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gsharpmi} alt="G#mi" /></StyleRoot>
     } else if (chord4 === "Gdim") {
-        return <img className="chordChart" src={Gdim} alt="Gdim" />
+        return <StyleRoot> <img style={styles.zoomIn} className="chordChart" src={Gdim} alt="Gdim" /></StyleRoot>
     } else {
         return <div className="emptyCard"></div>
     }

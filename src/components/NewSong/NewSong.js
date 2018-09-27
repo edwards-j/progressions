@@ -8,6 +8,7 @@ import Minor from './Minor'
 import Audio from './Audio'
 import LyricGenerator from './LyricGenerator'
 import SaveSongModal from './SaveSongModal'
+import { Animated } from "react-animated-css";
 import './ProgressBar.css'
 
 export default class NewSong extends Component {
@@ -68,6 +69,13 @@ export default class NewSong extends Component {
                 "progress": this.state.progress - 11,
                 "chord1Empty": true
             })
+        } else {
+            this.setState({
+                "chord1": evt.target.value,
+                "chord2": this.state.chord2,
+                "chord3": this.state.chord3,
+                "chord4": this.state.chord4,
+            })
         }
     }
 
@@ -89,6 +97,13 @@ export default class NewSong extends Component {
                 "chord4": this.state.chord4,
                 "progress": this.state.progress - 11,
                 "chord2Empty": true
+            })
+        } else {
+            this.setState({
+                "chord1": this.state.chord1,
+                "chord2": evt.target.value,
+                "chord3": this.state.chord3,
+                "chord4": this.state.chord4,
             })
         }
     }
@@ -112,6 +127,13 @@ export default class NewSong extends Component {
                 "progress": this.state.progress - 11,
                 "chord3Empty": true
             })
+        } else {
+            this.setState({
+                "chord1": this.state.chord1,
+                "chord2": this.state.chord2,
+                "chord3": evt.target.value,
+                "chord4": this.state.chord4,
+            })
         }
     }
 
@@ -133,6 +155,13 @@ export default class NewSong extends Component {
                 "chord4": evt.target.value,
                 "progress": this.state.progress - 11,
                 "chord4Empty": true
+            })
+        } else {
+            this.setState({
+                "chord1": this.state.chord1,
+                "chord2": this.state.chord2,
+                "chord3": this.state.chord3,
+                "chord4": evt.target.value,
             })
         }
     }
@@ -304,7 +333,7 @@ export default class NewSong extends Component {
                 maxWidth: "100%",
                 transition: "width .65s",
                 transitionTimingFunction: "cubic-bezier(.46,-0.36,.61,1.47)",
-                background: "linear-gradient(to right, #5433FF, #33C6F7,#A4FEC9)"
+                background: "linear-gradient(to right, #5433FF, #33C6F7, #A4FEC9)"
             }
         } else {
             progress = {
@@ -323,7 +352,7 @@ export default class NewSong extends Component {
                         <span style={progress}></span>
                     </div>
                 </div>
-                <div className="">
+                <div>
                     <div className="columns">
                         <div className="column is-2 is-offset-5">
                             <h4 className="is-size-4 has-text-centered new-song-title">Song Title</h4>
