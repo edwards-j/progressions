@@ -302,7 +302,7 @@ export default class NewSong extends Component {
             progress = {
                 width: this.state.progress + "%",
                 maxWidth: "100%",
-                transition: "width .5s",
+                transition: "width .65s",
                 transitionTimingFunction: "cubic-bezier(.46,-0.36,.61,1.47)",
                 background: "linear-gradient(to right, #5433FF, #33C6F7,#A4FEC9)"
             }
@@ -310,7 +310,7 @@ export default class NewSong extends Component {
             progress = {
                 width: this.state.progress + "%",
                 maxWidth: "100%",
-                transition: "width .4s",
+                transition: "width .65s",
                 transitionTimingFunction: "cubic-bezier(.46,-0.36,.61,1.47)",
                 background: "#5FFF4C"
             }
