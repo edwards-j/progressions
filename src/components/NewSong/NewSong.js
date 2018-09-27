@@ -8,7 +8,6 @@ import Minor from './Minor'
 import Audio from './Audio'
 import LyricGenerator from './LyricGenerator'
 import SaveSongModal from './SaveSongModal'
-import { Animated } from "react-animated-css";
 import './ProgressBar.css'
 
 export default class NewSong extends Component {
