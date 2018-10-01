@@ -7,7 +7,7 @@ import './Nav.css'
 
 export default class Nav extends Component {
     logout = () => {
-        sessionStorage.setItem("userInfo", null)
+        sessionStorage.removeItem("userInfo")
         this.props.handleNavChange()
     }
 
