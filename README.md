@@ -4,7 +4,7 @@
 ## What is progressions?
 
 
-progressions is a songwriting application to help simplify the songwriting process for new guitarists by handling some of the music theory involved with chords and scales, so you can focus on writing songs that sound good.
+progressions is a songwriting application to help simplify the songwriting process for new guitarists by handling some of the music theory involved with chords and keys, so you can focus on writing songs that sound good.
 
 
 ## Usage
