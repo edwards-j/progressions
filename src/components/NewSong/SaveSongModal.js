@@ -9,7 +9,7 @@ export default class SaveSongModal extends Component {
         return (
             <div>
                 {(this.props.modal === true) ?
-                    <Modal isActive>
+                    <Modal isActive className="animated fadeIn" style={{animationDuration: ".5s"}}>
                         <ModalBackground />
                         <ModalCard>
                             <ModalCardHeader className="has-text-centered">

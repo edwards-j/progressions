@@ -35,9 +35,9 @@ export default class LyricGenerator extends Component {
             <div>
                 {(this.props.modal) ?
                     <StyleRoot>
-                        <Modal isActive style={styles.fadeIn}>
-                            <ModalBackground />
-                            <ModalCard>
+                        <Modal isActive >
+                            <ModalBackground className="animated fadeIn" style={{animationDuration: ".75s"}}/>
+                            <ModalCard className="animated zoomIn" style={{animationDuration: "1s"}}>
                                 <ModalCardHeader>
                                     <div>
                                         <ModalCardTitle className="modal-title">Random Lyric Generator</ModalCardTitle>
