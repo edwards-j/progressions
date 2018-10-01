@@ -1,3 +1,5 @@
+//Purpose: Renders audio to page based on the currently selected key
+
 import React, { Component } from 'react'
 import Ab from "../../audio/maj/Ab.wav"
 import A from "../../audio/maj/A.wav"

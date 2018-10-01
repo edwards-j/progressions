@@ -10,6 +10,9 @@ import LyricGenerator from './LyricGenerator'
 import SaveSongModal from './SaveSongModal'
 import './ProgressBar.css'
 
+import { pulse } from 'react-animations';
+import Radium, { StyleRoot } from 'radium';
+
 export default class NewSong extends Component {
     state = {
         title: "",
@@ -343,10 +346,25 @@ export default class NewSong extends Component {
                 background: "#5FFF4C"
             }
         }
+
+        let progressText;
+        if (this.state.progress < 100) {
+            progressText = {
+                color: "hsl(0, 0%, 71%)"
+            }
+        } else {
+            progressText = {
+                color: "hsl(0, 0%, 29%)",
+                animation: 'x .75s',
+                animationName: Radium.keyframes(pulse, 'pulse'),
+                animationIterationCount: "infinite"
+            }
+        }
+
         return (
             <div>
                 <div className="progress-section column is-6 is-offset-3">
-                    <p className="has-text-centered has-text-grey-light	">Your song is {this.state.progress}% complete</p>
+                    <StyleRoot><p className="has-text-centered" style={progressText}>Your song is {this.state.progress}% complete</p></StyleRoot>
                     <div class="meter">
                         <span style={progress}></span>
                     </div>

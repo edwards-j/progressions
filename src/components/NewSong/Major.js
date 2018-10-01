@@ -1,3 +1,5 @@
+//Displays options if key is major
+
 import React, { Component } from 'react'
 import ChordDisplayer from './ChordDisplayer';
 import * as Scale from 'tonal-scale'
@@ -9,7 +11,7 @@ export default class Major extends Component {
                 <div className="availableChords">
                     <h4 className="is-size-4 has-text-centered">Available Chords</h4>
                     <div className="container has-text-centered is-gapless degrees has-text-weight-semibold">
-                        <div className="columns">
+                        <div className="columns animated fadeInUp numerals">
                             <span className="column">I</span>
                             <span className="column">ii</span>
                             <span className="column">iii</span>
@@ -21,13 +23,13 @@ export default class Major extends Component {
                     </div>
                     <div className="container is-gapless">
                         <div className="columns">
-                            <div data-key="49" className="is-marginless key column has-text-centered chord1">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[0]}</div>
-                            <div data-key="50" className="is-marginless key column has-text-centered chord2">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[1]}m</div>
-                            <div data-key="51" className="is-marginless key column has-text-centered chord3">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[2]}m</div>
-                            <div data-key="52" className="is-marginless key column has-text-centered chord4">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[3]}</div>
-                            <div data-key="53" className="is-marginless key column has-text-centered chord5">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[4]}</div>
-                            <div data-key="54" className="is-marginless key column has-text-centered chord6">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[5]}m</div>
-                            <div data-key="55" className="is-marginless key column has-text-centered chord7">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[6]}dim</div>
+                            <div data-key="49" className="is-marginless key column has-text-centered chord1"><span className="animated fadeIn">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[0]}</span></div>
+                            <div data-key="50" className="is-marginless key column has-text-centered chord2"><span className="animated fadeIn">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[1]}m</span></div>
+                            <div data-key="51" className="is-marginless key column has-text-centered chord3"><span className="animated fadeIn">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[2]}m</span></div>
+                            <div data-key="52" className="is-marginless key column has-text-centered chord4"><span className="animated fadeIn">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[3]}</span></div>
+                            <div data-key="53" className="is-marginless key column has-text-centered chord5"><span className="animated fadeIn">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[4]}</span></div>
+                            <div data-key="54" className="is-marginless key column has-text-centered chord6"><span className="animated fadeIn">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[5]}m</span></div>
+                            <div data-key="55" className="is-marginless key column has-text-centered chord7"><span className="animated fadeIn">{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[6]}dim</span></div>
                         </div>
                     </div>
                 </div>
@@ -45,8 +47,6 @@ export default class Major extends Component {
                                     <option className="column has-text-centered" value={Scale.notes(this.props.selectedKey, this.props.MajorMinor)[4]}>{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[4]}</option>
                                     <option className="column has-text-centered" value={Scale.notes(this.props.selectedKey, this.props.MajorMinor)[5] + "m"}>{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[5]}m</option>
                                     <option className="column has-text-centered" value={Scale.notes(this.props.selectedKey, this.props.MajorMinor)[6] + "dim"}>{Scale.notes(this.props.selectedKey, this.props.MajorMinor)[6]}dim</option>
-
-
                                 </select>
                                 <ChordDisplayer.Chord1Displayer chord1={this.props.chord1} {...this.props} />
                             </div>

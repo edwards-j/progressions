@@ -1,8 +1,9 @@
+//Purpose: Launch a modal that displays a random string from the database
+
 import React, { Component } from 'react'
 import DataManager from '../../modules/DataManager'
 import './LyricGenerator.css'
 import { Modal, ModalBackground, ModalCard, ModalCardBody, ModalCardFooter, ModalCardHeader, ModalCardTitle, Button } from 'bloomer'
-
 import { fadeIn } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
 
@@ -18,7 +19,7 @@ export default class LyricGenerator extends Component {
         lyrics: "(Click that button in the bottom left corner to get those create juices flowing)"
     }
 
-
+//Hits database and gets a random string of lyics
     newLyrics = () => {
         DataManager.getData.getRandomLyrics()
             .then(res => {
@@ -26,7 +27,6 @@ export default class LyricGenerator extends Component {
                 const newLyric = res[randomNumber]
                 this.setState({ lyrics: newLyric.words })
             })
-
     }
 
 
