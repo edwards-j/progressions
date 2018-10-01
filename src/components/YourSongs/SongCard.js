@@ -29,7 +29,7 @@ export default class SongCard extends Component {
 
             if (buttonId === divID) {
                 document.querySelector(`#songCard--${this.props.song.id}`).classList.add("animated", "zoomOut")
-                window.setTimeout(delayRemove, 500);
+                window.setTimeout(delayRemove, 750);
             }
         }
 

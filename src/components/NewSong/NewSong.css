@@ -170,3 +170,8 @@
     margin-bottom: 1.5em;
     border-radius: 50px;
   }
+
+  .numerals {
+      animation-duration: 800ms;
+      transition-timing-function: cubic-bezier(.33,-0.37,.47,1.57) !important
+  }

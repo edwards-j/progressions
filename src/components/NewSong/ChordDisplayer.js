@@ -1,3 +1,5 @@
+//Purpose: Displays the chord charts for each of the selected chords 
+
 import React from 'react'
 
 import A from '../../img/png/A.png'

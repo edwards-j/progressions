@@ -81,6 +81,51 @@
       "description": "",
       "public": false,
       "id": 24
+    },
+    {
+      "userId": 1,
+      "username": "Jonathan",
+      "selectedKey": "C",
+      "MajorMinor": "major",
+      "title": "NSS National Anthem",
+      "chord1": "C",
+      "chord2": "G",
+      "chord3": "Dm",
+      "chord4": "Em",
+      "lyrics": "",
+      "description": "The official anthem of the Nashville Software School",
+      "public": false,
+      "id": 25
+    },
+    {
+      "userId": 1,
+      "username": "Jonathan",
+      "selectedKey": "E",
+      "MajorMinor": "minor",
+      "title": "Cold Brew Blues",
+      "chord1": "Em",
+      "chord2": "Am",
+      "chord3": "Bm",
+      "chord4": "Bm",
+      "lyrics": "",
+      "description": "The perfect song for when you run out of that delicious iced coffee",
+      "public": false,
+      "id": 26
+    },
+    {
+      "userId": 1,
+      "username": "Jonathan",
+      "selectedKey": "G",
+      "MajorMinor": "major",
+      "title": "NSS Alma Mater",
+      "chord1": "G",
+      "chord2": "C",
+      "chord3": "Am",
+      "chord4": "D",
+      "lyrics": "So here's to you ol' NSS\nOur alma mater true.\nWe pledge in love and harmony \nOur loyalty to you. ",
+      "description": "So here's to you ol' NSS",
+      "public": false,
+      "id": 27
     }
   ],
   "lyrics": [

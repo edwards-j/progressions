@@ -160,7 +160,7 @@ export default class SongDetail extends Component {
                 }
                 {(this.state.edit) ?
                     <div className="has-text-centered">
-                        <button className="save-edits-button button is-rounded" onClick={this.saveEditedSong}>Save Changes <i class="far fa-save"></i></button>
+                        <button className="save-edits-button button is-rounded" onClick={this.saveEditedSong}>Save Changes <i style={{marginLeft: ".5em"}} className="far fa-save"></i></button>
                     </div>
                     :
                     <div className="songDetailButtons columns">
