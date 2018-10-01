@@ -103,7 +103,9 @@ export default class SongDetail extends Component {
                         <input className="titleInput input is-rounded" type="text" id="title" placeholder={this.state.title} onChange={this.handleFieldChange} value={this.state.title} /><br />
                     </div>
                     :
-                    <h1 className="is-size-1 has-text-centered">{song.title}</h1>
+                    <div>
+                        <h1 className="is-size-1 has-text-centered">{song.title}</h1>
+                    </div>
                 }
                 <h5 className="is-size-5 has-text-centered">Key: {song.selectedKey} {song.MajorMinor}</h5>
                 {(this.state.edit) ?
