@@ -1,4 +1,4 @@
-# Welcome to progressions
+### Welcome to progressions
 
 ----
 ### What is progressions?
