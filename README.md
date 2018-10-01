@@ -9,9 +9,9 @@ progressions is a songwriting application to help simplify the songwriting proce
 
 ## Usage
 1. Clone or download the progressions repository to your local machine
-2. ```cd src/lib```
-3. ```npm install``` from the root directory to install all necessary modules
-8. ```npm start``` to get the app running 
+2. ```npm install``` from the root directory to install all necessary modules
+3. ```npm start``` to get the app running 
+4. ```cd api``` then ```json-server -p 8088 -w progressions.json``` to run json server
 
 
 ## Languages and Technologies
