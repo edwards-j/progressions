@@ -24,3 +24,5 @@ progressions is a songwriting application to help simplify the songwriting proce
 * Radium
 * tonal.js
 * tilt.js
+
+![alt text](src/READMEimgs/progressionsERD.png)
