@@ -1,6 +1,5 @@
 # Welcome to progressions
 
-----
 ## What is progressions?
 
 
