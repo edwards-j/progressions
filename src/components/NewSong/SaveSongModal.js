@@ -9,9 +9,9 @@ export default class SaveSongModal extends Component {
         return (
             <div>
                 {(this.props.modal === true) ?
-                    <Modal isActive className="animated fadeIn" style={{animationDuration: ".5s"}}>
-                        <ModalBackground />
-                        <ModalCard>
+                    <Modal isActive>
+                        <ModalBackground className="animated fadeIn" style={{animationDuration: ".75s"}}/>
+                        <ModalCard className="animated zoomIn" style={{animationDuration: "1s"}}>
                             <ModalCardHeader className="has-text-centered">
                                 <ModalCardTitle className="modal-title columns">
                                     <div className="column">
