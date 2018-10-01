@@ -20,7 +20,7 @@
 }
 
 .try-again-button {
-    color: #28A9FF !important;
+    color: #33C6F7 !important;
     background-color: white !important;
     transition: all .2s;
 }
@@ -32,5 +32,5 @@
 
 .try-again-button:hover {
     color: white !important;
-    background-color: #28A9FF !important
+    background-color: #33C6F7 !important
 }

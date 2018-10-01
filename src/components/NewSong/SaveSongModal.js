@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Modal, ModalBackground, ModalCard, ModalCardBody, ModalCardFooter, ModalCardHeader, ModalCardTitle, Button } from 'bloomer'
 
 export default class SaveSongModal extends Component {
@@ -13,9 +13,20 @@ export default class SaveSongModal extends Component {
                         <ModalBackground />
                         <ModalCard>
                             <ModalCardHeader className="has-text-centered">
-                                <div>
-                                    <ModalCardTitle className="modal-title">Great job!<br /> <span className="is-size-6">Your song is awesome, I think even Jimi Hendrix would be jealous of this one.</span></ModalCardTitle>
-                                </div>
+                                <ModalCardTitle className="modal-title columns">
+                                    <div className="column">
+                                        <h4 className="is-size-4">Great job!</h4>
+                                        <div class="save-icon--order-success svg ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="72px" height="72px">
+                                                <g fill="none" stroke="#59D9E8" stroke-width="2">
+                                                    <circle cx="36" cy="36" r="35" style={{ strokeDasharray: "240px, 240px", strokeDashoffset: "480px" }}></circle>
+                                                    <path d="M17.417,37.778l9.93,9.909l25.444-25.393" style={{ strokeDasharray: "50px, 50px", strokeDashoffset: "0px" }}></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <span className="is-size-6 has-text-centered">Your song is awesome, I think even Jimi Hendrix would be jealous of this one.</span>
+                                    </div>
+                                </ModalCardTitle>
                             </ModalCardHeader>
                             <ModalCardBody>
                                 <p className="has-text-grey is-size-6 ">Would you like to write another song or view all of your songs?</p>
