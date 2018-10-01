@@ -68,6 +68,7 @@ export default class SongDetail extends Component {
 
     saveEditedSong = () => {
         const editedSong = {
+            title: this.state.title,
             chord1: this.state.chord1,
             chord2: this.state.chord2,
             chord3: this.state.chord3,
@@ -83,6 +84,7 @@ export default class SongDetail extends Component {
         const song = this.props.yourSongs.find(s => s.id === parseInt(this.props.match.params.songId, 0)) || {}
         this.setState({
             songID: song.id,
+            title: song.title,
             chord1: song.chord1,
             chord2: song.chord2,
             chord3: song.chord3,
@@ -95,7 +97,14 @@ export default class SongDetail extends Component {
         const song = this.props.yourSongs.find(s => s.id === parseInt(this.props.match.params.songId, 0)) || {}
         return (
             <div>
-                <h1 className="is-size-1 has-text-centered">{song.title}</h1>
+                {(this.state.edit) ?
+                    <div className="column is-4 is-offset-4">
+                        <h4 className="is-size-4 has-text-centered new-song-title">Song Title</h4>
+                        <input className="titleInput input is-rounded" type="text" id="title" placeholder={this.state.title} onChange={this.handleFieldChange} value={this.state.title} /><br />
+                    </div>
+                    :
+                    <h1 className="is-size-1 has-text-centered">{song.title}</h1>
+                }
                 <h5 className="is-size-5 has-text-centered">Key: {song.selectedKey} {song.MajorMinor}</h5>
                 {(this.state.edit) ?
                     <div>
@@ -160,7 +169,7 @@ export default class SongDetail extends Component {
                 }
                 {(this.state.edit) ?
                     <div className="has-text-centered">
-                        <button className="save-edits-button button is-rounded" onClick={this.saveEditedSong}>Save Changes <i style={{marginLeft: ".5em"}} className="far fa-save"></i></button>
+                        <button className="save-edits-button button is-rounded" onClick={this.saveEditedSong}>Save Changes <i style={{ marginLeft: ".5em" }} className="far fa-save"></i></button>
                     </div>
                     :
                     <div className="songDetailButtons columns">
