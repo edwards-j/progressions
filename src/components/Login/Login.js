@@ -104,9 +104,7 @@ class Login extends Component {
                             </p>
                                 </div>
                             </StyleRoot>
-
                             :
-                            
                             <div class="column is-4 is-offset-4 form">
                                 <div class="">
                                     <div class="field">

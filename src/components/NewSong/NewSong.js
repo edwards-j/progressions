@@ -43,12 +43,10 @@ export default class NewSong extends Component {
         DataManager.getData.getKey(evt.target.value)
             .then(res => this.setState({ currentKey: res }))
             .then(() => this.setState({
-                yourChords: {
                     "chord1": "",
                     "chord2": "",
                     "chord3": "",
                     "chord4": "",
-                }
             }))
     }
 
