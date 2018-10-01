@@ -25,4 +25,5 @@ progressions is a songwriting application to help simplify the songwriting proce
 * tonal.js
 * tilt.js
 
+## ERD
 ![alt text](src/READMEimgs/progressionsERD.png)
