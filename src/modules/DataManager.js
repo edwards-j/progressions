@@ -1,4 +1,4 @@
-const remoteURL = "http://localhost:8088"
+const remoteURL = "https://progressions-server.herokuapp.com"
 
 const getData = Object.create(null, {
     getUsers: {

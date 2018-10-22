@@ -130,17 +130,17 @@
     {
       "userId": 1,
       "username": "Jonathan",
-      "selectedKey": "D",
-      "MajorMinor": "major",
-      "title": "Delete me!",
-      "chord1": "D",
-      "chord2": "G",
-      "chord3": "A",
-      "chord4": "Bm",
-      "lyrics": "",
-      "description": "This song isn't very good",
+      "selectedKey": "A",
+      "MajorMinor": "minor",
+      "title": "My song",
+      "chord1": "Am",
+      "chord2": "Em",
+      "chord3": "F",
+      "chord4": "G",
+      "lyrics": "I don't know why, I don't know why. I return to the scenes of these crimes. Where the hedgerows slowly wind. Through the ghosts of Beverly Drive. I don't know why, I don't know why. I don't know what I expect to find. Where all the news is second hand. And everything just goes on as planned",
+      "description": "My first song",
       "public": false,
-      "id": 28
+      "id": 29
     }
   ],
   "lyrics": [
