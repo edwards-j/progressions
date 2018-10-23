@@ -10,6 +10,9 @@ import LyricGenerator from './LyricGenerator'
 import SaveSongModal from './SaveSongModal'
 import './ProgressBar.css'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { pulse } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
 
@@ -361,6 +364,19 @@ export default class NewSong extends Component {
 
         return (
             <div>
+                {(!this.state.keyEmpty && !this.state.majminEmpty) ?
+                    toast('Want to hear what those chords sound like? Press keys 1-7 on your keyboard to hear an audio clip!', {
+                        position: "bottom-center",
+                        autoClose: 8000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true
+                        })
+                        :
+                        <div></div>
+
+                }
                 <div className="progress-section column is-6 is-offset-3">
                     <StyleRoot><p className="has-text-centered" style={progressText}>Your song is {this.state.progress}% complete</p></StyleRoot>
                     <div class="meter">
@@ -510,6 +526,15 @@ export default class NewSong extends Component {
                         MajorMinor={this.state.MajorMinor}
                     />
                 </div>
+                <ToastContainer position="bottom-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnVisibilityChange
+                    draggable
+                    pauseOnHover/>
             </div>
         )
     }

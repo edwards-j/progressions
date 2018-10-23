@@ -2,10 +2,14 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import DataManager from '../../modules/DataManager'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default class Register extends Component {
     state = {
         username: "",
-        password: ""
+        password: "",
+        registerSuccess: false
     }
 
     handleFieldChange = evt => {
@@ -13,6 +17,8 @@ export default class Register extends Component {
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
     }
+
+    resetState = () => this.setState({ registerSuccess: false })
 
     registerNewUser = () => {
         const newUser = {
@@ -58,6 +64,15 @@ export default class Register extends Component {
                         </div>
                     </div>
                 </div>
+                <ToastContainer position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnVisibilityChange
+                    draggable
+                    pauseOnHover/>
             </section>
         )
     }
