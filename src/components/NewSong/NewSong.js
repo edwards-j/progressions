@@ -39,7 +39,8 @@ export default class NewSong extends Component {
         chord1Empty: true,
         chord2Empty: true,
         chord3Empty: true,
-        chord4Empty: true
+        chord4Empty: true,
+        noKey: true
     }
 
     handleKeyChange = evt => {
@@ -362,12 +363,14 @@ export default class NewSong extends Component {
             }
         }
 
+      
+
         return (
             <div>
                 {(!this.state.keyEmpty && !this.state.majminEmpty) ?
-                    toast('Want to hear what those chords sound like? Press keys 1-7 on your keyboard to hear an audio clip!', {
+                    toast.info(`Want to hear what the chords for ${this.state.selectedKey} ${this.state.MajorMinor} sound like? Press keys 1-7 on your keyboard to hear an audio clip. Go ahead, try it out!`, {
                         position: "bottom-center",
-                        autoClose: 8000,
+                        autoClose: 10000,
                         hideProgressBar: false,
                         closeOnClick: true,
                         pauseOnHover: true,
