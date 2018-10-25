@@ -40,17 +40,19 @@ export default class NewSong extends Component {
         chord2Empty: true,
         chord3Empty: true,
         chord4Empty: true,
-        noKey: true
+        noKey: true,
+        toastCount: 0,
+        toastDisplayed: true
     }
 
     handleKeyChange = evt => {
         DataManager.getData.getKey(evt.target.value)
             .then(res => this.setState({ currentKey: res }))
             .then(() => this.setState({
-                    "chord1": "",
-                    "chord2": "",
-                    "chord3": "",
-                    "chord4": "",
+                "chord1": "",
+                "chord2": "",
+                "chord3": "",
+                "chord4": "",
             }))
     }
 
@@ -280,6 +282,24 @@ export default class NewSong extends Component {
             .then(() => this.showSaveSongModal())
     }
 
+    displayToast = () => {
+        if (!this.state.toastDisplayed) {
+            this.setState({ toastDisplayed: true })
+            return (
+                toast.info(`Want to hear what the chords sound like? Press keys 1-7 on your keyboard to hear an audio clip. Go ahead, try it out!`, {
+                    position: "bottom-center",
+                    autoClose: 10000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true
+                })
+            )
+        } else {
+            return <div></div>
+        }
+    }
+
     render() {
         let down = false;
         let playAudio = (e) => {
@@ -363,23 +383,14 @@ export default class NewSong extends Component {
             }
         }
 
-      
+        if (!this.state.keyEmpty && !this.state.majminEmpty && this.state.toastCount < 1) {
+            this.setState({ toastDisplayed: false })
+            this.setState({ toastCount: + 1 })
+        }
 
         return (
             <div>
-                {(!this.state.keyEmpty && !this.state.majminEmpty) ?
-                    toast.info(`Want to hear what the chords for ${this.state.selectedKey} ${this.state.MajorMinor} sound like? Press keys 1-7 on your keyboard to hear an audio clip. Go ahead, try it out!`, {
-                        position: "bottom-center",
-                        autoClose: 10000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true
-                        })
-                        :
-                        <div></div>
-
-                }
+                {this.displayToast()}
                 <div className="progress-section column is-6 is-offset-3">
                     <StyleRoot><p className="has-text-centered" style={progressText}>Your song is {this.state.progress}% complete</p></StyleRoot>
                     <div class="meter">
@@ -537,7 +548,7 @@ export default class NewSong extends Component {
                     rtl={false}
                     pauseOnVisibilityChange
                     draggable
-                    pauseOnHover/>
+                    pauseOnHover />
             </div>
         )
     }
