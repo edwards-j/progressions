@@ -28,7 +28,7 @@ export default class Register extends Component {
 
         DataManager.saveData.newUser(newUser)
             .then(() => alert("You've successfully registered, please login"))
-            .then(() => this.props.history.push("/login"))
+            .then(() => this.props.history.push("/"))
     }
 
     render() {
