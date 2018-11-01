@@ -62,7 +62,7 @@ export default class Views extends Component {
     render() {
         return (
             <React.Fragment>
-                <Route exact path="/login" render={props => {
+                <Route exact path="/" render={props => {
                         return <Login {...props}
                             handleNavChange={this.props.handleNavChange}
                             addSong={this.addSong} />
@@ -74,7 +74,7 @@ export default class Views extends Component {
                         return <NewSong {...props}
                             addSong={this.addSong} />
                     } else {
-                        return <Redirect to="/login" />
+                        return <Redirect to="/" />
                     }
                 }} />
                 <Route exact path="/your-songs" render={props => {
@@ -84,7 +84,7 @@ export default class Views extends Component {
                             yourSongs={this.state.yourSongs}
                             deleteSong={this.deleteSong} />
                     } else {
-                        return <Redirect to="/login" />
+                        return <Redirect to="/" />
                     }
                 }} />
                 <Route path="/your-songs/:songId(\d+)" render={props => {
@@ -101,7 +101,7 @@ export default class Views extends Component {
                             getPublic={this.getPublic}
                             publicSongs={this.state.publicSongs} />
                     } else {
-                        return <Redirect to="/login" />
+                        return <Redirect to="/" />
                     }
                 }} />
                 <Route path="/public-songs/:songId(\d+)" render={props => {

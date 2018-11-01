@@ -34,7 +34,7 @@ export default class Nav extends Component {
 
                                     <div className="navbar-end">
                                         <div className="navbar-item">
-                                            <Link className="logout-button navbar-item button is-rounded" to="/login" onClick={this.logout}>Logout</Link>
+                                            <Link className="logout-button navbar-item button is-rounded" to="/" onClick={this.logout}>Logout</Link>
                                         </div>
                                     </div>
                                 </div>
