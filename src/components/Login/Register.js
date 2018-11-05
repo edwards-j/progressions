@@ -59,7 +59,7 @@ export default class Register extends Component {
                                 </div>
                             </div>
                             <div className="has-text-centered">
-                                <Link to="/login" className="cancel-register">Cancel</Link> &nbsp;·&nbsp;
+                                <Link to="/" className="cancel-register">Cancel</Link> &nbsp;·&nbsp;
                         </div>
                         </div>
                     </div>
