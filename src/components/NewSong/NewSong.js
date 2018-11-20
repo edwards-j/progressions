@@ -426,7 +426,7 @@ export default class NewSong extends Component {
                 </div>
 
                 <div className="">
-                    {(this.state.MajorMinor === "---") ?
+                    {(this.state.MajorMinor === "---" || this.state.selectedKey === "---") ?
                         <div className="availableChords ">
                             <h4 className="is-size-4 has-text-centered">Available Chords</h4>
                             <div className="container is-gapless">
